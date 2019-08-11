@@ -1,19 +1,21 @@
 import React, { useEffect } from "react";
+import { remote } from "electron";
+
 import logo from "./logo.svg";
 import "./App.css";
 
 import { useRuns } from "./rootReducer";
 import { Run, setRuns } from "./reducers/runs";
 
-const fs = require("fs");
-const path = require("path");
-
 const runsDir =
   "C:\\Program Files (x86)\\Steam\\steamapps\\common\\SlayTheSpire";
 const chars = ["IRONCLAD", "THE_SILENT", "DEFECT"];
 
+const fs = remote.require("fs");
+
 const App: React.FC = () => {
   // RUNファイルを全部読み込む
+  /*
   useEffect(() => {
     const runs: { [timestamp: string]: {} } = {};
     chars.forEach(char => {
@@ -30,6 +32,7 @@ const App: React.FC = () => {
     const allRuns: ReadonlyArray<Run> = Object.values(runs) as Run[];
     setRuns(allRuns);
   });
+  */
 
   const runs = useRuns();
   const runCount = Object.values(runs).flat().length;
