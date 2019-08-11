@@ -10,7 +10,21 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "electron:dev": "electron .",
-    "dev": "npm-run-all --parallel electron:dev start"
+    "dev": "npm-run-all --parallel electron:dev start",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "spirebuff.app",
+    "productName": "spirebuff",
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": ["x64"]
+        }
+      ]
+    }
   },
   "eslintConfig": {
     "extends": "react-app"
