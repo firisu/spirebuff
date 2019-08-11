@@ -2,7 +2,7 @@
   "name": "spirebuff.app",
   "version": "0.1.0",
   "private": true,
-  "main": "src/electron-starter.js",
+  "main": "electron-starter.js",
   "homepage": "./",
   "scripts": {
     "start": "react-scripts start",
@@ -15,6 +15,7 @@
     "dist": "electron-builder"
   },
   "build": {
+    "extends": null,
     "appId": "spirebuff.app",
     "productName": "spirebuff",
     "win": {
@@ -24,7 +25,11 @@
           "arch": ["x64"]
         }
       ]
-    }
+    },
+    "files": [
+      "./build/**/*",
+      "electron-starter.js"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"
