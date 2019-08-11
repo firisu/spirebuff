@@ -34,7 +34,7 @@ const App: React.FC = () => {
     });
     const allRuns: ReadonlyArray<Run> = Object.values(runs) as Run[];
     dispatch(setRuns(allRuns));
-  });
+  }, [dispatch]);
 
   const runs = useRuns();
   const runCount = Object.values(runs).flat().length;
