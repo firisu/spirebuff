@@ -1,6 +1,5 @@
 const { app, BrowserWindow } = require("electron");
 const path = require("path");
-const url = require("url");
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -17,14 +16,11 @@ function createWindow() {
   });
 
   // and load the index.html of the app.
-  const startURL = process.env.ELECTRON_DEV
-    ? "http://localhost:3000"
-    : url.format({
-        pathname: path.join(__dirname, "/../build/index.html"),
-        protocol: "file:",
-        slashes: true
-      });
-  win.loadURL(startURL);
+  if (process.env.NODE_ENV === "development") {
+    win.loadURL("http://localhost:3000");
+  } else {
+    win.loadFile(path.join(__dirname, "./build/index.html"));
+  }
 
   // Open the DevTools.
   win.webContents.openDevTools();
