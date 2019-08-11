@@ -16,7 +16,7 @@ function createWindow() {
   });
 
   // and load the index.html of the app.
-  if (process.env.NODE_ENV === "development") {
+  if (process.env.LOCAL_DEVELOPMENT === "true") {
     win.loadURL("http://localhost:3000");
   } else {
     win.loadFile(path.join(__dirname, "./build/index.html"));
