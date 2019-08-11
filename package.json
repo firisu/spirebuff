@@ -5,16 +5,16 @@
   "main": "electron-starter.js",
   "homepage": "./",
   "scripts": {
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
     "test": "react-app-rewired test",
-    "eject": "react-scripts eject",
-    "electron:dev": "cross-env LOCAL_DEVELOPMENT=true electron .",
-    "dev": "npm-run-all --parallel electron:dev start",
-    "builder-pack": "electron-builder --dir",
-    "builder-dist": "electron-builder",
-    "pack": "npm-run-all build builder-pack",
-    "dist": "npm-run-all build builder-dist"
+    "watch": "node watch.js",
+    "electron:dev": "electron .",
+    "dev": "npm-run-all --parallel watch electron:dev",
+    "build": "react-app-rewired build",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "prod:pack": "npm-run-all build pack",
+    "prod:dist": "npm-run-all build dist",
+    "eject": "react-scripts eject"
   },
   "build": {
     "extends": null,
