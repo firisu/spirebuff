@@ -11,8 +11,10 @@
     "eject": "react-scripts eject",
     "electron:dev": "cross-env LOCAL_DEVELOPMENT=true electron .",
     "dev": "npm-run-all --parallel electron:dev start",
-    "pack": "electron-builder --dir",
-    "dist": "electron-builder"
+    "builder-pack": "electron-builder --dir",
+    "builder-dist": "electron-builder",
+    "pack": "npm-run-all build builder-pack",
+    "dist": "npm-run-all build builder-dist"
   },
   "build": {
     "extends": null,

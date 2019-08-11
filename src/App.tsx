@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { remote } from "electron";
 
 import logo from "./logo.svg";
@@ -8,13 +9,15 @@ import { useRuns } from "./rootReducer";
 import { Run, setRuns } from "./reducers/runs";
 
 const runsDir =
-  "C:\\Program Files (x86)\\Steam\\steamapps\\common\\SlayTheSpire";
+  "C:/Program Files (x86)/Steam/steamapps/common/SlayTheSpire/runs";
 const chars = ["IRONCLAD", "THE_SILENT", "DEFECT"];
 
 const fs = remote.require("fs");
 const path = remote.require("path");
 
 const App: React.FC = () => {
+  const dispatch = useDispatch();
+
   // RUNファイルを全部読み込む
   useEffect(() => {
     const runs: { [timestamp: string]: {} } = {};
@@ -30,7 +33,7 @@ const App: React.FC = () => {
       });
     });
     const allRuns: ReadonlyArray<Run> = Object.values(runs) as Run[];
-    setRuns(allRuns);
+    dispatch(setRuns(allRuns));
   });
 
   const runs = useRuns();
