@@ -12,10 +12,10 @@ const runsDir =
 const chars = ["IRONCLAD", "THE_SILENT", "DEFECT"];
 
 const fs = remote.require("fs");
+const path = remote.require("path");
 
 const App: React.FC = () => {
   // RUNファイルを全部読み込む
-  /*
   useEffect(() => {
     const runs: { [timestamp: string]: {} } = {};
     chars.forEach(char => {
@@ -32,7 +32,6 @@ const App: React.FC = () => {
     const allRuns: ReadonlyArray<Run> = Object.values(runs) as Run[];
     setRuns(allRuns);
   });
-  */
 
   const runs = useRuns();
   const runCount = Object.values(runs).flat().length;
