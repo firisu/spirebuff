@@ -15,7 +15,7 @@ export type Run = {
   [otherParams: string]: any;
 };
 
-export const useRuns = dispatch => {
+export const useRuns = (dispatch: any) => {
   useEffect(() => {
     const runs: { [timestamp: string]: {} } = {};
     chars.forEach(char => {
