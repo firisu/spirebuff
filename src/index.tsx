@@ -7,7 +7,6 @@ import App from "./App";
 import reducer from "./rootReducer";
 
 // styles
-import "./reset.css";
 import "./index.css";
 import "semantic-ui-css/semantic.min.css";
 
