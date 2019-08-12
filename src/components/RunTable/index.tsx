@@ -58,7 +58,10 @@ const RunTable = (props: Props) => {
                 )}
               </Table.Cell>
               <Table.Cell>{run.floor_reached}階</Table.Cell>
-              <Table.Cell>{getModeName(run)}</Table.Cell>
+              <Table.Cell>
+                {getModeName(run)}
+                {run.ascension_level > 0 ? ` [A${run.ascension_level}]` : ""}
+              </Table.Cell>
               <Table.Cell>{getDurationString(run.playtime)}</Table.Cell>
             </Table.Row>
           );
