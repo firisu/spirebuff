@@ -1,0 +1,9 @@
+.char-avatar {
+  margin-right: 5px !important;
+  width: 2.25rem !important;
+  height: 2.25rem !important;
+
+  & + * {
+    vertical-align: middle;
+  }
+}

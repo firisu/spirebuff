@@ -5,6 +5,7 @@ import "moment/locale/ja";
 
 import { Run, getModeName } from "../../modules/runs";
 import { getCharName } from "../../modules/chars";
+import Avatar from "../Avatar";
 
 interface Props {
   runs: ReadonlyArray<Run>;
@@ -29,7 +30,7 @@ const RunTable = (props: Props) => {
   };
 
   return (
-    <Table inverted selectable size="small" compact="very">
+    <Table inverted striped selectable size="small" compact="very">
       <Table.Header>
         <Table.Row>
           <Table.HeaderCell>キャラクター</Table.HeaderCell>
@@ -43,8 +44,11 @@ const RunTable = (props: Props) => {
       <Table.Body>
         {runs.map(run => {
           return (
-            <Table.Row key={`runs-${run.timestamp}`}>
-              <Table.Cell>{getCharName(run.character_chosen)}</Table.Cell>
+            <Table.Row key={`runs-${run.timestamp}`} verticalAlign="middle">
+              <Table.Cell>
+                <Avatar char={run.character_chosen} />
+                <span>{getCharName(run.character_chosen)}</span>
+              </Table.Cell>
               <Table.Cell>{moment(run.timestamp * 1000).fromNow()}</Table.Cell>
               <Table.Cell>
                 {run.victory ? (

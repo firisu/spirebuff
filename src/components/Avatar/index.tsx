@@ -1,8 +1,11 @@
 import React from "react";
+import { Image } from "semantic-ui-react";
 
 import ironclad from "./ironclad.png";
 import silent from "./silent.png";
 import defect from "./defect.png";
+
+import "./style.scss";
 
 interface Props {
   color?: string;
@@ -13,11 +16,22 @@ const Avatar = (props: Props) => {
   const { color, char } = props;
 
   if (color === "red" || char === "IRONCLAD") {
-    return <img src={ironclad} alt="ironclad avatar" />;
+    return (
+      <Image
+        src={ironclad}
+        alt="ironclad avatar"
+        avatar
+        className="char-avatar"
+      />
+    );
   } else if (color === "green" || char === "THE_SILENT") {
-    return <img src={silent} alt="silent avatar" />;
+    return (
+      <Image src={silent} alt="silent avatar" avatar className="char-avatar" />
+    );
   } else if (color === "blue" || char === "DEFECT") {
-    return <img src={defect} alt="defect avatar" />;
+    return (
+      <Image src={defect} alt="defect avatar" avatar className="char-avatar" />
+    );
   }
 
   return null;
