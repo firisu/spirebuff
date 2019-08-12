@@ -42,6 +42,15 @@ export const isSeeded = (run: Run): boolean => {
   return run.seed_source_timestamp === 0;
 };
 
+// 統計データを取得する時はこっち
+export const useMetricsRuns = () => {
+  const allRuns = useRuns();
+  const runs = allRuns.filter(
+    run => getMode(run) === "normal" && !isSeeded(run)
+  );
+  return runs;
+};
+
 // 色ごとに組分けされたRUNデータを返す
 export const useRunsByColor = () => {
   const runs = useRuns();
@@ -138,8 +147,9 @@ export const isAct4Victory = (run: Run): boolean => {
   return run.victory && lastEnemies.enemies === "The Heart";
 };
 
+// キャラごとの勝利回数を調べる
 export const useVictoriesByChar = (level: number) => {
-  const allRuns = useRuns();
+  const allRuns = useMetricsRuns();
   const runs = allRuns.filter(run => run.ascension_level === level);
 
   const counts: {
