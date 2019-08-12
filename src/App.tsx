@@ -6,6 +6,7 @@ import { useRuns } from "./rootReducer";
 import { useLoadRuns } from "./modules/runs";
 import UserOverview from "./components/UserOverview";
 import RunTable from "./components/RunTable";
+import TopSidebar from "./components/TopSidebar";
 
 const LATEST_RUNS_COUNT = 10;
 
@@ -51,7 +52,9 @@ const App: React.FC = () => {
             </Header>
             <RunTable runs={latestRuns} />
           </Grid.Column>
-          <Grid.Column width={6}>プレイ回数</Grid.Column>
+          <Grid.Column width={6}>
+            <TopSidebar />
+          </Grid.Column>
         </Grid.Row>
       </Grid>
     </Container>

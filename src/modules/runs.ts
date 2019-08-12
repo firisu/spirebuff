@@ -101,3 +101,74 @@ export const useMaxLevelsByColor = () => {
 
   return maxLevelsByColor;
 };
+
+export const useRunCountsByMode = () => {
+  const runs = useRuns();
+  const runCounts: { [mode: string]: number } = {};
+
+  runs.forEach(run => {
+    const mode = getMode(run);
+    if (runCounts[mode] === undefined) {
+      runCounts[mode] = 0;
+    }
+    runCounts[mode]++;
+  });
+
+  return runCounts;
+};
+
+// act3を突破したかどうかを判定
+// victoryフラグが経っていない時でもact4に行っていればOKにしたい
+export const isAct3Victory = (run: Run): boolean => {
+  const lastEnemies = run.damage_taken.slice(-1)[0];
+  const defeatedInAct4 =
+    lastEnemies &&
+    (lastEnemies.enemies === "The Heart" ||
+      lastEnemies.enemies === "Shield and Spear");
+
+  // NOTE: この方法だとact4で手動降参した場合はカウント出来ないが、マイナーケース過ぎるので無視
+  return run.victory || defeatedInAct4;
+};
+
+// 心臓に対して勝ったかどうかを判定
+// floor === 57(56) で判定せずに敵を見に行っている理由は
+// ポータルイベントが起きるとこれより小さい値になってしまうため。
+export const isAct4Victory = (run: Run): boolean => {
+  const lastEnemies = run.damage_taken.slice(-1)[0];
+  return run.victory && lastEnemies.enemies === "The Heart";
+};
+
+export const useVictoriesByChar = (level: number) => {
+  const allRuns = useRuns();
+  const runs = allRuns.filter(run => run.ascension_level === level);
+
+  const counts: {
+    [char: string]: { runs: number; act3: number; act4: number };
+  } = {};
+
+  // 初期化
+  chars.forEach(char => {
+    counts[char] = {
+      runs: 0,
+      act3: 0,
+      act4: 0
+    };
+  });
+
+  runs.forEach(run => {
+    const char = run.character_chosen;
+
+    // プレイ回数
+    counts[char].runs++;
+
+    // 勝利回数
+    if (isAct3Victory(run)) {
+      counts[char].act3++;
+    }
+    if (isAct4Victory(run)) {
+      counts[char].act4++;
+    }
+  });
+
+  return counts;
+};
