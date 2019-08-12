@@ -7,6 +7,8 @@ import { useLoadRuns } from "./modules/runs";
 import UserOverview from "./components/UserOverview";
 import RunTable from "./components/RunTable";
 
+const LATEST_RUNS_COUNT = 10;
+
 const App: React.FC = () => {
   // ローカルからRUNファイルをロードする
   const dispatch = useDispatch();
@@ -27,7 +29,7 @@ const App: React.FC = () => {
     );
   }
 
-  const latestRuns = runs.slice(-20).reverse();
+  const latestRuns = runs.slice(-LATEST_RUNS_COUNT).reverse();
 
   return (
     <Container className="app">
@@ -45,7 +47,7 @@ const App: React.FC = () => {
         <Grid.Row>
           <Grid.Column width={10}>
             <Header inverted size="tiny">
-              最新のプレイ(20件)
+              最新のプレイ({LATEST_RUNS_COUNT}件)
             </Header>
             <RunTable runs={latestRuns} />
           </Grid.Column>
