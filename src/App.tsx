@@ -1,10 +1,11 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { Container, Grid, Header, Dimmer, Loader } from "semantic-ui-react";
 
 import { useRuns } from "./rootReducer";
 import { useLoadRuns } from "./modules/runs";
 import UserOverview from "./components/UserOverview";
-import { useDispatch } from "react-redux";
+import RunTable from "./components/RunTable";
 
 const App: React.FC = () => {
   // ローカルからRUNファイルをロードする
@@ -26,6 +27,8 @@ const App: React.FC = () => {
     );
   }
 
+  const latestRuns = runs.slice(-20).reverse();
+
   return (
     <Container className="app">
       <Grid>
@@ -40,7 +43,12 @@ const App: React.FC = () => {
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
-          <Grid.Column width={10}>最新のプレイ(20件)</Grid.Column>
+          <Grid.Column width={10}>
+            <Header inverted size="tiny">
+              最新のプレイ(20件)
+            </Header>
+            <RunTable runs={latestRuns} />
+          </Grid.Column>
           <Grid.Column width={6}>プレイ回数</Grid.Column>
         </Grid.Row>
       </Grid>

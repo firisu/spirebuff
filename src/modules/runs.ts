@@ -18,6 +18,30 @@ export type Run = {
   [otherParams: string]: any;
 };
 
+export const modeNameMap: { [mode: string]: string } = {
+  normal: "ノーマル",
+  custom: "カスタム",
+  daily: "デイリー",
+  demo: "デモ"
+};
+
+export const getMode = (run: Run): string => {
+  if (run.is_prod) return "demo";
+  if (run.is_trial) return "custom";
+  if (run.is_daily) return "daily";
+
+  return "normal";
+};
+
+export const getModeName = (run: Run): string => {
+  const mode = getMode(run);
+  return modeNameMap[mode];
+};
+
+export const isSeeded = (run: Run): boolean => {
+  return run.seed_source_timestamp === 0;
+};
+
 // 色ごとに組分けされたRUNデータを返す
 export const useRunsByColor = () => {
   const runs = useRuns();

@@ -4,8 +4,18 @@ export const colorCharMap = {
   blue: "DEFECT"
 };
 
-export const charColorMap: { [character: string]: string } = {
+export const charColorMap: { [char: string]: string } = {
   IRONCLAD: "red",
   THE_SILENT: "green",
   DEFECT: "blue"
+};
+
+export const charNameMap: { [char: string]: string } = {
+  IRONCLAD: "アイアンクラッド",
+  THE_SILENT: "サイレント",
+  DEFECT: "ディフェクト"
+};
+
+export const getCharName = (char: string): string => {
+  return charNameMap[char];
 };

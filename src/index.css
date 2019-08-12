@@ -7,6 +7,9 @@ body {
 .green { color: #40FF40; }
 .blue { color: #9090FF; }
 
+.victory { color: limegreen; }
+.defeat { color: red; }
+
 .app {
   margin-top: 1rem;
 }
