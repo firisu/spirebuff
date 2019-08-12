@@ -1,12 +1,30 @@
 import React from "react";
-import { Container, Grid, Header } from "semantic-ui-react";
+import { Container, Grid, Header, Dimmer, Loader } from "semantic-ui-react";
 
 import { useRuns } from "./rootReducer";
+import { useLoadRuns } from "./modules/runs";
 import UserOverview from "./components/UserOverview";
+import { useDispatch } from "react-redux";
 
 const App: React.FC = () => {
+  // ローカルからRUNファイルをロードする
+  const dispatch = useDispatch();
+  useLoadRuns(dispatch);
+
+  // storeのRUNデータを読み込む
   const runs = useRuns();
   const runCount = Object.values(runs).flat().length;
+
+  // ロード中
+  if (runCount === 0) {
+    return (
+      <Container>
+        <Dimmer active>
+          <Loader />
+        </Dimmer>
+      </Container>
+    );
+  }
 
   return (
     <Container className="app">
