@@ -1,10 +1,6 @@
 import { Reducer } from "redux";
 
-// run type
-export type Run = {
-  ascension_level: number;
-  [otherParams: string]: any;
-};
+import { Run } from "../modules/runs";
 
 // state
 export interface State {

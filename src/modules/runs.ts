@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { remote } from "electron";
 
-import { Run, setRuns } from "../reducers/runs";
+import { setRuns } from "../reducers/runs";
 
 const fs = remote.require("fs");
 const path = remote.require("path");
@@ -9,6 +9,11 @@ const path = remote.require("path");
 const runsDir =
   "C:/Program Files (x86)/Steam/steamapps/common/SlayTheSpire/runs";
 const chars = ["IRONCLAD", "THE_SILENT", "DEFECT"];
+
+export type Run = {
+  ascension_level: number;
+  [otherParams: string]: any;
+};
 
 export const useRuns = dispatch => {
   useEffect(() => {
