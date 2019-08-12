@@ -1,5 +1,5 @@
 import React from "react";
-import { Header, Table, Label } from "semantic-ui-react";
+import { Header, Table, Icon, Popup } from "semantic-ui-react";
 
 import {
   modeNameMap,
@@ -8,6 +8,8 @@ import {
 } from "../../modules/runs";
 import { charNameMap } from "../../modules/chars";
 import { formatWinrate } from "../../modules/utils";
+
+import "./style.scss";
 
 const TopSidebar = () => {
   // デイリー: そもそもファイルを読み込んでないので不要
@@ -19,8 +21,8 @@ const TopSidebar = () => {
   const victories_A20 = useVictoriesByChar(20);
 
   return (
-    <div>
-      <Header inverted size="tiny">
+    <div className="topsidebar">
+      <Header inverted size="small">
         全体
       </Header>
       <Table inverted striped selectable compact="very">
@@ -40,8 +42,13 @@ const TopSidebar = () => {
         </Table.Body>
       </Table>
 
-      <Header inverted size="tiny">
-        Ascension 0
+      <Header inverted size="small">
+        Ascension 0{" "}
+        <Popup
+          content="ノーマルかつシード未使用のデータだけを集計"
+          trigger={<Icon name="info circle" size="mini" />}
+          size="tiny"
+        />
       </Header>
       <Table inverted striped selectable compact="very">
         <Table.Header>
@@ -76,8 +83,13 @@ const TopSidebar = () => {
         </Table.Body>
       </Table>
 
-      <Header inverted size="tiny">
-        Ascension 20
+      <Header inverted size="small">
+        Ascension 20{" "}
+        <Popup
+          content="ノーマルかつシード未使用のデータだけを集計"
+          trigger={<Icon name="info circle" size="mini" />}
+          size="tiny"
+        />
       </Header>
       <Table inverted striped selectable compact="very">
         <Table.Header>
