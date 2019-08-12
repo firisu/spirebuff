@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Grid } from "semantic-ui-react";
+import { Container, Grid, Header } from "semantic-ui-react";
 
 import { useRuns } from "./rootReducer";
 import UserOverview from "./components/UserOverview";
@@ -9,10 +9,15 @@ const App: React.FC = () => {
   const runCount = Object.values(runs).flat().length;
 
   return (
-    <Container>
+    <Container className="app">
       <Grid>
         <Grid.Row>
-          <Grid.Column>
+          <Grid.Column width={6}>
+            <Header inverted size="huge">
+              Spirebuff.app
+            </Header>
+          </Grid.Column>
+          <Grid.Column floated="right" width={6}>
             <UserOverview />
           </Grid.Column>
         </Grid.Row>

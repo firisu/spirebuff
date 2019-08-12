@@ -6,3 +6,7 @@ body {
 .red { color: #FF4040; }
 .green { color: #40FF40; }
 .blue { color: #9090FF; }
+
+.app {
+  margin-top: 1rem;
+}

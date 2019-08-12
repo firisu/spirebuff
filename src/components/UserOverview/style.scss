@@ -1,8 +1,12 @@
 .useroverview {
   & .item {
-    line-height: 1.5 !important;
+    & > div:nth-child(1) {
+      line-height: 1 !important;
+      margin-bottom: 0.25em;
+    }
 
     & > div:nth-child(2) {
+      line-height: 1.5 !important;
       font-size: 0.8rem;
       color: gray;
     }
