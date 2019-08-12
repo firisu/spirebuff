@@ -1,24 +1,36 @@
 import React from "react";
 import { List } from "semantic-ui-react";
+import moment from "moment";
+import "moment/locale/ja";
 
 import "./style.scss";
+import { useRuns } from "../../rootReducer";
+
+import { useRunCountsByColor, useMaxLevelsByColor } from "../../modules/runs";
 
 const UserOverview = () => {
+  const runs = useRuns();
+  const runCounts = useRunCountsByColor();
+  const maxLevels = useMaxLevelsByColor();
+  const lastRun = runs[runs.length - 1];
+  const lastDatetime = moment(lastRun.timestamp * 1000).fromNow();
+
   return (
     <List className="useroverview" inverted divided horizontal size="small">
       <List.Item>
         <div>
-          <span className="red">500</span>/<span className="green">400</span>/
-          <span className="blue">300</span>
+          <span className="red">{runCounts["red"]}</span>/
+          <span className="green">{runCounts["green"]}</span>/
+          <span className="blue">{runCounts["blue"]}</span>
         </div>
         <div>プレイ回数</div>
       </List.Item>
       <List.Item>
-        <div>20/20/20</div>
+        <div>{Object.values(maxLevels).join("/")}</div>
         <div>アセンション</div>
       </List.Item>
       <List.Item>
-        <div>5時間前</div>
+        <div>{lastDatetime}</div>
         <div>前回のプレイ</div>
       </List.Item>
     </List>
