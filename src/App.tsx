@@ -47,7 +47,7 @@ const App: React.FC = () => {
         </Grid.Row>
         <Grid.Row>
           <Grid.Column width={10}>
-            <Header inverted size="tiny">
+            <Header inverted size="small">
               最新のプレイ({LATEST_RUNS_COUNT}件)
             </Header>
             <RunTable runs={latestRuns} />
