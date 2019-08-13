@@ -30,7 +30,7 @@ const RunTable = (props: Props) => {
   };
 
   return (
-    <Table inverted striped selectable size="small" compact="very">
+    <Table inverted selectable size="small" compact="very">
       <Table.Header>
         <Table.Row>
           <Table.HeaderCell>キャラクター</Table.HeaderCell>

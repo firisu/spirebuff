@@ -25,7 +25,7 @@ const TopSidebar = () => {
       <Header inverted size="small">
         全体
       </Header>
-      <Table inverted striped selectable compact="very">
+      <Table inverted selectable compact="very">
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell>モード</Table.HeaderCell>
@@ -50,7 +50,7 @@ const TopSidebar = () => {
           size="tiny"
         />
       </Header>
-      <Table inverted striped selectable compact="very">
+      <Table inverted selectable compact="very">
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell>キャラ</Table.HeaderCell>
@@ -91,7 +91,7 @@ const TopSidebar = () => {
           size="tiny"
         />
       </Header>
-      <Table inverted striped selectable compact="very">
+      <Table inverted selectable compact="very">
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell>キャラ</Table.HeaderCell>
