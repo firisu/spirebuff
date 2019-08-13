@@ -185,3 +185,42 @@ export const useVictoriesByChar = (level: number, startTimestamp?: number) => {
 
   return counts;
 };
+
+// モードごとの勝利回数を調べる
+export const useVictoriesByMode = (startTimestamp?: number) => {
+  let runs = useMetricsRuns();
+  if (startTimestamp !== undefined) {
+    runs = runs.filter(run => run.timestamp * 1000 >= startTimestamp);
+  }
+
+  const counts: {
+    [char: string]: { runs: number; act3: number; act4: number };
+  } = {};
+  const modes = Object.keys(modeNameMap);
+
+  // 初期化
+  modes.forEach(mode => {
+    counts[mode] = {
+      runs: 0,
+      act3: 0,
+      act4: 0
+    };
+  });
+
+  runs.forEach(run => {
+    const mode = getMode(run);
+
+    // プレイ回数
+    counts[mode].runs++;
+
+    // 勝利回数
+    if (isAct3Victory(run)) {
+      counts[mode].act3++;
+    }
+    if (isAct4Victory(run)) {
+      counts[mode].act4++;
+    }
+  });
+
+  return counts;
+};

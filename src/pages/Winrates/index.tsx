@@ -3,7 +3,11 @@ import { Grid, Table } from "semantic-ui-react";
 import moment from "moment";
 
 import { charNameMap } from "modules/chars";
-import { useVictoriesByChar } from "modules/runs";
+import {
+  useVictoriesByChar,
+  useVictoriesByMode,
+  modeNameMap
+} from "modules/runs";
 import { formatWinrate } from "modules/utils";
 
 const Winrates = () => {
@@ -24,15 +28,21 @@ const Winrates = () => {
   const now = moment()
     .utc()
     .valueOf();
+  const month = 1 * 30 * 24 * 60 * 60 * 1000;
+  const V_modes = {
+    all: useVictoriesByMode(),
+    medium: useVictoriesByMode(0, now - 3 * month),
+    short: useVictoriesByMode(0, now - 1 * month)
+  };
   const V_A0 = {
     all: useVictoriesByChar(0),
-    medium: useVictoriesByChar(0, now - 3 * 30 * 24 * 60 * 60 * 1000), // 3ヶ月前
-    short: useVictoriesByChar(0, now - 1 * 30 * 24 * 60 * 60 * 1000) // 1ヶ月前
+    medium: useVictoriesByChar(0, now - 3 * month),
+    short: useVictoriesByChar(0, now - 1 * month)
   };
   const V_A20 = {
     all: useVictoriesByChar(20),
-    medium: useVictoriesByChar(20, now - 3 * 30 * 24 * 60 * 60 * 1000), // 3ヶ月前
-    short: useVictoriesByChar(20, now - 1 * 30 * 24 * 60 * 60 * 1000) // 1ヶ月前
+    medium: useVictoriesByChar(20, now - 3 * month),
+    short: useVictoriesByChar(20, now - 1 * month)
   };
 
   return (
@@ -52,6 +62,8 @@ const Winrates = () => {
             </Table.HeaderCell>
           </Table.Row>
         </Table.Header>
+
+        {/* モード */}
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell>モード</Table.HeaderCell>
@@ -59,18 +71,52 @@ const Winrates = () => {
           </Table.Row>
         </Table.Header>
         <Table.Body>
-          <Table.Row>
-            <Table.Cell>ノーマル</Table.Cell>
-            <Table.Cell>500</Table.Cell>
-            <Table.Cell>25.0 %</Table.Cell>
-            <Table.Cell>5.0 %</Table.Cell>
-            <Table.Cell>300</Table.Cell>
-            <Table.Cell>25.0 %</Table.Cell>
-            <Table.Cell>5.0 %</Table.Cell>
-            <Table.Cell>100</Table.Cell>
-            <Table.Cell>25.0 %</Table.Cell>
-            <Table.Cell>5.0 %</Table.Cell>
-          </Table.Row>
+          {["normal", "custom"].map(mode => {
+            return (
+              <Table.Row key={`mode-${mode}`}>
+                <Table.Cell>{modeNameMap[mode]}</Table.Cell>
+                <Table.Cell>{V_modes.all[mode].runs}</Table.Cell>
+                <Table.Cell>
+                  {formatWinrate(
+                    V_modes.all[mode].runs,
+                    V_modes.all[mode].act3
+                  )}
+                </Table.Cell>
+                <Table.Cell>
+                  {formatWinrate(
+                    V_modes.all[mode].runs,
+                    V_modes.all[mode].act4
+                  )}
+                </Table.Cell>
+                <Table.Cell>{V_modes.medium[mode].runs}</Table.Cell>
+                <Table.Cell>
+                  {formatWinrate(
+                    V_modes.medium[mode].runs,
+                    V_modes.medium[mode].act3
+                  )}
+                </Table.Cell>
+                <Table.Cell>
+                  {formatWinrate(
+                    V_modes.medium[mode].runs,
+                    V_modes.medium[mode].act4
+                  )}
+                </Table.Cell>
+                <Table.Cell>{V_modes.short[mode].runs}</Table.Cell>
+                <Table.Cell>
+                  {formatWinrate(
+                    V_modes.short[mode].runs,
+                    V_modes.short[mode].act3
+                  )}
+                </Table.Cell>
+                <Table.Cell>
+                  {formatWinrate(
+                    V_modes.short[mode].runs,
+                    V_modes.short[mode].act4
+                  )}
+                </Table.Cell>
+              </Table.Row>
+            );
+          })}
         </Table.Body>
 
         {/* アセンション0 */}
