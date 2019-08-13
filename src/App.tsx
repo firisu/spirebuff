@@ -1,14 +1,13 @@
 import React from "react";
 import { useDispatch } from "react-redux";
+import { BrowserRouter, Route } from "react-router-dom";
 import { Container, Grid, Header, Dimmer, Loader } from "semantic-ui-react";
 
-import { useRuns } from "./rootReducer";
-import { useLoadRuns } from "./modules/runs";
-import UserOverview from "./components/UserOverview";
-import RunTable from "./components/RunTable";
-import TopSidebar from "./components/TopSidebar";
+import { useLoadRuns } from "modules/runs";
+import { useRuns } from "rootReducer";
+import UserOverview from "components/UserOverview";
 
-const LATEST_RUNS_COUNT = 10;
+import Top from "pages/Top";
 
 const App: React.FC = () => {
   // ローカルからRUNファイルをロードする
@@ -30,34 +29,29 @@ const App: React.FC = () => {
     );
   }
 
-  const latestRuns = runs.slice(-LATEST_RUNS_COUNT).reverse();
-
   return (
-    <Container className="app">
-      <Grid>
-        <Grid.Row>
-          <Grid.Column width={6}>
-            <Header inverted size="huge">
-              Spirebuff.app
-            </Header>
-          </Grid.Column>
-          <Grid.Column floated="right" width={6}>
-            <UserOverview />
-          </Grid.Column>
-        </Grid.Row>
-        <Grid.Row>
-          <Grid.Column width={10}>
-            <Header inverted size="small">
-              最新のプレイ({LATEST_RUNS_COUNT}件)
-            </Header>
-            <RunTable runs={latestRuns} />
-          </Grid.Column>
-          <Grid.Column width={6}>
-            <TopSidebar />
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
-    </Container>
+    <BrowserRouter>
+      <Container className="app">
+        <Grid>
+          <Grid.Row>
+            <Grid.Column width={6}>
+              <Header inverted size="huge">
+                Spirebuff.app
+              </Header>
+            </Grid.Column>
+            <Grid.Column floated="right" width={6}>
+              <UserOverview />
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row>
+            <Grid.Column width={16}>Menu Here</Grid.Column>
+          </Grid.Row>
+          <Grid.Row>
+            <Route path="/" exact components={Top} />
+          </Grid.Row>
+        </Grid>
+      </Container>
+    </BrowserRouter>
   );
 };
 
