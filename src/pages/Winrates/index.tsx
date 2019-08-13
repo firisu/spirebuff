@@ -31,8 +31,8 @@ const Winrates = () => {
   const month = 1 * 30 * 24 * 60 * 60 * 1000;
   const V_modes = {
     all: useVictoriesByMode(),
-    medium: useVictoriesByMode(0, now - 3 * month),
-    short: useVictoriesByMode(0, now - 1 * month)
+    medium: useVictoriesByMode(now - 3 * month),
+    short: useVictoriesByMode(now - 1 * month)
   };
   const V_A0 = {
     all: useVictoriesByChar(0),
@@ -67,7 +67,15 @@ const Winrates = () => {
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell>モード</Table.HeaderCell>
-            {commonHeaders}
+            <Table.HeaderCell>プレイ数</Table.HeaderCell>
+            <Table.HeaderCell>勝率</Table.HeaderCell>
+            <Table.HeaderCell>-</Table.HeaderCell>
+            <Table.HeaderCell>プレイ数</Table.HeaderCell>
+            <Table.HeaderCell>勝率</Table.HeaderCell>
+            <Table.HeaderCell>-</Table.HeaderCell>
+            <Table.HeaderCell>プレイ数</Table.HeaderCell>
+            <Table.HeaderCell>勝率</Table.HeaderCell>
+            <Table.HeaderCell>-</Table.HeaderCell>
           </Table.Row>
         </Table.Header>
         <Table.Body>
@@ -82,12 +90,7 @@ const Winrates = () => {
                     V_modes.all[mode].act3
                   )}
                 </Table.Cell>
-                <Table.Cell>
-                  {formatWinrate(
-                    V_modes.all[mode].runs,
-                    V_modes.all[mode].act4
-                  )}
-                </Table.Cell>
+                <Table.Cell>-</Table.Cell>
                 <Table.Cell>{V_modes.medium[mode].runs}</Table.Cell>
                 <Table.Cell>
                   {formatWinrate(
@@ -95,12 +98,7 @@ const Winrates = () => {
                     V_modes.medium[mode].act3
                   )}
                 </Table.Cell>
-                <Table.Cell>
-                  {formatWinrate(
-                    V_modes.medium[mode].runs,
-                    V_modes.medium[mode].act4
-                  )}
-                </Table.Cell>
+                <Table.Cell>-</Table.Cell>
                 <Table.Cell>{V_modes.short[mode].runs}</Table.Cell>
                 <Table.Cell>
                   {formatWinrate(
@@ -108,12 +106,7 @@ const Winrates = () => {
                     V_modes.short[mode].act3
                   )}
                 </Table.Cell>
-                <Table.Cell>
-                  {formatWinrate(
-                    V_modes.short[mode].runs,
-                    V_modes.short[mode].act4
-                  )}
-                </Table.Cell>
+                <Table.Cell>-</Table.Cell>
               </Table.Row>
             );
           })}

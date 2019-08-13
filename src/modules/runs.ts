@@ -194,7 +194,7 @@ export const useVictoriesByMode = (startTimestamp?: number) => {
   }
 
   const counts: {
-    [char: string]: { runs: number; act3: number; act4: number };
+    [char: string]: { runs: number; act3: number };
   } = {};
   const modes = Object.keys(modeNameMap);
 
@@ -202,8 +202,7 @@ export const useVictoriesByMode = (startTimestamp?: number) => {
   modes.forEach(mode => {
     counts[mode] = {
       runs: 0,
-      act3: 0,
-      act4: 0
+      act3: 0
     };
   });
 
@@ -214,11 +213,8 @@ export const useVictoriesByMode = (startTimestamp?: number) => {
     counts[mode].runs++;
 
     // 勝利回数
-    if (isAct3Victory(run)) {
+    if (run.victory) {
       counts[mode].act3++;
-    }
-    if (isAct4Victory(run)) {
-      counts[mode].act4++;
     }
   });
 
