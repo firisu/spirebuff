@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { HashRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
 import { Container, Grid, Header, Dimmer, Loader } from "semantic-ui-react";
 
 import { useLoadRuns } from "modules/runs";
@@ -52,7 +52,7 @@ const App: React.FC = () => {
           <Grid.Row>
             <Switch>
               <Route path="/" exact component={Top} />
-              <Route component={Top} />
+              <Redirect to="/" />
             </Switch>
           </Grid.Row>
         </Grid>

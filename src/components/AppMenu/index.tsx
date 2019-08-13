@@ -1,31 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Menu } from "semantic-ui-react";
+import useReactRouter from "use-react-router";
 
 const AppMenu = () => {
+  const { location } = useReactRouter();
+  const { pathname } = location;
+
+  const items = [
+    { to: "/", name: "トップ" },
+    { to: "/winrates", name: "勝率" },
+    { to: "/cards", name: "カード" },
+    { to: "/relics", name: "レリック" },
+    { to: "/events", name: "イベント" },
+    { to: "/monsters", name: "モンスター" },
+    { to: "/records", name: "記録" }
+  ];
+
   return (
-    <Menu pointing secondary inverted>
-      <Menu.Item as={Link} to="/">
-        トップ
-      </Menu.Item>
-      <Menu.Item as={Link} to="/winrates">
-        勝率
-      </Menu.Item>
-      <Menu.Item as={Link} to="/cards">
-        カード
-      </Menu.Item>
-      <Menu.Item as={Link} to="/relics">
-        レリック
-      </Menu.Item>
-      <Menu.Item as={Link} to="/events">
-        イベント
-      </Menu.Item>
-      <Menu.Item as={Link} to="/monsters">
-        モンスター
-      </Menu.Item>
-      <Menu.Item as={Link} to="/records">
-        記録
-      </Menu.Item>
+    <Menu inverted>
+      {items.map(item => (
+        <Menu.Item as={Link} to={item.to} active={pathname === item.to}>
+          {item.name}
+        </Menu.Item>
+      ))}
     </Menu>
   );
 };
