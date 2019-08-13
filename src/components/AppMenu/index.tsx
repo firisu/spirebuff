@@ -20,7 +20,12 @@ const AppMenu = () => {
   return (
     <Menu inverted>
       {items.map(item => (
-        <Menu.Item as={Link} to={item.to} active={pathname === item.to}>
+        <Menu.Item
+          key={`appmenu-${item.to}`}
+          as={Link}
+          to={item.to}
+          active={pathname === item.to}
+        >
           {item.name}
         </Menu.Item>
       ))}
