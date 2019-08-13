@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { BrowserRouter, Route } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import { Container, Grid, Header, Dimmer, Loader } from "semantic-ui-react";
 
 import { useLoadRuns } from "modules/runs";
@@ -8,6 +8,7 @@ import { useRuns } from "rootReducer";
 import UserOverview from "components/UserOverview";
 
 import Top from "pages/Top";
+import AppMenu from "components/AppMenu";
 
 const App: React.FC = () => {
   // ローカルからRUNファイルをロードする
@@ -30,7 +31,7 @@ const App: React.FC = () => {
   }
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Container className="app">
         <Grid>
           <Grid.Row>
@@ -44,14 +45,19 @@ const App: React.FC = () => {
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
-            <Grid.Column width={16}>Menu Here</Grid.Column>
+            <Grid.Column width={16}>
+              <AppMenu />
+            </Grid.Column>
           </Grid.Row>
           <Grid.Row>
-            <Route path="/" exact components={Top} />
+            <Switch>
+              <Route path="/" exact component={Top} />
+              <Route component={Top} />
+            </Switch>
           </Grid.Row>
         </Grid>
       </Container>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 

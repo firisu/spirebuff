@@ -8,6 +8,7 @@ import TopSidebar from "components/TopSidebar";
 const LATEST_RUNS_COUNT = 10;
 
 const Top = () => {
+  console.log("Top page here");
   const runs = useRuns();
   const latestRuns = runs.slice(-LATEST_RUNS_COUNT).reverse();
 
