@@ -188,7 +188,7 @@ export const useVictoriesByChar = (level: number, startTimestamp?: number) => {
 
 // モードごとの勝利回数を調べる
 export const useVictoriesByMode = (startTimestamp?: number) => {
-  let runs = useMetricsRuns();
+  let runs = useRuns(); // custom, daily 等も欲しいのでメトリクス用は使わない
   if (startTimestamp !== undefined) {
     runs = runs.filter(run => run.timestamp * 1000 >= startTimestamp);
   }
