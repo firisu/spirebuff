@@ -5,10 +5,11 @@ import { Container, Grid, Header, Dimmer, Loader } from "semantic-ui-react";
 
 import { useLoadRuns } from "modules/runs";
 import { useRuns } from "rootReducer";
+import AppMenu from "components/AppMenu";
 import UserOverview from "components/UserOverview";
 
 import Top from "pages/Top";
-import AppMenu from "components/AppMenu";
+import Winrates from "pages/Winrates";
 
 const App: React.FC = () => {
   // ローカルからRUNファイルをロードする
@@ -52,6 +53,7 @@ const App: React.FC = () => {
           <Grid.Row>
             <Switch>
               <Route path="/" exact component={Top} />
+              <Route path="/winrates" exact component={Winrates} />
               <Redirect to="/" />
             </Switch>
           </Grid.Row>
