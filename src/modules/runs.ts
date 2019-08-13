@@ -148,9 +148,12 @@ export const isAct4Victory = (run: Run): boolean => {
 };
 
 // キャラごとの勝利回数を調べる
-export const useVictoriesByChar = (level: number) => {
+export const useVictoriesByChar = (level: number, startTimestamp?: number) => {
   const allRuns = useMetricsRuns();
-  const runs = allRuns.filter(run => run.ascension_level === level);
+  let runs = allRuns.filter(run => run.ascension_level === level);
+  if (startTimestamp !== undefined) {
+    runs = runs.filter(run => run.timestamp * 1000 >= startTimestamp);
+  }
 
   const counts: {
     [char: string]: { runs: number; act3: number; act4: number };
