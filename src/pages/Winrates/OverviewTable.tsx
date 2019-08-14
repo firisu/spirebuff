@@ -11,6 +11,7 @@ import {
 import { formatWinrate } from "modules/utils";
 
 import { commonHeaders } from "./common";
+import AscensionRow from "./AscensionRow";
 
 const OverviewTable = () => {
   const now = moment()
@@ -97,86 +98,10 @@ const OverviewTable = () => {
       </Table.Body>
 
       {/* アセンション0 */}
-      <Table.Header>
-        <Table.Row>
-          <Table.HeaderCell>Ascension 0</Table.HeaderCell>
-          {commonHeaders}
-        </Table.Row>
-      </Table.Header>
-      <Table.Body>
-        {Object.keys(charNameMap).map(char => {
-          return (
-            <Table.Row key={`a0-${char}`}>
-              <Table.Cell>{charNameMap[char]}</Table.Cell>
-              <Table.Cell>{V_A0.all[char].runs}</Table.Cell>
-              <Table.Cell>
-                {formatWinrate(V_A0.all[char].runs, V_A0.all[char].act3)}
-              </Table.Cell>
-              <Table.Cell>
-                {formatWinrate(V_A0.all[char].runs, V_A0.all[char].act4)}
-              </Table.Cell>
-              <Table.Cell>{V_A0.medium[char].runs}</Table.Cell>
-              <Table.Cell>
-                {formatWinrate(V_A0.medium[char].runs, V_A0.medium[char].act3)}
-              </Table.Cell>
-              <Table.Cell>
-                {formatWinrate(V_A0.medium[char].runs, V_A0.medium[char].act4)}
-              </Table.Cell>
-              <Table.Cell>{V_A0.short[char].runs}</Table.Cell>
-              <Table.Cell>
-                {formatWinrate(V_A0.short[char].runs, V_A0.short[char].act3)}
-              </Table.Cell>
-              <Table.Cell>
-                {formatWinrate(V_A0.short[char].runs, V_A0.short[char].act4)}
-              </Table.Cell>
-            </Table.Row>
-          );
-        })}
-      </Table.Body>
+      <AscensionRow level={0} />
 
       {/* アセンション20 */}
-      <Table.Header>
-        <Table.Row>
-          <Table.HeaderCell>Ascension 20</Table.HeaderCell>
-          {commonHeaders}
-        </Table.Row>
-      </Table.Header>
-      <Table.Body>
-        {Object.keys(charNameMap).map(char => {
-          return (
-            <Table.Row key={`a20-${char}`}>
-              <Table.Cell>{charNameMap[char]}</Table.Cell>
-              <Table.Cell>{V_A20.all[char].runs}</Table.Cell>
-              <Table.Cell>
-                {formatWinrate(V_A20.all[char].runs, V_A20.all[char].act3)}
-              </Table.Cell>
-              <Table.Cell>
-                {formatWinrate(V_A20.all[char].runs, V_A20.all[char].act4)}
-              </Table.Cell>
-              <Table.Cell>{V_A20.medium[char].runs}</Table.Cell>
-              <Table.Cell>
-                {formatWinrate(
-                  V_A20.medium[char].runs,
-                  V_A20.medium[char].act3
-                )}
-              </Table.Cell>
-              <Table.Cell>
-                {formatWinrate(
-                  V_A20.medium[char].runs,
-                  V_A20.medium[char].act4
-                )}
-              </Table.Cell>
-              <Table.Cell>{V_A20.short[char].runs}</Table.Cell>
-              <Table.Cell>
-                {formatWinrate(V_A20.short[char].runs, V_A20.short[char].act3)}
-              </Table.Cell>
-              <Table.Cell>
-                {formatWinrate(V_A20.short[char].runs, V_A20.short[char].act4)}
-              </Table.Cell>
-            </Table.Row>
-          );
-        })}
-      </Table.Body>
+      <AscensionRow level={20} />
     </Table>
   );
 };
