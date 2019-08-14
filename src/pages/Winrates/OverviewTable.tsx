@@ -10,21 +10,9 @@ import {
 } from "modules/runs";
 import { formatWinrate } from "modules/utils";
 
-const OverviewTable = () => {
-  const commonHeaders = (
-    <>
-      <Table.HeaderCell>プレイ数</Table.HeaderCell>
-      <Table.HeaderCell>勝率(act3)</Table.HeaderCell>
-      <Table.HeaderCell>勝率(act4)</Table.HeaderCell>
-      <Table.HeaderCell>プレイ数</Table.HeaderCell>
-      <Table.HeaderCell>勝率(act3)</Table.HeaderCell>
-      <Table.HeaderCell>勝率(act4)</Table.HeaderCell>
-      <Table.HeaderCell>プレイ数</Table.HeaderCell>
-      <Table.HeaderCell>勝率(act3)</Table.HeaderCell>
-      <Table.HeaderCell>勝率(act4)</Table.HeaderCell>
-    </>
-  );
+import { commonHeaders } from "./common";
 
+const OverviewTable = () => {
   const now = moment()
     .utc()
     .valueOf();
