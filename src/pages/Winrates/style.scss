@@ -1,4 +1,8 @@
 .winrates-tab {
+  & > .ui.menu {
+    border-color: transparent !important;
+  }
+
   & > .ui.segment {
     padding: 0;
     border: none;
