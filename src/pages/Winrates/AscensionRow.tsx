@@ -28,7 +28,7 @@ const AscencionRow = (props: RowProps) => {
     <>
       <Table.Header>
         <Table.Row>
-          <Table.HeaderCell>Ascension {level}</Table.HeaderCell>
+          <Table.HeaderCell>アセンション {level}</Table.HeaderCell>
           {commonHeaders}
         </Table.Row>
       </Table.Header>

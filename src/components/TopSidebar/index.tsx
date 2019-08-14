@@ -43,7 +43,7 @@ const TopSidebar = () => {
       </Table>
 
       <Header inverted size="small">
-        Ascension 0{" "}
+        アセンション 0{"　"}
         <Popup
           content="ノーマルかつシード未使用のデータだけを集計"
           trigger={<Icon name="info circle" size="mini" />}
@@ -84,7 +84,7 @@ const TopSidebar = () => {
       </Table>
 
       <Header inverted size="small">
-        Ascension 20{" "}
+        アセンション 20{"　"}
         <Popup
           content="ノーマルかつシード未使用のデータだけを集計"
           trigger={<Icon name="info circle" size="mini" />}
