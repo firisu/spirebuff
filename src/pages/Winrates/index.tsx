@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Table, Menu, Tab } from "semantic-ui-react";
+import { Grid, Tab } from "semantic-ui-react";
 
 import OverviewTable from "./OverviewTable";
 import "./style.scss";

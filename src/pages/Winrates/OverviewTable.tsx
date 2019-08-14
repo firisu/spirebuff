@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Table, Menu } from "semantic-ui-react";
+import { Table } from "semantic-ui-react";
 import moment from "moment";
 
 import { charNameMap } from "modules/chars";
