@@ -22,10 +22,6 @@ const Winrates = () => {
           <AscensionsTable />
         </Tab.Pane>
       )
-    },
-    {
-      menuItem: "キャラクター",
-      render: () => <Tab.Pane attached={false}>TBD</Tab.Pane>
     }
   ];
 
