@@ -147,6 +147,14 @@ export const isAct4Victory = (run: Run): boolean => {
   return run.victory && lastEnemies.enemies === "The Heart";
 };
 
+export interface VictoryCounts {
+  [char: string]: {
+    runs: number;
+    act3: number;
+    act4: number;
+  };
+}
+
 // キャラごとの勝利回数を調べる
 export const useVictoriesByChar = (level: number, startTimestamp?: number) => {
   const allRuns = useMetricsRuns();
@@ -155,9 +163,7 @@ export const useVictoriesByChar = (level: number, startTimestamp?: number) => {
     runs = runs.filter(run => run.timestamp * 1000 >= startTimestamp);
   }
 
-  const counts: {
-    [char: string]: { runs: number; act3: number; act4: number };
-  } = {};
+  const counts: VictoryCounts = {};
 
   // 初期化
   chars.forEach(char => {
