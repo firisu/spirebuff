@@ -8,6 +8,7 @@ import {
 } from "semantic-ui-react";
 
 import { charNameMap, charImageMap } from "modules/chars";
+import StatsTable from "./StatsTable";
 
 // レベル選択
 const levelOptions: DropdownItemProps[] = [];
@@ -62,6 +63,8 @@ const Cards = () => {
           />
         </Menu.Item>
       </Menu>
+
+      <StatsTable level={level} char={char} />
     </Grid.Column>
   );
 };

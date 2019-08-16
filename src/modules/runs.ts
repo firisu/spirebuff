@@ -15,6 +15,11 @@ const chars = Object.keys(charColorMap);
 export type Run = {
   ascension_level: number;
   character_chosen: string;
+  card_choices: ReadonlyArray<{
+    not_picked: ReadonlyArray<string>;
+    picked: string;
+    floor: number;
+  }>;
   [otherParams: string]: any;
 };
 
