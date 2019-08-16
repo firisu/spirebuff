@@ -10,6 +10,7 @@ import UserOverview from "components/UserOverview";
 
 import Top from "pages/Top";
 import Winrates from "pages/Winrates";
+import Cards from "pages/Cards";
 import NotFound from "pages/NotFound";
 
 const App: React.FC = () => {
@@ -55,6 +56,7 @@ const App: React.FC = () => {
             <Switch>
               <Route path="/" exact component={Top} />
               <Route path="/winrates" exact component={Winrates} />
+              <Route path="/cards" exact component={Cards} />
               <Route component={NotFound} />
             </Switch>
           </Grid.Row>
