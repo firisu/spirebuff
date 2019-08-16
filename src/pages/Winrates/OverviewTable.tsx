@@ -18,22 +18,26 @@ const OverviewTable = () => {
     short: useVictoriesByMode(now - 1 * month)
   };
 
+  const header = (
+    <Table.Header>
+      <Table.Row>
+        <Table.HeaderCell width={2}>&nbsp;</Table.HeaderCell>
+        <Table.HeaderCell width={4} colSpan={3} textAlign="center">
+          全期間
+        </Table.HeaderCell>
+        <Table.HeaderCell width={4} colSpan={3} textAlign="center">
+          3ヶ月
+        </Table.HeaderCell>
+        <Table.HeaderCell width={4} colSpan={3} textAlign="center">
+          1ヶ月
+        </Table.HeaderCell>
+      </Table.Row>
+    </Table.Header>
+  );
+
   return (
     <Table inverted selectable celled size="small" compact="very">
-      <Table.Header>
-        <Table.Row>
-          <Table.HeaderCell width={2}>&nbsp;</Table.HeaderCell>
-          <Table.HeaderCell width={4} colSpan={3} textAlign="center">
-            全期間
-          </Table.HeaderCell>
-          <Table.HeaderCell width={4} colSpan={3} textAlign="center">
-            3ヶ月
-          </Table.HeaderCell>
-          <Table.HeaderCell width={4} colSpan={3} textAlign="center">
-            1ヶ月
-          </Table.HeaderCell>
-        </Table.Row>
-      </Table.Header>
+      {header}
 
       {/* モード */}
       <Table.Header>
@@ -82,9 +86,11 @@ const OverviewTable = () => {
       </Table.Body>
 
       {/* アセンション0 */}
+      {header}
       <AscensionRow level={0} />
 
       {/* アセンション20 */}
+      {header}
       <AscensionRow level={20} />
     </Table>
   );
