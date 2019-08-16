@@ -1,5 +1,7 @@
 const { app, BrowserWindow } = require("electron");
 const path = require("path");
+const os = require("os");
+const dotenv = require("dotenv").config();
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -14,6 +16,15 @@ function createWindow() {
       nodeIntegration: true
     }
   });
+
+  // React Dev Toolsの読み込み
+  if (!dotenv.error) {
+    if (process.env.REACT_DEV_TOOLS) {
+      BrowserWindow.addDevToolsExtension(
+        path.join(os.homedir(), process.env.REACT_DEV_TOOLS)
+      );
+    }
+  }
 
   // and load the index.html of the app.
   win.loadFile(path.join(__dirname, "./build/index.html"));
