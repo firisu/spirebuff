@@ -1,3 +1,7 @@
+import ironclad from "components/Avatar/ironclad.png";
+import silent from "components/Avatar/silent.png";
+import defect from "components/Avatar/defect.png";
+
 export const colorCharMap = {
   red: "IRONCLAD",
   green: "THE_SILENT",
@@ -18,4 +22,10 @@ export const charNameMap: { [char: string]: string } = {
 
 export const getCharName = (char: string): string => {
   return charNameMap[char];
+};
+
+export const charImageMap: { [char: string]: string } = {
+  IRONCLAD: ironclad,
+  THE_SILENT: silent,
+  DEFECT: defect
 };
