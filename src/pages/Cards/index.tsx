@@ -48,7 +48,6 @@ const Cards = () => {
       <Menu inverted>
         <Menu.Item>
           <Dropdown
-            inverted
             options={charOptions}
             defaultValue={char}
             onChange={changeChar}
@@ -56,7 +55,6 @@ const Cards = () => {
         </Menu.Item>
         <Menu.Item>
           <Dropdown
-            inverted
             scrolling
             options={levelOptions}
             defaultValue={level}
