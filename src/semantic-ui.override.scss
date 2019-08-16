@@ -1,0 +1,11 @@
+.ui.menu.inverted {
+  // インバートメニューに妙な罫線が付くのを修正
+  border-color: transparent !important;
+}
+
+.ui.menu + .ui.segment.tab {
+  // タブ内部の余白と罫線を消す
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}

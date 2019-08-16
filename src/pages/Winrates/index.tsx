@@ -3,7 +3,6 @@ import { Grid, Tab } from "semantic-ui-react";
 
 import OverviewTable from "./OverviewTable";
 import AscensionsTable from "./AscensionsTable";
-import "./style.scss";
 
 const Winrates = () => {
   const panes = [
@@ -30,7 +29,6 @@ const Winrates = () => {
       <Tab
         menu={{ inverted: true, secondary: true, pointing: true }}
         panes={panes}
-        className="winrates-tab"
       />
     </Grid.Column>
   );

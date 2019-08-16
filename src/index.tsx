@@ -9,6 +9,7 @@ import reducer from "./rootReducer";
 // styles
 import "./index.css";
 import "semantic-ui-css/semantic.min.css";
+import "./semantic-ui.override.scss";
 
 const store = createStore(reducer);
 
