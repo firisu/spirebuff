@@ -2,15 +2,9 @@ import React from "react";
 import { Table } from "semantic-ui-react";
 import moment from "moment";
 
-import { charNameMap } from "modules/chars";
-import {
-  useVictoriesByChar,
-  useVictoriesByMode,
-  modeNameMap
-} from "modules/runs";
+import { useVictoriesByMode, modeNameMap } from "modules/runs";
 import { formatWinrate } from "modules/utils";
 
-import { commonHeaders } from "./common";
 import AscensionRow from "./AscensionRow";
 
 const OverviewTable = () => {
@@ -22,16 +16,6 @@ const OverviewTable = () => {
     all: useVictoriesByMode(),
     medium: useVictoriesByMode(now - 3 * month),
     short: useVictoriesByMode(now - 1 * month)
-  };
-  const V_A0 = {
-    all: useVictoriesByChar(0),
-    medium: useVictoriesByChar(0, now - 3 * month),
-    short: useVictoriesByChar(0, now - 1 * month)
-  };
-  const V_A20 = {
-    all: useVictoriesByChar(20),
-    medium: useVictoriesByChar(20, now - 3 * month),
-    short: useVictoriesByChar(20, now - 1 * month)
   };
 
   return (
