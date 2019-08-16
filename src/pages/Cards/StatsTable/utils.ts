@@ -13,16 +13,18 @@ export const useStats = (level: number, char: string) => {
   runs.forEach(run => {
     // ピック率の計算
     run.card_choices.forEach(choice => {
-      [choice.picked, ...choice.not_picked].forEach((fullname, i) => {
-        // 出現回数
+      // ピックしなかったカードは出現回数のみ加算
+      choice.not_picked.forEach(fullname => {
         const [name] = parseCardName(fullname);
         stats.appeared(name);
-
-        // ピック回数
-        if (i === 0) {
-          stats.picked(name);
-        }
       });
+
+      // ピックしたカードは両方加算
+      const [name] = parseCardName(choice.picked);
+      if (name !== "SKIP" && name !== "Singing Bowl") {
+        stats.appeared(name);
+        stats.picked(name);
+      }
     });
   });
 
