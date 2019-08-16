@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import { Container, Grid, Header, Dimmer, Loader } from "semantic-ui-react";
 
 import { useLoadRuns } from "modules/runs";
@@ -10,6 +10,7 @@ import UserOverview from "components/UserOverview";
 
 import Top from "pages/Top";
 import Winrates from "pages/Winrates";
+import NotFound from "pages/NotFound";
 
 const App: React.FC = () => {
   // ローカルからRUNファイルをロードする
@@ -54,7 +55,7 @@ const App: React.FC = () => {
             <Switch>
               <Route path="/" exact component={Top} />
               <Route path="/winrates" exact component={Winrates} />
-              <Redirect to="/" />
+              <Route component={NotFound} />
             </Switch>
           </Grid.Row>
         </Grid>
