@@ -14,12 +14,19 @@ const useSortedStats = (
   sort: SortString,
   direction: SortDirection
 ) => {
+  const { cardInfo } = useLocalization();
+
   const sourceStats = useStats(level, char);
   if (sort === "") {
     return sourceStats;
   }
 
-  let sortedStats = _.sortBy(sourceStats, elm => elm[sort]);
+  let sortedStats;
+  if (sort === "cardname") {
+    sortedStats = _.sortBy(sourceStats, elm => cardInfo(elm.cardname).NAME);
+  } else {
+    sortedStats = _.sortBy(sourceStats, elm => elm[sort]);
+  }
 
   // 降順
   if (direction === "descending") {

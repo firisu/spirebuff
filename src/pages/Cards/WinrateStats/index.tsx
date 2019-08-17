@@ -2,8 +2,10 @@ import React from "react";
 import { Table } from "semantic-ui-react";
 import * as _ from "lodash";
 
-import { useStats } from "./utils";
 import { formatWinrate } from "modules/utils";
+import { useLocalization } from "modules/localization";
+
+import { useStats } from "./utils";
 
 type SortString =
   | "cardname"
@@ -20,13 +22,17 @@ const useSortedStats = (
   sort: SortString,
   direction: SortDirection
 ) => {
+  const { cardInfo } = useLocalization();
+
   const sourceStats = useStats(level, char);
   if (sort === "") {
     return sourceStats;
   }
 
   let sortedStats;
-  if (sort === "master_deck") {
+  if (sort === "cardname") {
+    sortedStats = _.sortBy(sourceStats, elm => cardInfo(elm.cardname).NAME);
+  } else if (sort === "master_deck") {
     sortedStats = _.sortBy(sourceStats, elm => elm.defeated + elm.act3won);
   } else if (sort === "avg_count") {
     sortedStats = _.sortBy(
@@ -58,6 +64,8 @@ interface Props {
 }
 
 const StatsTable = (props: Props) => {
+  const { cardInfo } = useLocalization();
+
   const { level, char } = props;
 
   const [sort, setSort] = React.useState<SortString>("cardname");
@@ -131,7 +139,9 @@ const StatsTable = (props: Props) => {
 
           return (
             <Table.Row key={`card-row-${cardname}`}>
-              <Table.Cell data-sort="cardname">{cardname}</Table.Cell>
+              <Table.Cell data-sort="cardname">
+                {cardInfo(cardname).NAME}
+              </Table.Cell>
               <Table.Cell data-sort="master_deck">
                 {defeated + act3won}
               </Table.Cell>
