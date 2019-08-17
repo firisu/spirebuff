@@ -12,6 +12,15 @@ export type RelicTier =
   | "BOSS"
   | "SHOP";
 
+export const RelicTierNormal: ReadonlyArray<RelicTier> = [
+  "COMMON",
+  "UNCOMMON",
+  "RARE"
+];
+export const RelicTierBoss: ReadonlyArray<RelicTier> = ["BOSS"];
+export const RelicTierSpecial: ReadonlyArray<RelicTier> = ["SPECIAL"];
+export const RelicTierShop: ReadonlyArray<RelicTier> = ["SHOP"];
+
 export interface RelicData {
   [id: string]: {
     tier: RelicTier;
