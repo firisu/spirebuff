@@ -71,7 +71,7 @@ const StatsTable = (props: Props) => {
   const { level, char, hideLow } = props;
 
   const [sort, setSort] = React.useState<SortString>("cardname");
-  const [direction, setDirection] = React.useState<SortDirection>("ascending");
+  const [direction, setDirection] = React.useState<SortDirection>("descending");
   const stats = useSortedStats(level, char, sort, direction);
 
   const handleSort = (e: any) => {
