@@ -10,8 +10,8 @@ let win;
 function createWindow() {
   // Create the browser window.
   win = new BrowserWindow({
-    width: 1400,
-    height: 1000,
+    width: process.env.START_WIDTH ? Number(process.env.START_WIDTH) : 1400,
+    height: process.env.START_HEIGHT ? Number(process.env.START_HEIGHT) : 1000,
     webPreferences: {
       nodeIntegration: true
     }
