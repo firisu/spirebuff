@@ -35,7 +35,7 @@ interface Props {
 const StatsTable = (props: Props) => {
   const { level, char } = props;
 
-  const [sort, setSort] = React.useState<SortString>("");
+  const [sort, setSort] = React.useState<SortString>("cardname");
   const [direction, setDirection] = React.useState<SortDirection>("ascending");
   const stats = useSortedStats(level, char, sort, direction);
 
