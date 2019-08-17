@@ -8,12 +8,18 @@ import { useRuns } from "rootReducer";
 import AppMenu from "components/AppMenu";
 import UserOverview from "components/UserOverview";
 
+import { LanguageContext, GameLanguage } from "modules/localization";
+
 import Top from "pages/Top";
 import Winrates from "pages/Winrates";
 import Cards from "pages/Cards";
 import NotFound from "pages/NotFound";
 
 const App: React.FC = () => {
+  // 言語設定
+  // NOTE: setLanguage は言語切替ボタンを実装してから使う
+  const [language] = React.useState<GameLanguage>("jpn");
+
   // ローカルからRUNファイルをロードする
   const dispatch = useDispatch();
   useLoadRuns(dispatch);
@@ -35,33 +41,35 @@ const App: React.FC = () => {
 
   return (
     <HashRouter>
-      <Container className="app">
-        <Grid>
-          <Grid.Row>
-            <Grid.Column width={6}>
-              <Header inverted size="huge">
-                Spirebuff.app
-              </Header>
-            </Grid.Column>
-            <Grid.Column floated="right" width={6}>
-              <UserOverview />
-            </Grid.Column>
-          </Grid.Row>
-          <Grid.Row>
-            <Grid.Column width={16}>
-              <AppMenu />
-            </Grid.Column>
-          </Grid.Row>
-          <Grid.Row>
-            <Switch>
-              <Route path="/" exact component={Top} />
-              <Route path="/winrates" exact component={Winrates} />
-              <Route path="/cards" exact component={Cards} />
-              <Route component={NotFound} />
-            </Switch>
-          </Grid.Row>
-        </Grid>
-      </Container>
+      <LanguageContext.Provider value={language}>
+        <Container className="app">
+          <Grid>
+            <Grid.Row>
+              <Grid.Column width={6}>
+                <Header inverted size="huge">
+                  Spirebuff.app
+                </Header>
+              </Grid.Column>
+              <Grid.Column floated="right" width={6}>
+                <UserOverview />
+              </Grid.Column>
+            </Grid.Row>
+            <Grid.Row>
+              <Grid.Column width={16}>
+                <AppMenu />
+              </Grid.Column>
+            </Grid.Row>
+            <Grid.Row>
+              <Switch>
+                <Route path="/" exact component={Top} />
+                <Route path="/winrates" exact component={Winrates} />
+                <Route path="/cards" exact component={Cards} />
+                <Route component={NotFound} />
+              </Switch>
+            </Grid.Row>
+          </Grid>
+        </Container>
+      </LanguageContext.Provider>
     </HashRouter>
   );
 };
