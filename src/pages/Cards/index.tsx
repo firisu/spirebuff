@@ -5,7 +5,8 @@ import {
   Dropdown,
   DropdownItemProps,
   DropdownProps,
-  Tab
+  Tab,
+  Checkbox
 } from "semantic-ui-react";
 
 import { charNameMap, charImageMap } from "modules/chars";
@@ -82,6 +83,9 @@ const Cards = () => {
             defaultValue={level}
             onChange={changeLevel}
           />
+        </Menu.Item>
+        <Menu.Item>
+          <Checkbox label="低頻度のカードを隠す" />
         </Menu.Item>
       </Menu>
 

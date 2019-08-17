@@ -9,3 +9,7 @@
   border: none;
   background-color: transparent;
 }
+
+.ui.inverted .ui.checkbox input ~ label {
+  color: rgba(255,255,255,.9) !important;
+}
