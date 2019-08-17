@@ -25,6 +25,7 @@ const DropdownLevel = (props: Props) => {
 
   return (
     <Dropdown
+      scrolling
       options={levelOptions}
       defaultValue={value}
       onChange={changeHandler}
