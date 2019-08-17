@@ -4,11 +4,12 @@ import {
   Menu,
   Dropdown,
   DropdownItemProps,
-  DropdownProps
+  DropdownProps,
+  Tab
 } from "semantic-ui-react";
 
 import { charNameMap, charImageMap } from "modules/chars";
-import StatsTable from "./StatsTable";
+import PickStats from "./PickStats";
 
 // レベル選択
 const levelOptions: DropdownItemProps[] = [];
@@ -44,6 +45,17 @@ const Cards = () => {
     setChar(value);
   };
 
+  const panes = [
+    {
+      menuItem: "ピック",
+      render: () => (
+        <Tab.Pane attached={false}>
+          <PickStats level={level} char={char} />
+        </Tab.Pane>
+      )
+    }
+  ];
+
   return (
     <Grid.Column width={16}>
       <Menu inverted>
@@ -64,7 +76,10 @@ const Cards = () => {
         </Menu.Item>
       </Menu>
 
-      <StatsTable level={level} char={char} />
+      <Tab
+        menu={{ inverted: true, secondary: true, pointing: true }}
+        panes={panes}
+      />
     </Grid.Column>
   );
 };

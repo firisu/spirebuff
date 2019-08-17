@@ -20,6 +20,7 @@ export type Run = {
     picked: string;
     floor: number;
   }>;
+  master_deck: ReadonlyArray<string>;
   [otherParams: string]: any;
 };
 

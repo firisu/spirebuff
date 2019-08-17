@@ -1,10 +1,17 @@
 import * as _ from "lodash";
 
-export type StatsData = Array<{
+interface SingleStat {
   cardname: string;
   appeared: number;
   picked: number;
-}>;
+  defeated: number;
+  act3won: number;
+  act4won: number;
+}
+
+export type StatsData = Array<SingleStat>;
+
+type StatKey = keyof SingleStat;
 
 export class Stats {
   data: StatsData;
@@ -19,20 +26,17 @@ export class Stats {
       this.data.push({
         cardname,
         appeared: 0,
-        picked: 0
+        picked: 0,
+        defeated: 0,
+        act3won: 0,
+        act4won: 0
       });
     }
   }
 
-  appeared(cardname: string) {
+  incr(key: StatKey, cardname: string) {
     this.initCard(cardname);
     const i = _.findIndex(this.data, elm => elm.cardname === cardname);
-    this.data[i].appeared++;
-  }
-
-  picked(cardname: string) {
-    this.initCard(cardname);
-    const i = _.findIndex(this.data, elm => elm.cardname === cardname);
-    this.data[i].picked++;
+    this.data[i][key]++;
   }
 }
