@@ -10,6 +10,7 @@ import {
 
 import { charNameMap, charImageMap } from "modules/chars";
 import PickStats from "./PickStats";
+import WinrateStats from "./WinrateStats";
 
 // レベル選択
 const levelOptions: DropdownItemProps[] = [];
@@ -51,6 +52,14 @@ const Cards = () => {
       render: () => (
         <Tab.Pane attached={false}>
           <PickStats level={level} char={char} />
+        </Tab.Pane>
+      )
+    },
+    {
+      menuItem: "勝率",
+      render: () => (
+        <Tab.Pane attached={false}>
+          <WinrateStats level={level} char={char} />
         </Tab.Pane>
       )
     }

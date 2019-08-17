@@ -3,8 +3,9 @@ import { Table } from "semantic-ui-react";
 import * as _ from "lodash";
 
 import { useStats } from "./utils";
+import { formatWinrate } from "modules/utils";
 
-type SortString = "cardname" | "appeared" | "picked" | "";
+type SortString = "cardname" | "master_deck" | "act3won" | "act4won" | "";
 type SortDirection = "ascending" | "descending" | undefined;
 
 const useSortedStats = (
@@ -18,7 +19,20 @@ const useSortedStats = (
     return sourceStats;
   }
 
-  let sortedStats = _.sortBy(sourceStats, elm => elm[sort]);
+  let sortedStats;
+  if (sort === "master_deck") {
+    sortedStats = _.sortBy(sourceStats, elm => elm.defeated + elm.act3won);
+  } else if (sort === "act3won") {
+    sortedStats = _.sortBy(sourceStats, elm =>
+      elm.act3won === 0 ? 0 : elm.act3won / (elm.defeated + elm.act3won)
+    );
+  } else if (sort === "act4won") {
+    sortedStats = _.sortBy(sourceStats, elm =>
+      elm.act3won === 0 ? 0 : elm.act4won / (elm.defeated + elm.act3won)
+    );
+  } else {
+    sortedStats = _.sortBy(sourceStats, elm => elm[sort]);
+  }
 
   // 降順
   if (direction === "descending") {
@@ -66,30 +80,44 @@ const StatsTable = (props: Props) => {
             カード名
           </Table.HeaderCell>
           <Table.HeaderCell
-            sorted={sort === "appeared" ? direction : undefined}
+            sorted={sort === "master_deck" ? direction : undefined}
             onClick={handleSort}
-            data-sort="appeared"
+            data-sort="master_deck"
           >
-            出現回数
+            最終デッキ採用
           </Table.HeaderCell>
           <Table.HeaderCell
-            sorted={sort === "picked" ? direction : undefined}
+            sorted={sort === "act3won" ? direction : undefined}
             onClick={handleSort}
-            data-sort="picked"
+            data-sort="act3won"
           >
-            ピック回数
+            勝率(act3)
+          </Table.HeaderCell>
+          <Table.HeaderCell
+            sorted={sort === "act4won" ? direction : undefined}
+            onClick={handleSort}
+            data-sort="act4won"
+          >
+            勝率(act4)
           </Table.HeaderCell>
         </Table.Row>
       </Table.Header>
       <Table.Body>
         {stats.map(elm => {
-          const { cardname, appeared, picked } = elm;
+          const { cardname, defeated, act3won, act4won } = elm;
 
           return (
             <Table.Row key={`card-row-${cardname}`}>
               <Table.Cell data-sort="cardname">{cardname}</Table.Cell>
-              <Table.Cell data-sort="appeared">{appeared}</Table.Cell>
-              <Table.Cell data-sort="picked">{picked}</Table.Cell>
+              <Table.Cell data-sort="master_deck">
+                {defeated + act3won}
+              </Table.Cell>
+              <Table.Cell data-sort="act3">
+                {formatWinrate(defeated + act3won, act3won)}
+              </Table.Cell>
+              <Table.Cell data-sort="act4">
+                {formatWinrate(defeated + act3won, act4won)}
+              </Table.Cell>
             </Table.Row>
           );
         })}
