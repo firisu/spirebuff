@@ -47,12 +47,17 @@ const Cards = () => {
     setChar(value);
   };
 
+  const [hideLow, setHideLow] = React.useState(false);
+  const toggleHideLow = () => {
+    setHideLow(!hideLow);
+  };
+
   const panes = [
     {
       menuItem: "ピック",
       render: () => (
         <Tab.Pane attached={false}>
-          <PickStats level={level} char={char} />
+          <PickStats level={level} char={char} hideLow={hideLow} />
         </Tab.Pane>
       )
     },
@@ -60,7 +65,7 @@ const Cards = () => {
       menuItem: "勝率",
       render: () => (
         <Tab.Pane attached={false}>
-          <WinrateStats level={level} char={char} />
+          <WinrateStats level={level} char={char} hideLow={hideLow} />
         </Tab.Pane>
       )
     }
@@ -85,7 +90,11 @@ const Cards = () => {
           />
         </Menu.Item>
         <Menu.Item>
-          <Checkbox label="低頻度のカードを隠す" />
+          <Checkbox
+            label="低頻度のカードを隠す"
+            onClick={toggleHideLow}
+            defaultChecked={hideLow}
+          />
         </Menu.Item>
       </Menu>
 

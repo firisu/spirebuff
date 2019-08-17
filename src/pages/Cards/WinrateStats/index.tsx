@@ -17,6 +17,8 @@ type SortString =
   | "";
 type SortDirection = "ascending" | "descending" | undefined;
 
+const hideLowCap = 10;
+
 const useSortedStats = (
   level: number,
   char: string,
@@ -62,10 +64,11 @@ const useSortedStats = (
 interface Props {
   level: number;
   char: string;
+  hideLow: boolean;
 }
 
 const StatsTable = (props: Props) => {
-  const { level, char } = props;
+  const { level, char, hideLow } = props;
 
   const [sort, setSort] = React.useState<SortString>("cardname");
   const [direction, setDirection] = React.useState<SortDirection>("ascending");
@@ -135,6 +138,7 @@ const StatsTable = (props: Props) => {
       <Table.Body>
         {stats.map(elm => {
           const { cardname, count, defeated, act3won, act4won } = elm;
+          if (hideLow && defeated + act3won < hideLowCap) return null;
 
           return (
             <Table.Row key={`card-row-${cardname}`}>

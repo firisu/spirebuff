@@ -9,6 +9,8 @@ import { useStats } from "./utils";
 type SortString = "cardname" | "appeared" | "picked" | "";
 type SortDirection = "ascending" | "descending" | undefined;
 
+const hideLowCap = 10;
+
 const useSortedStats = (
   level: number,
   char: string,
@@ -39,10 +41,11 @@ const useSortedStats = (
 interface Props {
   level: number;
   char: string;
+  hideLow: boolean;
 }
 
 const StatsTable = (props: Props) => {
-  const { level, char } = props;
+  const { level, char, hideLow } = props;
 
   const [sort, setSort] = React.useState<SortString>("cardname");
   const [direction, setDirection] = React.useState<SortDirection>("ascending");
@@ -96,6 +99,7 @@ const StatsTable = (props: Props) => {
       <Table.Body>
         {stats.map(elm => {
           const { cardname, appeared, picked } = elm;
+          if (hideLow && appeared < hideLowCap) return null;
 
           return (
             <Table.Row key={`card-row-${cardname}`}>
