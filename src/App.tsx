@@ -13,6 +13,7 @@ import { LanguageContext, GameLanguage } from "modules/localization";
 import Top from "pages/Top";
 import Winrates from "pages/Winrates";
 import Cards from "pages/Cards";
+import Relics from "pages/Relics";
 import NotFound from "pages/NotFound";
 
 const App: React.FC = () => {
@@ -64,6 +65,7 @@ const App: React.FC = () => {
                 <Route path="/" exact component={Top} />
                 <Route path="/winrates" exact component={Winrates} />
                 <Route path="/cards" exact component={Cards} />
+                <Route path="/relics" exact component={Relics} />
                 <Route component={NotFound} />
               </Switch>
             </Grid.Row>
