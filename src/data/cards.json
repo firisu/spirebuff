@@ -1,0 +1,1700 @@
+{
+  "A Thousand Cuts": {
+    "type": "POWER",
+    "color": "GREEN",
+    "rarity": "RARE",
+    "target": "SELF"
+  },
+  "Accuracy": {
+    "type": "POWER",
+    "color": "GREEN",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Acrobatics": {
+    "type": "SKILL",
+    "color": "GREEN",
+    "rarity": "COMMON",
+    "target": "NONE"
+  },
+  "Adrenaline": {
+    "type": "SKILL",
+    "color": "GREEN",
+    "rarity": "RARE",
+    "target": "SELF"
+  },
+  "After Image": {
+    "type": "POWER",
+    "color": "GREEN",
+    "rarity": "RARE",
+    "target": "SELF"
+  },
+  "Aggregate": {
+    "type": "SKILL",
+    "color": "BLUE",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "All For One": {
+    "type": "ATTACK",
+    "color": "BLUE",
+    "rarity": "RARE",
+    "target": "ENEMY"
+  },
+  "All Out Attack": {
+    "type": "ATTACK",
+    "color": "GREEN",
+    "rarity": "UNCOMMON",
+    "target": "ALL_ENEMY"
+  },
+  "Amplify": {
+    "type": "SKILL",
+    "color": "BLUE",
+    "rarity": "RARE",
+    "target": "SELF"
+  },
+  "Anger": {
+    "type": "ATTACK",
+    "color": "RED",
+    "rarity": "COMMON",
+    "target": "ENEMY"
+  },
+  "Apotheosis": {
+    "type": "SKILL",
+    "color": "COLORLESS",
+    "rarity": "RARE",
+    "target": "NONE"
+  },
+  "Armaments": {
+    "type": "SKILL",
+    "color": "RED",
+    "rarity": "COMMON",
+    "target": "SELF"
+  },
+  "AscendersBane": {
+    "type": "CURSE",
+    "color": "CURSE",
+    "rarity": "SPECIAL",
+    "target": "NONE"
+  },
+  "Auto Shields": {
+    "type": "SKILL",
+    "color": "BLUE",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Backflip": {
+    "type": "SKILL",
+    "color": "GREEN",
+    "rarity": "COMMON",
+    "target": "SELF"
+  },
+  "Backstab": {
+    "type": "ATTACK",
+    "color": "GREEN",
+    "rarity": "UNCOMMON",
+    "target": "ENEMY"
+  },
+  "Ball Lightning": {
+    "type": "ATTACK",
+    "color": "BLUE",
+    "rarity": "COMMON",
+    "target": "ENEMY"
+  },
+  "Bandage Up": {
+    "type": "SKILL",
+    "color": "COLORLESS",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Bane": {
+    "type": "ATTACK",
+    "color": "GREEN",
+    "rarity": "COMMON",
+    "target": "ENEMY"
+  },
+  "Barrage": {
+    "type": "ATTACK",
+    "color": "BLUE",
+    "rarity": "COMMON",
+    "target": "ENEMY"
+  },
+  "Barricade": {
+    "type": "POWER",
+    "color": "RED",
+    "rarity": "RARE",
+    "target": "SELF"
+  },
+  "Bash": {
+    "type": "ATTACK",
+    "color": "RED",
+    "rarity": "BASIC",
+    "target": "ENEMY"
+  },
+  "Battle Trance": {
+    "type": "SKILL",
+    "color": "RED",
+    "rarity": "UNCOMMON",
+    "target": "NONE"
+  },
+  "Beam Cell": {
+    "type": "ATTACK",
+    "color": "BLUE",
+    "rarity": "COMMON",
+    "target": "ENEMY"
+  },
+  "Berserk": {
+    "type": "POWER",
+    "color": "RED",
+    "rarity": "RARE",
+    "target": "SELF"
+  },
+  "Biased Cognition": {
+    "type": "POWER",
+    "color": "BLUE",
+    "rarity": "RARE",
+    "target": "SELF"
+  },
+  "Bite": {
+    "type": "ATTACK",
+    "color": "COLORLESS",
+    "rarity": "SPECIAL",
+    "target": "ENEMY"
+  },
+  "Blade Dance": {
+    "type": "SKILL",
+    "color": "GREEN",
+    "rarity": "COMMON",
+    "target": "NONE"
+  },
+  "Blind": {
+    "type": "SKILL",
+    "color": "COLORLESS",
+    "rarity": "UNCOMMON",
+    "target": "ENEMY"
+  },
+  "Blizzard": {
+    "type": "ATTACK",
+    "color": "BLUE",
+    "rarity": "UNCOMMON",
+    "target": "ALL_ENEMY"
+  },
+  "Blood for Blood": {
+    "type": "ATTACK",
+    "color": "RED",
+    "rarity": "UNCOMMON",
+    "target": "ENEMY"
+  },
+  "Bloodletting": {
+    "type": "SKILL",
+    "color": "RED",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Bludgeon": {
+    "type": "ATTACK",
+    "color": "RED",
+    "rarity": "RARE",
+    "target": "ENEMY"
+  },
+  "Blur": {
+    "type": "SKILL",
+    "color": "GREEN",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Body Slam": {
+    "type": "ATTACK",
+    "color": "RED",
+    "rarity": "COMMON",
+    "target": "ENEMY"
+  },
+  "BootSequence": {
+    "type": "SKILL",
+    "color": "BLUE",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Bouncing Flask": {
+    "type": "SKILL",
+    "color": "GREEN",
+    "rarity": "UNCOMMON",
+    "target": "ALL_ENEMY"
+  },
+  "Brutality": {
+    "type": "POWER",
+    "color": "RED",
+    "rarity": "RARE",
+    "target": "SELF"
+  },
+  "Buffer": {
+    "type": "POWER",
+    "color": "BLUE",
+    "rarity": "RARE",
+    "target": "SELF"
+  },
+  "Bullet Time": {
+    "type": "SKILL",
+    "color": "GREEN",
+    "rarity": "RARE",
+    "target": "NONE"
+  },
+  "Burn": {
+    "type": "STATUS",
+    "color": "COLORLESS",
+    "rarity": "COMMON",
+    "target": "NONE"
+  },
+  "Burning Pact": {
+    "type": "SKILL",
+    "color": "RED",
+    "rarity": "UNCOMMON",
+    "target": "NONE"
+  },
+  "Burst": {
+    "type": "SKILL",
+    "color": "GREEN",
+    "rarity": "RARE",
+    "target": "SELF"
+  },
+  "Calculated Gamble": {
+    "type": "SKILL",
+    "color": "GREEN",
+    "rarity": "UNCOMMON",
+    "target": "NONE"
+  },
+  "Caltrops": {
+    "type": "POWER",
+    "color": "GREEN",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Capacitor": {
+    "type": "POWER",
+    "color": "BLUE",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Carnage": {
+    "type": "ATTACK",
+    "color": "RED",
+    "rarity": "UNCOMMON",
+    "target": "ENEMY"
+  },
+  "Catalyst": {
+    "type": "SKILL",
+    "color": "GREEN",
+    "rarity": "UNCOMMON",
+    "target": "ENEMY"
+  },
+  "Chaos": {
+    "type": "SKILL",
+    "color": "BLUE",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Chill": {
+    "type": "SKILL",
+    "color": "BLUE",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Choke": {
+    "type": "ATTACK",
+    "color": "GREEN",
+    "rarity": "UNCOMMON",
+    "target": "ENEMY"
+  },
+  "Chrysalis": {
+    "type": "SKILL",
+    "color": "COLORLESS",
+    "rarity": "RARE",
+    "target": "NONE"
+  },
+  "Clash": {
+    "type": "ATTACK",
+    "color": "RED",
+    "rarity": "COMMON",
+    "target": "ENEMY"
+  },
+  "Cleave": {
+    "type": "ATTACK",
+    "color": "RED",
+    "rarity": "COMMON",
+    "target": "ALL_ENEMY"
+  },
+  "Cloak And Dagger": {
+    "type": "SKILL",
+    "color": "GREEN",
+    "rarity": "COMMON",
+    "target": "SELF"
+  },
+  "Clothesline": {
+    "type": "ATTACK",
+    "color": "RED",
+    "rarity": "COMMON",
+    "target": "ENEMY"
+  },
+  "Clumsy": {
+    "type": "CURSE",
+    "color": "CURSE",
+    "rarity": "CURSE",
+    "target": "NONE"
+  },
+  "Cold Snap": {
+    "type": "ATTACK",
+    "color": "BLUE",
+    "rarity": "COMMON",
+    "target": "ENEMY"
+  },
+  "Combust": {
+    "type": "POWER",
+    "color": "RED",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Compile Driver": {
+    "type": "ATTACK",
+    "color": "BLUE",
+    "rarity": "COMMON",
+    "target": "ENEMY"
+  },
+  "Concentrate": {
+    "type": "SKILL",
+    "color": "GREEN",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Conserve Battery": {
+    "type": "SKILL",
+    "color": "BLUE",
+    "rarity": "COMMON",
+    "target": "SELF"
+  },
+  "Consume": {
+    "type": "SKILL",
+    "color": "BLUE",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Coolheaded": {
+    "type": "SKILL",
+    "color": "BLUE",
+    "rarity": "COMMON",
+    "target": "SELF"
+  },
+  "Core Surge": {
+    "type": "ATTACK",
+    "color": "BLUE",
+    "rarity": "RARE",
+    "target": "ENEMY"
+  },
+  "Corpse Explosion": {
+    "type": "SKILL",
+    "color": "GREEN",
+    "rarity": "RARE",
+    "target": "ENEMY"
+  },
+  "Corruption": {
+    "type": "POWER",
+    "color": "RED",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Creative AI": {
+    "type": "POWER",
+    "color": "BLUE",
+    "rarity": "RARE",
+    "target": "SELF"
+  },
+  "Crippling Poison": {
+    "type": "SKILL",
+    "color": "GREEN",
+    "rarity": "UNCOMMON",
+    "target": "ALL_ENEMY"
+  },
+  "Dagger Spray": {
+    "type": "ATTACK",
+    "color": "GREEN",
+    "rarity": "COMMON",
+    "target": "ALL_ENEMY"
+  },
+  "Dagger Throw": {
+    "type": "ATTACK",
+    "color": "GREEN",
+    "rarity": "COMMON",
+    "target": "ENEMY"
+  },
+  "Dark Embrace": {
+    "type": "POWER",
+    "color": "RED",
+    "rarity": "RARE",
+    "target": "SELF"
+  },
+  "Dark Shackles": {
+    "type": "SKILL",
+    "color": "COLORLESS",
+    "rarity": "UNCOMMON",
+    "target": "ENEMY"
+  },
+  "Darkness": {
+    "type": "SKILL",
+    "color": "BLUE",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Dash": {
+    "type": "ATTACK",
+    "color": "GREEN",
+    "rarity": "UNCOMMON",
+    "target": "ENEMY"
+  },
+  "Dazed": {
+    "type": "STATUS",
+    "color": "COLORLESS",
+    "rarity": "COMMON",
+    "target": "NONE"
+  },
+  "Deadly Poison": {
+    "type": "SKILL",
+    "color": "GREEN",
+    "rarity": "COMMON",
+    "target": "ENEMY"
+  },
+  "Decay": {
+    "type": "CURSE",
+    "color": "CURSE",
+    "rarity": "CURSE",
+    "target": "NONE"
+  },
+  "Deep Breath": {
+    "type": "SKILL",
+    "color": "COLORLESS",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Defend_B": {
+    "type": "SKILL",
+    "color": "BLUE",
+    "rarity": "BASIC",
+    "target": "SELF"
+  },
+  "Defend_G": {
+    "type": "SKILL",
+    "color": "GREEN",
+    "rarity": "BASIC",
+    "target": "SELF"
+  },
+  "Defend_R": {
+    "type": "SKILL",
+    "color": "RED",
+    "rarity": "BASIC",
+    "target": "SELF"
+  },
+  "Deflect": {
+    "type": "SKILL",
+    "color": "GREEN",
+    "rarity": "COMMON",
+    "target": "SELF"
+  },
+  "Defragment": {
+    "type": "POWER",
+    "color": "BLUE",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Demon Form": {
+    "type": "POWER",
+    "color": "RED",
+    "rarity": "RARE",
+    "target": "NONE"
+  },
+  "Die Die Die": {
+    "type": "ATTACK",
+    "color": "GREEN",
+    "rarity": "RARE",
+    "target": "ALL_ENEMY"
+  },
+  "Disarm": {
+    "type": "SKILL",
+    "color": "RED",
+    "rarity": "UNCOMMON",
+    "target": "ENEMY"
+  },
+  "Discovery": {
+    "type": "SKILL",
+    "color": "COLORLESS",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Distraction": {
+    "type": "SKILL",
+    "color": "GREEN",
+    "rarity": "UNCOMMON",
+    "target": "NONE"
+  },
+  "Dodge and Roll": {
+    "type": "SKILL",
+    "color": "GREEN",
+    "rarity": "COMMON",
+    "target": "SELF"
+  },
+  "Doom and Gloom": {
+    "type": "ATTACK",
+    "color": "BLUE",
+    "rarity": "UNCOMMON",
+    "target": "ALL_ENEMY"
+  },
+  "Doppelganger": {
+    "type": "SKILL",
+    "color": "GREEN",
+    "rarity": "RARE",
+    "target": "SELF"
+  },
+  "Double Energy": {
+    "type": "SKILL",
+    "color": "BLUE",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Double Tap": {
+    "type": "SKILL",
+    "color": "RED",
+    "rarity": "RARE",
+    "target": "SELF"
+  },
+  "Doubt": {
+    "type": "CURSE",
+    "color": "CURSE",
+    "rarity": "CURSE",
+    "target": "NONE"
+  },
+  "Dramatic Entrance": {
+    "type": "ATTACK",
+    "color": "COLORLESS",
+    "rarity": "UNCOMMON",
+    "target": "ALL_ENEMY"
+  },
+  "Dropkick": {
+    "type": "ATTACK",
+    "color": "RED",
+    "rarity": "UNCOMMON",
+    "target": "ENEMY"
+  },
+  "Dual Wield": {
+    "type": "SKILL",
+    "color": "RED",
+    "rarity": "UNCOMMON",
+    "target": "NONE"
+  },
+  "Dualcast": {
+    "type": "SKILL",
+    "color": "BLUE",
+    "rarity": "BASIC",
+    "target": "NONE"
+  },
+  "Echo Form": {
+    "type": "POWER",
+    "color": "BLUE",
+    "rarity": "RARE",
+    "target": "SELF"
+  },
+  "Electrodynamics": {
+    "type": "POWER",
+    "color": "BLUE",
+    "rarity": "RARE",
+    "target": "SELF"
+  },
+  "Endless Agony": {
+    "type": "ATTACK",
+    "color": "GREEN",
+    "rarity": "UNCOMMON",
+    "target": "ENEMY"
+  },
+  "Enlightenment": {
+    "type": "SKILL",
+    "color": "COLORLESS",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Entrench": {
+    "type": "SKILL",
+    "color": "RED",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Envenom": {
+    "type": "POWER",
+    "color": "GREEN",
+    "rarity": "RARE",
+    "target": "SELF"
+  },
+  "Escape Plan": {
+    "type": "SKILL",
+    "color": "GREEN",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Eviscerate": {
+    "type": "ATTACK",
+    "color": "GREEN",
+    "rarity": "UNCOMMON",
+    "target": "ENEMY"
+  },
+  "Evolve": {
+    "type": "POWER",
+    "color": "RED",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Exhume": {
+    "type": "SKILL",
+    "color": "RED",
+    "rarity": "RARE",
+    "target": "NONE"
+  },
+  "Expertise": {
+    "type": "SKILL",
+    "color": "GREEN",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "FTL": {
+    "type": "ATTACK",
+    "color": "BLUE",
+    "rarity": "UNCOMMON",
+    "target": "ENEMY"
+  },
+  "Feed": {
+    "type": "ATTACK",
+    "color": "RED",
+    "rarity": "RARE",
+    "target": "ENEMY"
+  },
+  "Feel No Pain": {
+    "type": "POWER",
+    "color": "RED",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Fiend Fire": {
+    "type": "ATTACK",
+    "color": "RED",
+    "rarity": "RARE",
+    "target": "ENEMY"
+  },
+  "Finesse": {
+    "type": "SKILL",
+    "color": "COLORLESS",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Finisher": {
+    "type": "ATTACK",
+    "color": "GREEN",
+    "rarity": "UNCOMMON",
+    "target": "ENEMY"
+  },
+  "Fire Breathing": {
+    "type": "POWER",
+    "color": "RED",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Fission": {
+    "type": "SKILL",
+    "color": "BLUE",
+    "rarity": "RARE",
+    "target": "NONE"
+  },
+  "Flame Barrier": {
+    "type": "SKILL",
+    "color": "RED",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Flash of Steel": {
+    "type": "ATTACK",
+    "color": "COLORLESS",
+    "rarity": "UNCOMMON",
+    "target": "ENEMY"
+  },
+  "Flechettes": {
+    "type": "ATTACK",
+    "color": "GREEN",
+    "rarity": "UNCOMMON",
+    "target": "ENEMY"
+  },
+  "Flex": {
+    "type": "SKILL",
+    "color": "RED",
+    "rarity": "COMMON",
+    "target": "SELF"
+  },
+  "Flying Knee": {
+    "type": "ATTACK",
+    "color": "GREEN",
+    "rarity": "COMMON",
+    "target": "ENEMY"
+  },
+  "Footwork": {
+    "type": "POWER",
+    "color": "GREEN",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Force Field": {
+    "type": "SKILL",
+    "color": "BLUE",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Forethought": {
+    "type": "SKILL",
+    "color": "COLORLESS",
+    "rarity": "UNCOMMON",
+    "target": "NONE"
+  },
+  "Fusion": {
+    "type": "SKILL",
+    "color": "BLUE",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Gash": {
+    "type": "ATTACK",
+    "color": "BLUE",
+    "rarity": "COMMON",
+    "target": "ENEMY"
+  },
+  "Genetic Algorithm": {
+    "type": "SKILL",
+    "color": "BLUE",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Ghostly": {
+    "type": "SKILL",
+    "color": "COLORLESS",
+    "rarity": "SPECIAL",
+    "target": "SELF"
+  },
+  "Ghostly Armor": {
+    "type": "SKILL",
+    "color": "RED",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Glacier": {
+    "type": "SKILL",
+    "color": "BLUE",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Glass Knife": {
+    "type": "ATTACK",
+    "color": "GREEN",
+    "rarity": "RARE",
+    "target": "ENEMY"
+  },
+  "Go for the Eyes": {
+    "type": "ATTACK",
+    "color": "BLUE",
+    "rarity": "COMMON",
+    "target": "ENEMY"
+  },
+  "Good Instincts": {
+    "type": "SKILL",
+    "color": "COLORLESS",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Grand Finale": {
+    "type": "ATTACK",
+    "color": "GREEN",
+    "rarity": "RARE",
+    "target": "ALL_ENEMY"
+  },
+  "HandOfGreed": {
+    "type": "ATTACK",
+    "color": "COLORLESS",
+    "rarity": "RARE",
+    "target": "ENEMY"
+  },
+  "Havoc": {
+    "type": "SKILL",
+    "color": "RED",
+    "rarity": "COMMON",
+    "target": "NONE"
+  },
+  "Headbutt": {
+    "type": "ATTACK",
+    "color": "RED",
+    "rarity": "COMMON",
+    "target": "ENEMY"
+  },
+  "Heatsinks": {
+    "type": "POWER",
+    "color": "BLUE",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Heavy Blade": {
+    "type": "ATTACK",
+    "color": "RED",
+    "rarity": "COMMON",
+    "target": "ENEMY"
+  },
+  "Heel Hook": {
+    "type": "ATTACK",
+    "color": "GREEN",
+    "rarity": "UNCOMMON",
+    "target": "ENEMY"
+  },
+  "Hello World": {
+    "type": "POWER",
+    "color": "BLUE",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Hemokinesis": {
+    "type": "ATTACK",
+    "color": "RED",
+    "rarity": "UNCOMMON",
+    "target": "ENEMY"
+  },
+  "Hologram": {
+    "type": "SKILL",
+    "color": "BLUE",
+    "rarity": "COMMON",
+    "target": "SELF"
+  },
+  "Hyperbeam": {
+    "type": "ATTACK",
+    "color": "BLUE",
+    "rarity": "RARE",
+    "target": "ALL_ENEMY"
+  },
+  "Immolate": {
+    "type": "ATTACK",
+    "color": "RED",
+    "rarity": "RARE",
+    "target": "ALL_ENEMY"
+  },
+  "Impatience": {
+    "type": "SKILL",
+    "color": "COLORLESS",
+    "rarity": "UNCOMMON",
+    "target": "NONE"
+  },
+  "Impervious": {
+    "type": "SKILL",
+    "color": "RED",
+    "rarity": "RARE",
+    "target": "SELF"
+  },
+  "Infernal Blade": {
+    "type": "SKILL",
+    "color": "RED",
+    "rarity": "UNCOMMON",
+    "target": "NONE"
+  },
+  "Infinite Blades": {
+    "type": "POWER",
+    "color": "GREEN",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Inflame": {
+    "type": "POWER",
+    "color": "RED",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Injury": {
+    "type": "CURSE",
+    "color": "CURSE",
+    "rarity": "CURSE",
+    "target": "NONE"
+  },
+  "Intimidate": {
+    "type": "SKILL",
+    "color": "RED",
+    "rarity": "UNCOMMON",
+    "target": "ALL_ENEMY"
+  },
+  "Iron Wave": {
+    "type": "ATTACK",
+    "color": "RED",
+    "rarity": "COMMON",
+    "target": "ENEMY"
+  },
+  "J.A.X.": {
+    "type": "SKILL",
+    "color": "COLORLESS",
+    "rarity": "SPECIAL",
+    "target": "SELF"
+  },
+  "Jack Of All Trades": {
+    "type": "SKILL",
+    "color": "COLORLESS",
+    "rarity": "UNCOMMON",
+    "target": "NONE"
+  },
+  "Juggernaut": {
+    "type": "POWER",
+    "color": "RED",
+    "rarity": "RARE",
+    "target": "SELF"
+  },
+  "Leap": {
+    "type": "SKILL",
+    "color": "BLUE",
+    "rarity": "COMMON",
+    "target": "SELF"
+  },
+  "Leg Sweep": {
+    "type": "SKILL",
+    "color": "GREEN",
+    "rarity": "UNCOMMON",
+    "target": "ENEMY"
+  },
+  "Limit Break": {
+    "type": "SKILL",
+    "color": "RED",
+    "rarity": "RARE",
+    "target": "SELF"
+  },
+  "Lockon": {
+    "type": "ATTACK",
+    "color": "BLUE",
+    "rarity": "UNCOMMON",
+    "target": "ENEMY"
+  },
+  "Loop": {
+    "type": "POWER",
+    "color": "BLUE",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Machine Learning": {
+    "type": "POWER",
+    "color": "BLUE",
+    "rarity": "RARE",
+    "target": "SELF"
+  },
+  "Madness": {
+    "type": "SKILL",
+    "color": "COLORLESS",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Magnetism": {
+    "type": "POWER",
+    "color": "COLORLESS",
+    "rarity": "RARE",
+    "target": "SELF"
+  },
+  "Malaise": {
+    "type": "SKILL",
+    "color": "GREEN",
+    "rarity": "RARE",
+    "target": "ENEMY"
+  },
+  "Master of Strategy": {
+    "type": "SKILL",
+    "color": "COLORLESS",
+    "rarity": "RARE",
+    "target": "NONE"
+  },
+  "Masterful Stab": {
+    "type": "ATTACK",
+    "color": "GREEN",
+    "rarity": "UNCOMMON",
+    "target": "ENEMY"
+  },
+  "Mayhem": {
+    "type": "POWER",
+    "color": "COLORLESS",
+    "rarity": "RARE",
+    "target": "SELF"
+  },
+  "Melter": {
+    "type": "ATTACK",
+    "color": "BLUE",
+    "rarity": "UNCOMMON",
+    "target": "ENEMY"
+  },
+  "Metallicize": {
+    "type": "POWER",
+    "color": "RED",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Metamorphosis": {
+    "type": "SKILL",
+    "color": "COLORLESS",
+    "rarity": "RARE",
+    "target": "NONE"
+  },
+  "Meteor Strike": {
+    "type": "ATTACK",
+    "color": "BLUE",
+    "rarity": "RARE",
+    "target": "ENEMY"
+  },
+  "Mind Blast": {
+    "type": "ATTACK",
+    "color": "COLORLESS",
+    "rarity": "UNCOMMON",
+    "target": "ENEMY"
+  },
+  "Multi-Cast": {
+    "type": "SKILL",
+    "color": "BLUE",
+    "rarity": "RARE",
+    "target": "NONE"
+  },
+  "Necronomicurse": {
+    "type": "CURSE",
+    "color": "CURSE",
+    "rarity": "SPECIAL",
+    "target": "NONE"
+  },
+  "Neutralize": {
+    "type": "ATTACK",
+    "color": "GREEN",
+    "rarity": "BASIC",
+    "target": "ENEMY"
+  },
+  "Night Terror": {
+    "type": "SKILL",
+    "color": "GREEN",
+    "rarity": "RARE",
+    "target": "NONE"
+  },
+  "Normality": {
+    "type": "CURSE",
+    "color": "CURSE",
+    "rarity": "CURSE",
+    "target": "NONE"
+  },
+  "Noxious Fumes": {
+    "type": "POWER",
+    "color": "GREEN",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Offering": {
+    "type": "SKILL",
+    "color": "RED",
+    "rarity": "RARE",
+    "target": "SELF"
+  },
+  "Outmaneuver": {
+    "type": "SKILL",
+    "color": "GREEN",
+    "rarity": "COMMON",
+    "target": "NONE"
+  },
+  "Pain": {
+    "type": "CURSE",
+    "color": "CURSE",
+    "rarity": "CURSE",
+    "target": "NONE"
+  },
+  "Panacea": {
+    "type": "SKILL",
+    "color": "COLORLESS",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Panache": {
+    "type": "POWER",
+    "color": "COLORLESS",
+    "rarity": "RARE",
+    "target": "SELF"
+  },
+  "PanicButton": {
+    "type": "SKILL",
+    "color": "COLORLESS",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Parasite": {
+    "type": "CURSE",
+    "color": "CURSE",
+    "rarity": "CURSE",
+    "target": "NONE"
+  },
+  "Perfected Strike": {
+    "type": "ATTACK",
+    "color": "RED",
+    "rarity": "COMMON",
+    "target": "ENEMY"
+  },
+  "Phantasmal Killer": {
+    "type": "SKILL",
+    "color": "GREEN",
+    "rarity": "RARE",
+    "target": "SELF"
+  },
+  "PiercingWail": {
+    "type": "SKILL",
+    "color": "GREEN",
+    "rarity": "COMMON",
+    "target": "ALL_ENEMY"
+  },
+  "Poisoned Stab": {
+    "type": "ATTACK",
+    "color": "GREEN",
+    "rarity": "COMMON",
+    "target": "ENEMY"
+  },
+  "Pommel Strike": {
+    "type": "ATTACK",
+    "color": "RED",
+    "rarity": "COMMON",
+    "target": "ENEMY"
+  },
+  "Power Through": {
+    "type": "SKILL",
+    "color": "RED",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Predator": {
+    "type": "ATTACK",
+    "color": "GREEN",
+    "rarity": "UNCOMMON",
+    "target": "ENEMY"
+  },
+  "Prepared": {
+    "type": "SKILL",
+    "color": "GREEN",
+    "rarity": "COMMON",
+    "target": "NONE"
+  },
+  "Pride": {
+    "type": "CURSE",
+    "color": "CURSE",
+    "rarity": "SPECIAL",
+    "target": "SELF"
+  },
+  "Pummel": {
+    "type": "ATTACK",
+    "color": "RED",
+    "rarity": "UNCOMMON",
+    "target": "ENEMY"
+  },
+  "Purity": {
+    "type": "SKILL",
+    "color": "COLORLESS",
+    "rarity": "UNCOMMON",
+    "target": "NONE"
+  },
+  "Quick Slash": {
+    "type": "ATTACK",
+    "color": "GREEN",
+    "rarity": "COMMON",
+    "target": "ENEMY"
+  },
+  "Rage": {
+    "type": "SKILL",
+    "color": "RED",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Rainbow": {
+    "type": "SKILL",
+    "color": "BLUE",
+    "rarity": "RARE",
+    "target": "SELF"
+  },
+  "Rampage": {
+    "type": "ATTACK",
+    "color": "RED",
+    "rarity": "UNCOMMON",
+    "target": "ENEMY"
+  },
+  "Reaper": {
+    "type": "ATTACK",
+    "color": "RED",
+    "rarity": "RARE",
+    "target": "ALL_ENEMY"
+  },
+  "Reboot": {
+    "type": "SKILL",
+    "color": "BLUE",
+    "rarity": "RARE",
+    "target": "SELF"
+  },
+  "Rebound": {
+    "type": "ATTACK",
+    "color": "BLUE",
+    "rarity": "COMMON",
+    "target": "ENEMY"
+  },
+  "Reckless Charge": {
+    "type": "ATTACK",
+    "color": "RED",
+    "rarity": "UNCOMMON",
+    "target": "ENEMY"
+  },
+  "Recycle": {
+    "type": "SKILL",
+    "color": "BLUE",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Redo": {
+    "type": "SKILL",
+    "color": "BLUE",
+    "rarity": "COMMON",
+    "target": "SELF"
+  },
+  "Reflex": {
+    "type": "SKILL",
+    "color": "GREEN",
+    "rarity": "UNCOMMON",
+    "target": "NONE"
+  },
+  "Regret": {
+    "type": "CURSE",
+    "color": "CURSE",
+    "rarity": "CURSE",
+    "target": "NONE"
+  },
+  "Reinforced Body": {
+    "type": "SKILL",
+    "color": "BLUE",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Reprogram": {
+    "type": "SKILL",
+    "color": "BLUE",
+    "rarity": "UNCOMMON",
+    "target": "NONE"
+  },
+  "Riddle With Holes": {
+    "type": "ATTACK",
+    "color": "GREEN",
+    "rarity": "UNCOMMON",
+    "target": "ENEMY"
+  },
+  "Rip and Tear": {
+    "type": "ATTACK",
+    "color": "BLUE",
+    "rarity": "UNCOMMON",
+    "target": "ALL_ENEMY"
+  },
+  "RitualDagger": {
+    "type": "ATTACK",
+    "color": "COLORLESS",
+    "rarity": "SPECIAL",
+    "target": "ENEMY"
+  },
+  "Rupture": {
+    "type": "POWER",
+    "color": "RED",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Sadistic Nature": {
+    "type": "POWER",
+    "color": "COLORLESS",
+    "rarity": "RARE",
+    "target": "SELF"
+  },
+  "Scrape": {
+    "type": "ATTACK",
+    "color": "BLUE",
+    "rarity": "UNCOMMON",
+    "target": "ENEMY"
+  },
+  "Searing Blow": {
+    "type": "ATTACK",
+    "color": "RED",
+    "rarity": "UNCOMMON",
+    "target": "ENEMY"
+  },
+  "Second Wind": {
+    "type": "SKILL",
+    "color": "RED",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Secret Technique": {
+    "type": "SKILL",
+    "color": "COLORLESS",
+    "rarity": "RARE",
+    "target": "NONE"
+  },
+  "Secret Weapon": {
+    "type": "SKILL",
+    "color": "COLORLESS",
+    "rarity": "RARE",
+    "target": "NONE"
+  },
+  "Seeing Red": {
+    "type": "SKILL",
+    "color": "RED",
+    "rarity": "UNCOMMON",
+    "target": "NONE"
+  },
+  "Seek": {
+    "type": "SKILL",
+    "color": "BLUE",
+    "rarity": "RARE",
+    "target": "NONE"
+  },
+  "Self Repair": {
+    "type": "POWER",
+    "color": "BLUE",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Sentinel": {
+    "type": "SKILL",
+    "color": "RED",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Setup": {
+    "type": "SKILL",
+    "color": "GREEN",
+    "rarity": "UNCOMMON",
+    "target": "NONE"
+  },
+  "Sever Soul": {
+    "type": "ATTACK",
+    "color": "RED",
+    "rarity": "UNCOMMON",
+    "target": "ENEMY"
+  },
+  "Shame": {
+    "type": "CURSE",
+    "color": "CURSE",
+    "rarity": "CURSE",
+    "target": "NONE"
+  },
+  "Shiv": {
+    "type": "ATTACK",
+    "color": "COLORLESS",
+    "rarity": "SPECIAL",
+    "target": "ENEMY"
+  },
+  "Shockwave": {
+    "type": "SKILL",
+    "color": "RED",
+    "rarity": "UNCOMMON",
+    "target": "ALL_ENEMY"
+  },
+  "Shrug It Off": {
+    "type": "SKILL",
+    "color": "RED",
+    "rarity": "COMMON",
+    "target": "SELF"
+  },
+  "Skewer": {
+    "type": "ATTACK",
+    "color": "GREEN",
+    "rarity": "UNCOMMON",
+    "target": "ENEMY"
+  },
+  "Skim": {
+    "type": "SKILL",
+    "color": "BLUE",
+    "rarity": "UNCOMMON",
+    "target": "NONE"
+  },
+  "Slice": {
+    "type": "ATTACK",
+    "color": "GREEN",
+    "rarity": "COMMON",
+    "target": "ENEMY"
+  },
+  "Slimed": {
+    "type": "STATUS",
+    "color": "COLORLESS",
+    "rarity": "COMMON",
+    "target": "SELF"
+  },
+  "Spot Weakness": {
+    "type": "SKILL",
+    "color": "RED",
+    "rarity": "UNCOMMON",
+    "target": "SELF_AND_ENEMY"
+  },
+  "Stack": {
+    "type": "SKILL",
+    "color": "BLUE",
+    "rarity": "COMMON",
+    "target": "SELF"
+  },
+  "Static Discharge": {
+    "type": "POWER",
+    "color": "BLUE",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Steam": {
+    "type": "SKILL",
+    "color": "BLUE",
+    "rarity": "COMMON",
+    "target": "SELF"
+  },
+  "Steam Power": {
+    "type": "SKILL",
+    "color": "BLUE",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Storm": {
+    "type": "POWER",
+    "color": "BLUE",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Storm of Steel": {
+    "type": "SKILL",
+    "color": "GREEN",
+    "rarity": "RARE",
+    "target": "NONE"
+  },
+  "Streamline": {
+    "type": "ATTACK",
+    "color": "BLUE",
+    "rarity": "COMMON",
+    "target": "ENEMY"
+  },
+  "Strike_B": {
+    "type": "ATTACK",
+    "color": "BLUE",
+    "rarity": "BASIC",
+    "target": "ENEMY"
+  },
+  "Strike_G": {
+    "type": "ATTACK",
+    "color": "GREEN",
+    "rarity": "BASIC",
+    "target": "ENEMY"
+  },
+  "Strike_R": {
+    "type": "ATTACK",
+    "color": "RED",
+    "rarity": "BASIC",
+    "target": "ENEMY"
+  },
+  "Sucker Punch": {
+    "type": "ATTACK",
+    "color": "GREEN",
+    "rarity": "COMMON",
+    "target": "ENEMY"
+  },
+  "Sunder": {
+    "type": "ATTACK",
+    "color": "BLUE",
+    "rarity": "UNCOMMON",
+    "target": "ENEMY"
+  },
+  "Survivor": {
+    "type": "SKILL",
+    "color": "GREEN",
+    "rarity": "BASIC",
+    "target": "SELF"
+  },
+  "Sweeping Beam": {
+    "type": "ATTACK",
+    "color": "BLUE",
+    "rarity": "COMMON",
+    "target": "ALL_ENEMY"
+  },
+  "Swift Strike": {
+    "type": "ATTACK",
+    "color": "COLORLESS",
+    "rarity": "UNCOMMON",
+    "target": "ENEMY"
+  },
+  "Sword Boomerang": {
+    "type": "ATTACK",
+    "color": "RED",
+    "rarity": "COMMON",
+    "target": "ALL_ENEMY"
+  },
+  "Tactician": {
+    "type": "SKILL",
+    "color": "GREEN",
+    "rarity": "UNCOMMON",
+    "target": "NONE"
+  },
+  "Tempest": {
+    "type": "SKILL",
+    "color": "BLUE",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Terror": {
+    "type": "SKILL",
+    "color": "GREEN",
+    "rarity": "UNCOMMON",
+    "target": "ENEMY"
+  },
+  "The Bomb": {
+    "type": "SKILL",
+    "color": "COLORLESS",
+    "rarity": "RARE",
+    "target": "SELF"
+  },
+  "Thinking Ahead": {
+    "type": "SKILL",
+    "color": "COLORLESS",
+    "rarity": "RARE",
+    "target": "NONE"
+  },
+  "Thunder Strike": {
+    "type": "ATTACK",
+    "color": "BLUE",
+    "rarity": "RARE",
+    "target": "ALL_ENEMY"
+  },
+  "Thunderclap": {
+    "type": "ATTACK",
+    "color": "RED",
+    "rarity": "COMMON",
+    "target": "ALL_ENEMY"
+  },
+  "Tools of the Trade": {
+    "type": "POWER",
+    "color": "GREEN",
+    "rarity": "RARE",
+    "target": "SELF"
+  },
+  "Transmutation": {
+    "type": "SKILL",
+    "color": "COLORLESS",
+    "rarity": "RARE",
+    "target": "SELF"
+  },
+  "Trip": {
+    "type": "SKILL",
+    "color": "COLORLESS",
+    "rarity": "UNCOMMON",
+    "target": "ENEMY"
+  },
+  "True Grit": {
+    "type": "SKILL",
+    "color": "RED",
+    "rarity": "COMMON",
+    "target": "SELF"
+  },
+  "Turbo": {
+    "type": "SKILL",
+    "color": "BLUE",
+    "rarity": "COMMON",
+    "target": "SELF"
+  },
+  "Twin Strike": {
+    "type": "ATTACK",
+    "color": "RED",
+    "rarity": "COMMON",
+    "target": "ENEMY"
+  },
+  "Underhanded Strike": {
+    "type": "ATTACK",
+    "color": "GREEN",
+    "rarity": "COMMON",
+    "target": "ENEMY"
+  },
+  "Undo": {
+    "type": "SKILL",
+    "color": "BLUE",
+    "rarity": "UNCOMMON",
+    "target": "SELF"
+  },
+  "Unload": {
+    "type": "ATTACK",
+    "color": "GREEN",
+    "rarity": "RARE",
+    "target": "ENEMY"
+  },
+  "Uppercut": {
+    "type": "ATTACK",
+    "color": "RED",
+    "rarity": "UNCOMMON",
+    "target": "ENEMY"
+  },
+  "Venomology": {
+    "type": "SKILL",
+    "color": "GREEN",
+    "rarity": "RARE",
+    "target": "SELF"
+  },
+  "Violence": {
+    "type": "SKILL",
+    "color": "COLORLESS",
+    "rarity": "RARE",
+    "target": "NONE"
+  },
+  "Void": {
+    "type": "STATUS",
+    "color": "COLORLESS",
+    "rarity": "COMMON",
+    "target": "NONE"
+  },
+  "Warcry": {
+    "type": "SKILL",
+    "color": "RED",
+    "rarity": "COMMON",
+    "target": "SELF"
+  },
+  "Well Laid Plans": {
+    "type": "POWER",
+    "color": "GREEN",
+    "rarity": "UNCOMMON",
+    "target": "NONE"
+  },
+  "Whirlwind": {
+    "type": "ATTACK",
+    "color": "RED",
+    "rarity": "UNCOMMON",
+    "target": "ALL_ENEMY"
+  },
+  "White Noise": {
+    "type": "SKILL",
+    "color": "BLUE",
+    "rarity": "UNCOMMON",
+    "target": "NONE"
+  },
+  "Wild Strike": {
+    "type": "ATTACK",
+    "color": "RED",
+    "rarity": "COMMON",
+    "target": "ENEMY"
+  },
+  "Wound": {
+    "type": "STATUS",
+    "color": "COLORLESS",
+    "rarity": "COMMON",
+    "target": "NONE"
+  },
+  "Wraith Form v2": {
+    "type": "POWER",
+    "color": "GREEN",
+    "rarity": "RARE",
+    "target": "SELF"
+  },
+  "Writhe": {
+    "type": "CURSE",
+    "color": "CURSE",
+    "rarity": "CURSE",
+    "target": "NONE"
+  },
+  "Zap": {
+    "type": "SKILL",
+    "color": "BLUE",
+    "rarity": "BASIC",
+    "target": "SELF"
+  }
+}
