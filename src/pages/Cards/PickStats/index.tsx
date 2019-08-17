@@ -2,6 +2,7 @@ import React from "react";
 import { Table } from "semantic-ui-react";
 import * as _ from "lodash";
 
+import CardName from "components/CardName";
 import { useCards } from "modules/cards";
 import { useStats } from "./utils";
 
@@ -61,8 +62,6 @@ const StatsTable = (props: Props) => {
     }
   };
 
-  const { getCardInfo } = useCards();
-
   return (
     <Table inverted sortable selectable celled size="small" compact="very">
       <Table.Header>
@@ -101,7 +100,7 @@ const StatsTable = (props: Props) => {
           return (
             <Table.Row key={`card-row-${cardname}`}>
               <Table.Cell data-sort="cardname">
-                {getCardInfo(cardname).name}
+                <CardName id={cardname} />
               </Table.Cell>
               <Table.Cell data-sort="appeared">{appeared}</Table.Cell>
               <Table.Cell data-sort="picked">{picked}</Table.Cell>

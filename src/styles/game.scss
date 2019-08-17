@@ -1,9 +1,9 @@
-$CARD_COLOR_COMMON: rgba(131.0, 129.0, 121.0);
-$CARD_COLOR_UNCOMMON: rgba(142.0, 196.0, 213.0);
+$CARD_COLOR_COMMON: rgb(211.0, 209.0, 201.0); /* ORIGINAL: rgb(131.0, 129.0, 121.0); */
+$CARD_COLOR_UNCOMMON: rgb(142.0, 196.0, 213.0);
 $CARD_COLOR_RARE: rgba(255, 203, 64, 1.0);
 
 .card-text {
-  &[data-color=COMMON] { color: $CARD_COLOR_COMMON; }
-  &[data-color=UNCOMMON] { color: $CARD_COLOR_UNCOMMON; }
-  &[data-color=RARE] { color: $CARD_COLOR_RARE; }
+  &[data-rarity=COMMON] { color: $CARD_COLOR_COMMON; }
+  &[data-rarity=UNCOMMON] { color: $CARD_COLOR_UNCOMMON; }
+  &[data-rarity=RARE] { color: $CARD_COLOR_RARE; }
 }

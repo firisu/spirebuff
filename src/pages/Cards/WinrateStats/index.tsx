@@ -2,6 +2,7 @@ import React from "react";
 import { Table } from "semantic-ui-react";
 import * as _ from "lodash";
 
+import CardName from "components/CardName";
 import { useCards } from "modules/cards";
 import { formatWinrate } from "modules/utils";
 
@@ -64,8 +65,6 @@ interface Props {
 }
 
 const StatsTable = (props: Props) => {
-  const { getCardInfo } = useCards();
-
   const { level, char } = props;
 
   const [sort, setSort] = React.useState<SortString>("cardname");
@@ -140,7 +139,7 @@ const StatsTable = (props: Props) => {
           return (
             <Table.Row key={`card-row-${cardname}`}>
               <Table.Cell data-sort="cardname" className="card-text">
-                {getCardInfo(cardname).name}
+                <CardName id={cardname} />
               </Table.Cell>
               <Table.Cell data-sort="master_deck">
                 {defeated + act3won}
