@@ -13,7 +13,11 @@ const CardName = (props: Props) => {
   const card = getCardInfo(id);
 
   return (
-    <div className="card-text" data-rarity={card.rarity}>
+    <div
+      className="card-text"
+      data-rarity={card.rarity}
+      data-color={card.color}
+    >
       {card.name}
     </div>
   );

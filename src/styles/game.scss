@@ -2,8 +2,66 @@ $CARD_COLOR_COMMON: rgb(211.0, 209.0, 201.0); /* ORIGINAL: rgb(131.0, 129.0, 121
 $CARD_COLOR_UNCOMMON: rgb(142.0, 196.0, 213.0);
 $CARD_COLOR_RARE: rgba(255, 203, 64, 1.0);
 
+$WHITE: rgba(255, 255, 255, 1.0);
+$LIGHT_GRAY: #BFBFBF;
+$GRAY: #7F7F7F;
+$DARK_GRAY: #3F3F3F;
+$BLACK: rgba(0.0, 0.0, 0.0, 1.0);
+$CLEAR: rgba(0.0, 0.0, 0.0, 0.0);
+$BLUE: rgba(0.0, 0.0, 255.0, 1.0);
+$NAVY: rgba(0.0, 0.0, 127, 1.0);
+$ROYAL: #4169E1;
+$SLATE: #708090;
+$SKY: #87CEEB;
+$CYAN: rgba(0.0, 255, 255, 1.0);
+$TEAL: rgba(0.0, 127, 127, 1.0);
+$GREEN: #00FF00;
+$CHARTREUSE: #7FFF00;
+$LIME: #32CD32;;
+$FOREST: #228B22;
+$OLIVE: #6B8E23;
+$YELLOW: #FFFF00;
+$GOLD: #FFD700;
+$GOLDENROD: #DAA520;
+$ORANGE: #FFA500;
+$BROWN: #8B4513;
+$TAN: #D2B48C;
+$FIREBRICK: #B22222;
+$RED: #FF0000;
+$SCARLET: #FF341C;
+$CORAL: #FF7F50;
+$SALMON: #FA8072;
+$PINK: #FF69B4;
+$MAGENTA: rgba(255.0, 0.0, 255.0, 1.0);
+$PURPLE: #A020F0;
+$VIOLET: #EE82EE;
+$MAROON: #B03060;
+
 .card-text {
+  line-height: 1.5;
+
   &[data-rarity=COMMON] { color: $CARD_COLOR_COMMON; }
   &[data-rarity=UNCOMMON] { color: $CARD_COLOR_UNCOMMON; }
   &[data-rarity=RARE] { color: $CARD_COLOR_RARE; }
+
+  &[data-color] {
+    position: relative;
+    padding-left: 1.2em;
+
+    &::before {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 0.2em;
+      width: 0.9em;
+      height: 0.9em;
+    }
+  }
+
+  &[data-color=RED]::before { background: $FIREBRICK; }
+  &[data-color=BLUE]::before { background: $ROYAL; }
+  &[data-color=GREEN]::before { background: $FOREST; }
+  &[data-color=PURPLE]::before { background: $PURPLE; }
+  &[data-color=COLORLESS]::before { background: $GRAY; }
+  &[data-color=CURSE]::before { background: $BLACK; }
 }
