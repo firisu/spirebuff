@@ -1,51 +1,15 @@
 import React from "react";
-import {
-  Grid,
-  Menu,
-  Dropdown,
-  DropdownItemProps,
-  DropdownProps,
-  Tab,
-  Checkbox
-} from "semantic-ui-react";
+import { Grid, Menu, Tab, Checkbox } from "semantic-ui-react";
 
-import { charNameMap, charImageMap } from "modules/chars";
+import DropdownChar from "components/DropdownChar";
+import DropdownLevel from "components/DropdownLevel";
+import { charNameMap } from "modules/chars";
 import PickStats from "./PickStats";
 import WinrateStats from "./WinrateStats";
 
-// レベル選択
-const levelOptions: DropdownItemProps[] = [];
-for (let i = 0; i <= 20; i++) {
-  levelOptions.push({
-    key: `level-${i}`,
-    text: `アセンション ${i}`,
-    value: i
-  });
-}
-
-// キャラ選択
-const charOptions: DropdownItemProps[] = [];
-Object.keys(charNameMap).forEach(char => {
-  const name = charNameMap[char];
-  charOptions.push({
-    key: `char-${char}`,
-    text: name,
-    value: char,
-    image: charImageMap[char]
-  });
-});
-
 const Cards = () => {
   const [level, setLevel] = React.useState(20);
-  const changeLevel = (_: any, data: DropdownProps) => {
-    setLevel(Number(data.value));
-  };
-
   const [char, setChar] = React.useState<string>(Object.keys(charNameMap)[0]);
-  const changeChar = (_: any, data: DropdownProps) => {
-    const value = data.value as string;
-    setChar(value);
-  };
 
   const [hideLow, setHideLow] = React.useState(true);
   const toggleHideLow = () => {
@@ -75,19 +39,10 @@ const Cards = () => {
     <Grid.Column width={16}>
       <Menu inverted>
         <Menu.Item>
-          <Dropdown
-            options={charOptions}
-            defaultValue={char}
-            onChange={changeChar}
-          />
+          <DropdownChar value={char} setFunction={setChar} />
         </Menu.Item>
         <Menu.Item>
-          <Dropdown
-            scrolling
-            options={levelOptions}
-            defaultValue={level}
-            onChange={changeLevel}
-          />
+          <DropdownLevel value={level} setFunction={setLevel} />
         </Menu.Item>
         <Menu.Item>
           <Checkbox
