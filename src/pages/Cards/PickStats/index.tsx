@@ -61,7 +61,7 @@ const StatsTable = (props: Props) => {
             sorted={sort === "cardname" ? direction : undefined}
             onClick={handleSort}
             data-sort="cardname"
-            width={4}
+            width={3}
           >
             カード名
           </Table.HeaderCell>
@@ -69,6 +69,7 @@ const StatsTable = (props: Props) => {
             sorted={sort === "appeared" ? direction : undefined}
             onClick={handleSort}
             data-sort="appeared"
+            width={2}
           >
             出現回数
           </Table.HeaderCell>
@@ -76,9 +77,11 @@ const StatsTable = (props: Props) => {
             sorted={sort === "picked" ? direction : undefined}
             onClick={handleSort}
             data-sort="picked"
+            width={2}
           >
             ピック回数
           </Table.HeaderCell>
+          <Table.HeaderCell>備考</Table.HeaderCell>
         </Table.Row>
       </Table.Header>
       <Table.Body>
@@ -90,6 +93,7 @@ const StatsTable = (props: Props) => {
               <Table.Cell data-sort="cardname">{cardname}</Table.Cell>
               <Table.Cell data-sort="appeared">{appeared}</Table.Cell>
               <Table.Cell data-sort="picked">{picked}</Table.Cell>
+              <Table.Cell />
             </Table.Row>
           );
         })}
