@@ -1,0 +1,509 @@
+{
+  "Anchor": {
+    "tier": "COMMON"
+  },
+  "Ancient Tea Set": {
+    "tier": "COMMON"
+  },
+  "Art of War": {
+    "tier": "COMMON"
+  },
+  "Astrolabe": {
+    "tier": "BOSS"
+  },
+  "Bag of Marbles": {
+    "tier": "COMMON"
+  },
+  "Bag of Preparation": {
+    "tier": "COMMON"
+  },
+  "Bird Faced Urn": {
+    "tier": "RARE"
+  },
+  "Black Blood": {
+    "tier": "BOSS"
+  },
+  "Black Star": {
+    "tier": "BOSS"
+  },
+  "Blood Vial": {
+    "tier": "COMMON"
+  },
+  "Bloody Idol": {
+    "tier": "SPECIAL"
+  },
+  "Blue Candle": {
+    "tier": "UNCOMMON"
+  },
+  "Boot": {
+    "tier": "COMMON"
+  },
+  "Bottled Flame": {
+    "tier": "UNCOMMON"
+  },
+  "Bottled Lightning": {
+    "tier": "UNCOMMON"
+  },
+  "Bottled Tornado": {
+    "tier": "UNCOMMON"
+  },
+  "Brimstone": {
+    "tier": "SHOP"
+  },
+  "Bronze Scales": {
+    "tier": "COMMON"
+  },
+  "Burning Blood": {
+    "tier": "STARTER"
+  },
+  "Busted Crown": {
+    "tier": "BOSS"
+  },
+  "Cables": {
+    "tier": "UNCOMMON"
+  },
+  "Calipers": {
+    "tier": "RARE"
+  },
+  "Calling Bell": {
+    "tier": "BOSS"
+  },
+  "Cauldron": {
+    "tier": "SHOP"
+  },
+  "Centennial Puzzle": {
+    "tier": "COMMON"
+  },
+  "Champion Belt": {
+    "tier": "RARE"
+  },
+  "Charon's Ashes": {
+    "tier": "RARE"
+  },
+  "Chemical X": {
+    "tier": "SHOP"
+  },
+  "Circlet": {
+    "tier": "SPECIAL"
+  },
+  "ClockworkSouvenir": {
+    "tier": "SHOP"
+  },
+  "Coffee Dripper": {
+    "tier": "BOSS"
+  },
+  "Cracked Core": {
+    "tier": "STARTER"
+  },
+  "CultistMask": {
+    "tier": "SPECIAL"
+  },
+  "Cursed Key": {
+    "tier": "BOSS"
+  },
+  "Darkstone Periapt": {
+    "tier": "UNCOMMON"
+  },
+  "DataDisk": {
+    "tier": "COMMON"
+  },
+  "Dead Branch": {
+    "tier": "RARE"
+  },
+  "Discerning Monocle": {
+    "tier": "UNCOMMON"
+  },
+  "Dodecahedron": {
+    "tier": "UNCOMMON"
+  },
+  "DollysMirror": {
+    "tier": "SHOP"
+  },
+  "Dream Catcher": {
+    "tier": "COMMON"
+  },
+  "Du-Vu Doll": {
+    "tier": "RARE"
+  },
+  "Ectoplasm": {
+    "tier": "BOSS"
+  },
+  "Emotion Chip": {
+    "tier": "RARE"
+  },
+  "Empty Cage": {
+    "tier": "BOSS"
+  },
+  "Enchiridion": {
+    "tier": "SPECIAL"
+  },
+  "Eternal Feather": {
+    "tier": "BOSS"
+  },
+  "FaceOfCleric": {
+    "tier": "SPECIAL"
+  },
+  "FossilizedHelix": {
+    "tier": "RARE"
+  },
+  "Frozen Egg 2": {
+    "tier": "UNCOMMON"
+  },
+  "Frozen Eye": {
+    "tier": "SHOP"
+  },
+  "FrozenCore": {
+    "tier": "BOSS"
+  },
+  "Fusion Hammer": {
+    "tier": "BOSS"
+  },
+  "Gambling Chip": {
+    "tier": "RARE"
+  },
+  "Ginger": {
+    "tier": "RARE"
+  },
+  "Girya": {
+    "tier": "RARE"
+  },
+  "Golden Idol": {
+    "tier": "SPECIAL"
+  },
+  "Gremlin Horn": {
+    "tier": "UNCOMMON"
+  },
+  "GremlinMask": {
+    "tier": "SPECIAL"
+  },
+  "HandDrill": {
+    "tier": "SHOP"
+  },
+  "Happy Flower": {
+    "tier": "COMMON"
+  },
+  "HoveringKite": {
+    "tier": "BOSS"
+  },
+  "Ice Cream": {
+    "tier": "RARE"
+  },
+  "Incense Burner": {
+    "tier": "RARE"
+  },
+  "Inserter": {
+    "tier": "BOSS"
+  },
+  "Juzu Bracelet": {
+    "tier": "COMMON"
+  },
+  "Kunai": {
+    "tier": "UNCOMMON"
+  },
+  "Lantern": {
+    "tier": "COMMON"
+  },
+  "Lee's Waffle": {
+    "tier": "SHOP"
+  },
+  "Letter Opener": {
+    "tier": "UNCOMMON"
+  },
+  "Lizard Tail": {
+    "tier": "BOSS"
+  },
+  "Magic Flower": {
+    "tier": "RARE"
+  },
+  "Mango": {
+    "tier": "RARE"
+  },
+  "Mark of Pain": {
+    "tier": "BOSS"
+  },
+  "Mark of the Bloom": {
+    "tier": "SPECIAL"
+  },
+  "Matryoshka": {
+    "tier": "UNCOMMON"
+  },
+  "MawBank": {
+    "tier": "COMMON"
+  },
+  "MealTicket": {
+    "tier": "SHOP"
+  },
+  "Meat on the Bone": {
+    "tier": "UNCOMMON"
+  },
+  "Medical Kit": {
+    "tier": "SHOP"
+  },
+  "Membership Card": {
+    "tier": "SHOP"
+  },
+  "Mercury Hourglass": {
+    "tier": "UNCOMMON"
+  },
+  "Molten Egg 2": {
+    "tier": "UNCOMMON"
+  },
+  "Mummified Hand": {
+    "tier": "UNCOMMON"
+  },
+  "MutagenicStrength": {
+    "tier": "SPECIAL"
+  },
+  "Necronomicon": {
+    "tier": "SPECIAL"
+  },
+  "NeowsBlessing": {
+    "tier": "SPECIAL"
+  },
+  "Nilry's Codex": {
+    "tier": "SPECIAL"
+  },
+  "Ninja Scroll": {
+    "tier": "UNCOMMON"
+  },
+  "Nloth's Gift": {
+    "tier": "SPECIAL"
+  },
+  "NlothsMask": {
+    "tier": "SPECIAL"
+  },
+  "Nuclear Battery": {
+    "tier": "BOSS"
+  },
+  "Nunchaku": {
+    "tier": "RARE"
+  },
+  "Odd Mushroom": {
+    "tier": "SPECIAL"
+  },
+  "Oddly Smooth Stone": {
+    "tier": "COMMON"
+  },
+  "Old Coin": {
+    "tier": "RARE"
+  },
+  "Omamori": {
+    "tier": "COMMON"
+  },
+  "OrangePellets": {
+    "tier": "SHOP"
+  },
+  "Orichalcum": {
+    "tier": "COMMON"
+  },
+  "Ornamental Fan": {
+    "tier": "UNCOMMON"
+  },
+  "Orrery": {
+    "tier": "BOSS"
+  },
+  "Pandora's Box": {
+    "tier": "BOSS"
+  },
+  "Pantograph": {
+    "tier": "UNCOMMON"
+  },
+  "Paper Crane": {
+    "tier": "UNCOMMON"
+  },
+  "Paper Frog": {
+    "tier": "UNCOMMON"
+  },
+  "Peace Pipe": {
+    "tier": "RARE"
+  },
+  "Pear": {
+    "tier": "UNCOMMON"
+  },
+  "Pen Nib": {
+    "tier": "COMMON"
+  },
+  "Philosopher's Stone": {
+    "tier": "BOSS"
+  },
+  "Pocketwatch": {
+    "tier": "RARE"
+  },
+  "Potion Belt": {
+    "tier": "COMMON"
+  },
+  "Prayer Wheel": {
+    "tier": "RARE"
+  },
+  "PreservedInsect": {
+    "tier": "COMMON"
+  },
+  "PrismaticShard": {
+    "tier": "SHOP"
+  },
+  "Question Card": {
+    "tier": "UNCOMMON"
+  },
+  "Red Circlet": {
+    "tier": "SPECIAL"
+  },
+  "Red Mask": {
+    "tier": "SPECIAL"
+  },
+  "Red Skull": {
+    "tier": "COMMON"
+  },
+  "Regal Pillow": {
+    "tier": "COMMON"
+  },
+  "Ring of the Serpent": {
+    "tier": "BOSS"
+  },
+  "Ring of the Snake": {
+    "tier": "STARTER"
+  },
+  "Runic Capacitor": {
+    "tier": "SHOP"
+  },
+  "Runic Cube": {
+    "tier": "BOSS"
+  },
+  "Runic Dome": {
+    "tier": "BOSS"
+  },
+  "Runic Pyramid": {
+    "tier": "BOSS"
+  },
+  "Self Forming Clay": {
+    "tier": "UNCOMMON"
+  },
+  "Shovel": {
+    "tier": "RARE"
+  },
+  "Shuriken": {
+    "tier": "UNCOMMON"
+  },
+  "Singing Bowl": {
+    "tier": "UNCOMMON"
+  },
+  "Sling": {
+    "tier": "SHOP"
+  },
+  "Smiling Mask": {
+    "tier": "COMMON"
+  },
+  "Snake Skull": {
+    "tier": "COMMON"
+  },
+  "Snecko Eye": {
+    "tier": "BOSS"
+  },
+  "Sozu": {
+    "tier": "BOSS"
+  },
+  "Spirit Poop": {
+    "tier": "SPECIAL"
+  },
+  "SsserpentHead": {
+    "tier": "SPECIAL"
+  },
+  "StoneCalendar": {
+    "tier": "RARE"
+  },
+  "Strange Spoon": {
+    "tier": "SHOP"
+  },
+  "Strawberry": {
+    "tier": "COMMON"
+  },
+  "Sundial": {
+    "tier": "UNCOMMON"
+  },
+  "Symbiotic Virus": {
+    "tier": "UNCOMMON"
+  },
+  "Test 1": {
+    "tier": "UNCOMMON"
+  },
+  "Test 3": {
+    "tier": "RARE"
+  },
+  "Test 4": {
+    "tier": "RARE"
+  },
+  "Test 5": {
+    "tier": "COMMON"
+  },
+  "Test 6": {
+    "tier": "UNCOMMON"
+  },
+  "The Courier": {
+    "tier": "UNCOMMON"
+  },
+  "The Specimen": {
+    "tier": "RARE"
+  },
+  "TheAbacus": {
+    "tier": "SHOP"
+  },
+  "Thread and Needle": {
+    "tier": "RARE"
+  },
+  "Tingsha": {
+    "tier": "RARE"
+  },
+  "Tiny Chest": {
+    "tier": "COMMON"
+  },
+  "Tiny House": {
+    "tier": "BOSS"
+  },
+  "Toolbox": {
+    "tier": "SHOP"
+  },
+  "Torii": {
+    "tier": "RARE"
+  },
+  "Tough Bandages": {
+    "tier": "RARE"
+  },
+  "Toxic Egg 2": {
+    "tier": "UNCOMMON"
+  },
+  "Toy Ornithopter": {
+    "tier": "SHOP"
+  },
+  "Turnip": {
+    "tier": "RARE"
+  },
+  "TwistedFunnel": {
+    "tier": "SHOP"
+  },
+  "Unceasing Top": {
+    "tier": "RARE"
+  },
+  "Vajra": {
+    "tier": "COMMON"
+  },
+  "Velvet Choker": {
+    "tier": "BOSS"
+  },
+  "War Paint": {
+    "tier": "COMMON"
+  },
+  "WarpedTongs": {
+    "tier": "SPECIAL"
+  },
+  "Whetstone": {
+    "tier": "COMMON"
+  },
+  "White Beast Statue": {
+    "tier": "BOSS"
+  },
+  "WingedGreaves": {
+    "tier": "RARE"
+  },
+  "WristBlade": {
+    "tier": "BOSS"
+  }
+}
