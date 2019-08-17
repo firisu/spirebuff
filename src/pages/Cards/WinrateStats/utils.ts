@@ -13,13 +13,17 @@ export const useStats = (level: number, char: string) => {
   const stats = new Stats();
 
   runs.forEach(run => {
+    // 枚数を計算
+    const parsedMasterDeck = _.map(run.master_deck, fullname => {
+      const [name] = parseCardName(fullname);
+      return name;
+    });
+    parsedMasterDeck.forEach(name => {
+      stats.incr("count", name);
+    });
+
     // 勝率の計算
-    const uniqDeck = _.uniq(
-      _.map(run.master_deck, fullname => {
-        const [name] = parseCardName(fullname);
-        return name;
-      })
-    );
+    const uniqDeck = _.uniq(parsedMasterDeck);
     if (isAct3Victory(run)) {
       uniqDeck.forEach(name => {
         stats.incr("act3won", name);

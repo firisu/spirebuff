@@ -2,8 +2,7 @@ import * as _ from "lodash";
 
 interface SingleStat {
   cardname: string;
-  appeared: number;
-  picked: number;
+  count: number;
   defeated: number;
   act3won: number;
   act4won: number;
@@ -25,8 +24,7 @@ export class Stats {
     if (i === -1) {
       this.data.push({
         cardname,
-        appeared: 0,
-        picked: 0,
+        count: 0,
         defeated: 0,
         act3won: 0,
         act4won: 0
