@@ -12,15 +12,15 @@ for (let i = 0; i <= 20; i++) {
 }
 
 interface Props {
-  value;
-  setFunction;
+  value: number;
+  setFunction: (newValue: number) => void;
 }
 
 const DropdownLevel = (props: Props) => {
   const { value, setFunction } = props;
 
   const changeHandler = (_: any, data: DropdownProps) => {
-    setFunction(Number(data.value));
+    setFunction(Number(data.value as string));
   };
 
   return (

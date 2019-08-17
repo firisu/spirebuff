@@ -16,15 +16,15 @@ Object.keys(charNameMap).forEach(char => {
 });
 
 interface Props {
-  value;
-  setFunction;
+  value: string;
+  setFunction: (newValue: string) => void;
 }
 
 const DropdownChar = (props: Props) => {
   const { value, setFunction } = props;
 
   const changeHandler = (_: any, data: DropdownProps) => {
-    setFunction(Number(data.value));
+    setFunction(data.value as string);
   };
 
   return (
