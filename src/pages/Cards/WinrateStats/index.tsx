@@ -70,7 +70,7 @@ interface Props {
 const StatsTable = (props: Props) => {
   const { level, char, hideLow } = props;
 
-  const [sort, setSort] = React.useState<SortString>("cardname");
+  const [sort, setSort] = React.useState<SortString>("master_deck");
   const [direction, setDirection] = React.useState<SortDirection>("descending");
   const stats = useSortedStats(level, char, sort, direction);
 
@@ -84,7 +84,7 @@ const StatsTable = (props: Props) => {
       setDirection(newDirection);
     } else {
       setSort(newSort);
-      setDirection("ascending");
+      setDirection("descending");
     }
   };
 
