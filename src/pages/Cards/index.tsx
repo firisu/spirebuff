@@ -47,7 +47,7 @@ const Cards = () => {
     setChar(value);
   };
 
-  const [hideLow, setHideLow] = React.useState(false);
+  const [hideLow, setHideLow] = React.useState(true);
   const toggleHideLow = () => {
     setHideLow(!hideLow);
   };
