@@ -14,7 +14,8 @@
     "dist": "electron-builder",
     "prod:pack": "npm-run-all build pack",
     "prod:dist": "npm-run-all build dist",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "make_card_json": "node -r dotenv/config scripts/make_card_json.js"
   },
   "build": {
     "extends": null,
