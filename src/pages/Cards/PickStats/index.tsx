@@ -2,7 +2,7 @@ import React from "react";
 import { Table } from "semantic-ui-react";
 import * as _ from "lodash";
 
-import { useLocalization } from "modules/localization";
+import { useCards } from "modules/cards";
 import { useStats } from "./utils";
 
 type SortString = "cardname" | "appeared" | "picked" | "";
@@ -14,7 +14,7 @@ const useSortedStats = (
   sort: SortString,
   direction: SortDirection
 ) => {
-  const { cardInfo } = useLocalization();
+  const { getCardInfo } = useCards();
 
   const sourceStats = useStats(level, char);
   if (sort === "") {
@@ -23,7 +23,7 @@ const useSortedStats = (
 
   let sortedStats;
   if (sort === "cardname") {
-    sortedStats = _.sortBy(sourceStats, elm => cardInfo(elm.cardname).NAME);
+    sortedStats = _.sortBy(sourceStats, elm => getCardInfo(elm.cardname).name);
   } else {
     sortedStats = _.sortBy(sourceStats, elm => elm[sort]);
   }
@@ -61,7 +61,7 @@ const StatsTable = (props: Props) => {
     }
   };
 
-  const { cardInfo } = useLocalization();
+  const { getCardInfo } = useCards();
 
   return (
     <Table inverted sortable selectable celled size="small" compact="very">
@@ -101,7 +101,7 @@ const StatsTable = (props: Props) => {
           return (
             <Table.Row key={`card-row-${cardname}`}>
               <Table.Cell data-sort="cardname">
-                {cardInfo(cardname).NAME}
+                {getCardInfo(cardname).name}
               </Table.Cell>
               <Table.Cell data-sort="appeared">{appeared}</Table.Cell>
               <Table.Cell data-sort="picked">{picked}</Table.Cell>
