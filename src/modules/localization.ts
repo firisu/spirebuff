@@ -21,7 +21,12 @@ export const useLocalization = () => {
   }
 
   return {
-    cardName: (id: string) => {
+    cardInfo: (id: string) => {
+      if (jsons.cards[id] === undefined) {
+        console.error(id, "のカード情報が見つかりませんでした。");
+        return { NAME: "ERROR CARD" };
+      }
+
       return jsons.cards[id];
     }
   };
