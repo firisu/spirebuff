@@ -1,0 +1,9 @@
+$CARD_COLOR_COMMON: rgba(131.0, 129.0, 121.0);
+$CARD_COLOR_UNCOMMON: rgba(142.0, 196.0, 213.0);
+$CARD_COLOR_RARE: rgba(255, 203, 64, 1.0);
+
+.card-text {
+  &[data-color=COMMON] { color: $CARD_COLOR_COMMON; }
+  &[data-color=UNCOMMON] { color: $CARD_COLOR_UNCOMMON; }
+  &[data-color=RARE] { color: $CARD_COLOR_RARE; }
+}
