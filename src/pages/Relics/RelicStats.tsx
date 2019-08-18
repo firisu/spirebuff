@@ -72,6 +72,7 @@ const RelicStats = (props: Props) => {
           >
             勝率(act4)
           </Table.HeaderCell>
+          <Table.HeaderCell>備考</Table.HeaderCell>
         </Table.Row>
       </Table.Header>
       <Table.Body>
@@ -90,6 +91,7 @@ const RelicStats = (props: Props) => {
               <Table.Cell data-sort="act4won">
                 {formatWinrate(picked, act4won)}
               </Table.Cell>
+              <Table.Cell />
             </Table.Row>
           );
         })}
