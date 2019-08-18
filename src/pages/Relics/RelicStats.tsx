@@ -2,11 +2,12 @@ import React from "react";
 import { Table } from "semantic-ui-react";
 import * as _ from "lodash";
 
-import { RelicTier, useRelics } from "modules/relics";
+import RelicName from "components/RelicName";
+import { RelicTier } from "modules/relics";
+import { formatWinrate } from "modules/utils";
 
 import { useSortedStats } from "./utils";
 import { SortString, SortDirection } from "./types";
-import { formatWinrate } from "modules/utils";
 
 interface Props {
   level: number;
@@ -34,10 +35,6 @@ const RelicStats = (props: Props) => {
       setDirection("descending");
     }
   };
-
-  // レリックの名前取得用
-  const { getAllRelicInfo } = useRelics();
-  const allRelics = getAllRelicInfo();
 
   return (
     <Table inverted sortable selectable celled size="small" compact="very">
@@ -83,7 +80,9 @@ const RelicStats = (props: Props) => {
 
           return (
             <Table.Row key={`relic-row-${id}`}>
-              <Table.Cell data-sort="name">{allRelics[id].name}</Table.Cell>
+              <Table.Cell data-sort="name">
+                <RelicName id={id} />
+              </Table.Cell>
               <Table.Cell data-sort="picked">{picked}</Table.Cell>
               <Table.Cell data-sort="act3won">
                 {formatWinrate(picked, act3won)}

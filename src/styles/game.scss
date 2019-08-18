@@ -65,3 +65,9 @@ $MAROON: #B03060;
   &[data-color=COLORLESS]::before { background: $GRAY; }
   &[data-color=CURSE]::before { background: $BLACK; }
 }
+
+.relic-name {
+  &[data-tier=COMMON] { color: $CARD_COLOR_COMMON; }
+  &[data-tier=UNCOMMON] { color: $CARD_COLOR_UNCOMMON; }
+  &[data-tier=RARE] { color: $CARD_COLOR_RARE; }
+}
