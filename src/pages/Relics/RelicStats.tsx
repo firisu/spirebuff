@@ -80,10 +80,6 @@ const RelicStats = (props: Props) => {
       <Table.Body>
         {_.map(stats, (stat, id) => {
           const { picked, act3won, act4won } = stat;
-          const relic = allRelics[id];
-          if (!relic) {
-            console.log(relic, id);
-          }
 
           return (
             <Table.Row key={`relic-row-${id}`}>

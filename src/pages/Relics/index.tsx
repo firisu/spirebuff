@@ -35,7 +35,6 @@ const Relics = () => {
   const [tierGroup, setTierGroup] = React.useState<TierGroup>("normal");
   const changeHandler = (_: any, data: DropdownProps) => {
     setTierGroup(data.value as TierGroup);
-    console.log(data.value, tierGroupMap[data.value as TierGroup]);
   };
 
   return (
