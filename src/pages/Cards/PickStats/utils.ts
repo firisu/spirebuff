@@ -1,5 +1,3 @@
-import * as _ from "lodash";
-
 import { parseCardName } from "modules/cards";
 import { useMetricsRuns } from "modules/runs";
 
