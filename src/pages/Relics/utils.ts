@@ -10,13 +10,6 @@ export const useStats = (
   char: string,
   tiers: ReadonlyArray<RelicTier>
 ) => {
-  // 全てのレリックデータを取得
-  const { getAllRelicInfo } = useRelics();
-  const allRelics = getAllRelicInfo();
-
-  // レリックをフィルタリング
-  const relics = _.pickBy(allRelics, relic => tiers.includes(relic.tier));
-
   // プレイデータを取得
   const allRuns = useMetricsRuns();
   const runs = allRuns.filter(
@@ -25,9 +18,6 @@ export const useStats = (
 
   // スタッツの初期化
   const stats = new Stats("picked", "act3won", "act4won");
-  _.forEach(relics, (relic, id) => {
-    stats.initStat(id);
-  });
 
   // スタッツの計算
   runs.forEach(run => {
@@ -35,10 +25,7 @@ export const useStats = (
     const act4won = isAct4Victory(run);
 
     run.relics.forEach((id: string) => {
-      // フィルタ済みのレリックのみ計算対象とする
-      if (relics[id] === undefined) {
-        return;
-      }
+      stats.initStat(id);
 
       // ピック回数
       stats.incr(id, "picked");
@@ -55,7 +42,16 @@ export const useStats = (
     });
   });
 
-  return stats.data;
+  // 全てのレリックデータを取得
+  const { getAllRelicInfo } = useRelics();
+  const allRelics = getAllRelicInfo();
+
+  // ティアーでフィルタリング
+  const data = _.pickBy(stats.data, (v, id) =>
+    tiers.includes(allRelics[id].tier)
+  );
+
+  return data;
 };
 
 export const useSortedStats = (
