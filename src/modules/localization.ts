@@ -54,7 +54,7 @@ export const useLocalization = () => {
       return jsons.cards[id];
     },
     relicL: (id: string): RelicLocalization => {
-      if (jsons.cards[id] === undefined) {
+      if (jsons.relics[id] === undefined) {
         throw new Error(`${id} のレリック情報が見つかりませんでした。`);
       }
       return jsons.relics[id];
