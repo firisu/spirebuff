@@ -1,3 +1,5 @@
+import * as _ from "lodash";
+
 import { useLocalization } from "./localization";
 
 import relics from "data/relics.json";
@@ -38,17 +40,23 @@ export interface RelicInfo {
 export const useRelics = () => {
   const { relicL } = useLocalization();
 
+  const relicInfo: { [id: string]: RelicInfo } = {};
+  _.map(relics as RelicData, (data, id) => {
+    const info = relicL(id);
+    relicInfo[id] = {
+      name: info.NAME,
+      flavor: info.FLAVOR,
+      descriptions: info.DESCRIPTIONS,
+      ...data
+    };
+  });
+
   return {
     getRelicInfo: (id: string): RelicInfo => {
-      const info = relicL(id);
-      const data = (relics as RelicData)[id];
-
-      return {
-        name: info.NAME,
-        flavor: info.FLAVOR,
-        descriptions: info.DESCRIPTIONS,
-        tier: data.tier
-      };
+      return relicInfo[id];
+    },
+    getAllRelicInfo: (): { [id: string]: RelicInfo } => {
+      return relicInfo;
     }
   };
 };
