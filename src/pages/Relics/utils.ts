@@ -13,6 +13,8 @@ export const useStats = (
   // 全てのレリックデータを取得
   const { getAllRelicInfo } = useRelics();
   const allRelics = getAllRelicInfo();
+
+  // レリックをフィルタリング
   const relics = _.pickBy(allRelics, relic => tiers.includes(relic.tier));
 
   // プレイデータを取得
@@ -33,6 +35,11 @@ export const useStats = (
     const act4won = isAct4Victory(run);
 
     run.relics.forEach((id: string) => {
+      // フィルタ済みのレリックのみ計算対象とする
+      if (relics[id] === undefined) {
+        return;
+      }
+
       // ピック回数
       stats.incr(id, "picked");
 
@@ -72,10 +79,12 @@ export const useSortedStats = (
     sortedKeys = _.sortBy(Object.keys(stats), id =>
       stats[id].picked === 0 ? 0 : stats[id][sort] / stats[id].picked
     );
-  } else {
+  } else if (sort === "act4won") {
     sortedKeys = _.sortBy(Object.keys(stats), id =>
       stats[id].picked === 0 ? 0 : stats[id][sort] / stats[id].picked
     );
+  } else {
+    sortedKeys = _.sortBy(Object.keys(stats), id => stats[id][sort]);
   }
 
   // 降順なら逆にする
