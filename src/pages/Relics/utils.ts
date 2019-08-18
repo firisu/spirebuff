@@ -68,8 +68,14 @@ export const useSortedStats = (
   let sortedKeys: string[];
   if (sort === "name") {
     sortedKeys = _.sortBy(Object.keys(stats), id => allRelics[id].name);
+  } else if (sort === "act3won") {
+    sortedKeys = _.sortBy(Object.keys(stats), id =>
+      stats[id].picked === 0 ? 0 : stats[id][sort] / stats[id].picked
+    );
   } else {
-    sortedKeys = _.sortBy(Object.keys(stats), id => stats[id][sort]);
+    sortedKeys = _.sortBy(Object.keys(stats), id =>
+      stats[id].picked === 0 ? 0 : stats[id][sort] / stats[id].picked
+    );
   }
 
   // 降順なら逆にする
