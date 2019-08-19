@@ -19,9 +19,9 @@ const UserOverview = () => {
     <List className="useroverview" inverted divided horizontal size="small">
       <List.Item>
         <div>
-          <span className="red">{runCounts["red"]}</span>/
-          <span className="green">{runCounts["green"]}</span>/
-          <span className="blue">{runCounts["blue"]}</span>
+          <span className="red">{runCounts["RED"]}</span>/
+          <span className="green">{runCounts["GREEN"]}</span>/
+          <span className="blue">{runCounts["BLUE"]}</span>
         </div>
         <div>プレイ回数</div>
       </List.Item>
