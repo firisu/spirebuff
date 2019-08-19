@@ -33,7 +33,11 @@ const Cards = () => {
       menuItem: "勝率",
       render: () => (
         <Tab.Pane attached={false}>
-          <WinrateStats level={level} char={char} />
+          <WinrateStats
+            level={level}
+            char={char}
+            hideOtherColor={hideOtherColor}
+          />
         </Tab.Pane>
       )
     }
