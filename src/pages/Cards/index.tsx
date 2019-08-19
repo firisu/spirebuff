@@ -15,14 +15,6 @@ const Cards = () => {
   const toggleHideOtherColor = () => {
     setHideOtherColor(!hideOtherColor);
   };
-  const [hideLow, setHideLow] = React.useState(true);
-  const toggleHideLow = () => {
-    setHideLow(!hideLow);
-  };
-  const [hideStarter, setHideStarter] = React.useState(true);
-  const toggleHideStarter = () => {
-    setHideStarter(!hideStarter);
-  };
 
   const panes = [
     {
@@ -41,12 +33,7 @@ const Cards = () => {
       menuItem: "勝率",
       render: () => (
         <Tab.Pane attached={false}>
-          <WinrateStats
-            level={level}
-            char={char}
-            hideLow={hideLow}
-            hideStarter={hideStarter}
-          />
+          <WinrateStats level={level} char={char} />
         </Tab.Pane>
       )
     }
@@ -66,20 +53,6 @@ const Cards = () => {
             label="他色のカードを隠す"
             onClick={toggleHideOtherColor}
             defaultChecked={hideOtherColor}
-          />
-        </Menu.Item>
-        <Menu.Item>
-          <Checkbox
-            label="低頻度のカードを隠す"
-            onClick={toggleHideLow}
-            defaultChecked={hideLow}
-          />
-        </Menu.Item>
-        <Menu.Item>
-          <Checkbox
-            label="スターターを隠す"
-            onClick={toggleHideStarter}
-            defaultChecked={hideStarter}
           />
         </Menu.Item>
       </Menu>
