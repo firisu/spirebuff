@@ -9,9 +9,9 @@ export const colorCharMap = {
 };
 
 export const charColorMap: { [char: string]: string } = {
-  IRONCLAD: "red",
-  THE_SILENT: "green",
-  DEFECT: "blue"
+  IRONCLAD: "RED",
+  THE_SILENT: "GREEN",
+  DEFECT: "BLUE"
 };
 
 export const charNameMap: { [char: string]: string } = {
