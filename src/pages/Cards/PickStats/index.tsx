@@ -66,8 +66,6 @@ const StatsTable = (props: Props) => {
     }
   };
 
-  const { getCardInfo } = useCards();
-
   return (
     <Table inverted sortable selectable celled size="small" compact="very">
       <Table.Header>
@@ -102,9 +100,6 @@ const StatsTable = (props: Props) => {
       <Table.Body>
         {stats.map(elm => {
           const { cardname, appeared, picked } = elm;
-          if (hideLow && appeared < hideLowCap) return null;
-          if (hideStarter && getCardInfo(elm.cardname).rarity === "BASIC")
-            return null;
 
           return (
             <Table.Row key={`card-row-${cardname}`}>
