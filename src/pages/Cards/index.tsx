@@ -11,6 +11,10 @@ const Cards = () => {
   const [level, setLevel] = React.useState(20);
   const [char, setChar] = React.useState<string>(Object.keys(charNameMap)[0]);
 
+  const [hideOtherColor, setHideOtherColor] = React.useState(true);
+  const toggleHideOtherColor = () => {
+    setHideOtherColor(!hideOtherColor);
+  };
   const [hideLow, setHideLow] = React.useState(true);
   const toggleHideLow = () => {
     setHideLow(!hideLow);
@@ -28,8 +32,7 @@ const Cards = () => {
           <PickStats
             level={level}
             char={char}
-            hideLow={hideLow}
-            hideStarter={hideStarter}
+            hideOtherColor={hideOtherColor}
           />
         </Tab.Pane>
       )
@@ -57,6 +60,13 @@ const Cards = () => {
         </Menu.Item>
         <Menu.Item>
           <DropdownLevel value={level} setFunction={setLevel} />
+        </Menu.Item>
+        <Menu.Item>
+          <Checkbox
+            label="他色のカードを隠す"
+            onClick={toggleHideOtherColor}
+            defaultChecked={hideOtherColor}
+          />
         </Menu.Item>
         <Menu.Item>
           <Checkbox

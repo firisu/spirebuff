@@ -4,12 +4,13 @@ import * as _ from "lodash";
 
 import CardName from "components/CardName";
 import { useCards } from "modules/cards";
+import { charColorMap } from "modules/chars";
+import { formatWinrate } from "modules/utils";
+
 import { useStats } from "./utils";
 
-type SortString = "cardname" | "appeared" | "picked" | "";
+type SortString = "cardname" | "appeared" | "picked" | "pickrate";
 type SortDirection = "ascending" | "descending" | undefined;
-
-const hideLowCap = 10;
 
 const useSortedStats = (
   level: number,
@@ -20,13 +21,12 @@ const useSortedStats = (
   const { getCardInfo } = useCards();
 
   const sourceStats = useStats(level, char);
-  if (sort === "") {
-    return sourceStats;
-  }
 
   let sortedStats;
   if (sort === "cardname") {
     sortedStats = _.sortBy(sourceStats, elm => getCardInfo(elm.cardname).name);
+  } else if (sort === "pickrate") {
+    sortedStats = _.sortBy(sourceStats, elm => elm.picked / elm.appeared);
   } else {
     sortedStats = _.sortBy(sourceStats, elm => elm[sort]);
   }
@@ -41,12 +41,11 @@ const useSortedStats = (
 interface Props {
   level: number;
   char: string;
-  hideLow: boolean;
-  hideStarter: boolean;
+  hideOtherColor: boolean;
 }
 
 const StatsTable = (props: Props) => {
-  const { level, char, hideLow, hideStarter } = props;
+  const { level, char, hideOtherColor } = props;
 
   const [sort, setSort] = React.useState<SortString>("appeared");
   const [direction, setDirection] = React.useState<SortDirection>("descending");
@@ -54,9 +53,7 @@ const StatsTable = (props: Props) => {
 
   const handleSort = (e: any) => {
     const newSort: SortString = e.target.dataset.sort;
-    if (sort === "") {
-      setSort(newSort);
-    } else if (sort === newSort) {
+    if (sort === newSort) {
       const newDirection =
         direction === "ascending" ? "descending" : "ascending";
       setDirection(newDirection);
@@ -65,6 +62,10 @@ const StatsTable = (props: Props) => {
       setDirection("descending");
     }
   };
+
+  // 色判定用
+  const { getCardInfo } = useCards();
+  const myColor = charColorMap[char];
 
   return (
     <Table inverted sortable selectable celled size="small" compact="very">
@@ -94,12 +95,23 @@ const StatsTable = (props: Props) => {
           >
             ピック回数
           </Table.HeaderCell>
+          <Table.HeaderCell
+            sorted={sort === "pickrate" ? direction : undefined}
+            onClick={handleSort}
+            data-sort="pickrate"
+            width={2}
+          >
+            ピック率
+          </Table.HeaderCell>
           <Table.HeaderCell>備考</Table.HeaderCell>
         </Table.Row>
       </Table.Header>
       <Table.Body>
         {stats.map(elm => {
           const { cardname, appeared, picked } = elm;
+          if (hideOtherColor && getCardInfo(elm.cardname).color !== myColor) {
+            return null;
+          }
 
           return (
             <Table.Row key={`card-row-${cardname}`}>
@@ -108,6 +120,9 @@ const StatsTable = (props: Props) => {
               </Table.Cell>
               <Table.Cell data-sort="appeared">{appeared}</Table.Cell>
               <Table.Cell data-sort="picked">{picked}</Table.Cell>
+              <Table.Cell data-sort="picked">
+                {formatWinrate(appeared, picked)}
+              </Table.Cell>
               <Table.Cell />
             </Table.Row>
           );
