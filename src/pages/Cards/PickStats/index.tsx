@@ -42,10 +42,11 @@ interface Props {
   level: number;
   char: string;
   hideLow: boolean;
+  hideStarter: boolean;
 }
 
 const StatsTable = (props: Props) => {
-  const { level, char, hideLow } = props;
+  const { level, char, hideLow, hideStarter } = props;
 
   const [sort, setSort] = React.useState<SortString>("appeared");
   const [direction, setDirection] = React.useState<SortDirection>("descending");
@@ -64,6 +65,8 @@ const StatsTable = (props: Props) => {
       setDirection("descending");
     }
   };
+
+  const { getCardInfo } = useCards();
 
   return (
     <Table inverted sortable selectable celled size="small" compact="very">
@@ -100,6 +103,8 @@ const StatsTable = (props: Props) => {
         {stats.map(elm => {
           const { cardname, appeared, picked } = elm;
           if (hideLow && appeared < hideLowCap) return null;
+          if (hideStarter && getCardInfo(elm.cardname).rarity === "BASIC")
+            return null;
 
           return (
             <Table.Row key={`card-row-${cardname}`}>

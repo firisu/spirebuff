@@ -15,13 +15,22 @@ const Cards = () => {
   const toggleHideLow = () => {
     setHideLow(!hideLow);
   };
+  const [hideStarter, setHideStarter] = React.useState(true);
+  const toggleHideStarter = () => {
+    setHideStarter(!hideStarter);
+  };
 
   const panes = [
     {
       menuItem: "ピック",
       render: () => (
         <Tab.Pane attached={false}>
-          <PickStats level={level} char={char} hideLow={hideLow} />
+          <PickStats
+            level={level}
+            char={char}
+            hideLow={hideLow}
+            hideStarter={hideStarter}
+          />
         </Tab.Pane>
       )
     },
@@ -29,7 +38,12 @@ const Cards = () => {
       menuItem: "勝率",
       render: () => (
         <Tab.Pane attached={false}>
-          <WinrateStats level={level} char={char} hideLow={hideLow} />
+          <WinrateStats
+            level={level}
+            char={char}
+            hideLow={hideLow}
+            hideStarter={hideStarter}
+          />
         </Tab.Pane>
       )
     }
@@ -49,6 +63,13 @@ const Cards = () => {
             label="低頻度のカードを隠す"
             onClick={toggleHideLow}
             defaultChecked={hideLow}
+          />
+        </Menu.Item>
+        <Menu.Item>
+          <Checkbox
+            label="スターターを隠す"
+            onClick={toggleHideStarter}
+            defaultChecked={hideStarter}
           />
         </Menu.Item>
       </Menu>
