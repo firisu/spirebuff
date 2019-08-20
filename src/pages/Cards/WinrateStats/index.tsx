@@ -1,5 +1,5 @@
 import React from "react";
-import { Table, Checkbox, Form } from "semantic-ui-react";
+import { Table, Form } from "semantic-ui-react";
 import * as _ from "lodash";
 
 import CardName from "components/CardName";
