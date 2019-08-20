@@ -121,7 +121,6 @@ const StatsTable = (props: Props) => {
   });
   Object.keys(countByRarity).forEach(rarity => {
     const avg = totalByRarity[rarity] / countByRarity[rarity];
-    console.log(rarity, "avg", avg);
     hideLowCapsByRarity[rarity] = avg / 5;
   });
 
