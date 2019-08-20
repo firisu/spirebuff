@@ -3,10 +3,6 @@ body {
   color: #FFFFFF;
 }
 
-.red { color: #FF4040; }
-.green { color: #40FF40; }
-.blue { color: #9090FF; }
-
 .victory { color: limegreen; }
 .defeat { color: red; }
 
