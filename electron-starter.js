@@ -1,4 +1,5 @@
 const { app, BrowserWindow } = require("electron");
+const fs = require("fs");
 const path = require("path");
 const os = require("os");
 const dotenv = require("dotenv").config();
@@ -19,10 +20,21 @@ function createWindow() {
 
   // React Dev Toolsの読み込み
   if (!dotenv.error) {
-    if (process.env.REACT_DEV_TOOLS) {
-      BrowserWindow.addDevToolsExtension(
-        path.join(os.homedir(), process.env.REACT_DEV_TOOLS)
+    if (process.env.REACT_DEV_TOOLS_DIR) {
+      const tools_dir = path.join(
+        os.homedir(),
+        process.env.REACT_DEV_TOOLS_DIR
       );
+      const dirs = fs.readdirSync(tools_dir);
+
+      // 最新バージョンを自動で開く
+      if (dirs && dirs.length === 1) {
+        const fullpath = path.join(tools_dir, dirs[0]);
+        const stat = fs.statSync(fullpath);
+        if (stat && stat.isDirectory()) {
+          BrowserWindow.addDevToolsExtension(fullpath);
+        }
+      }
     }
   }
 
