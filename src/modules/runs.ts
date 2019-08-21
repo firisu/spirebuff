@@ -21,6 +21,10 @@ export type Run = {
     floor: number;
   }>;
   master_deck: ReadonlyArray<string>;
+  event_choices: ReadonlyArray<{
+    event_name: string;
+    player_choice: string;
+  }>;
   [otherParams: string]: any;
 };
 
