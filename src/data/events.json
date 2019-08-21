@@ -1,0 +1,314 @@
+{
+  "Falling": {
+    "choices": [
+      "Ignored",
+      "Removed Skill",
+      "Removed Power",
+      "Removed Attack"
+    ]
+  },
+  "MindBloom": {
+    "choices": [
+      "Fight",
+      "Upgrade",
+      "Gold",
+      "Heal"
+    ]
+  },
+  "The Moai Head": {
+    "choices": [
+      "Heal",
+      "Gave Idol",
+      "Ignored"
+    ]
+  },
+  "Mysterious Sphere": {
+    "choices": [
+      "Fight",
+      "Ignored"
+    ]
+  },
+  "SecretPortal": {
+    "choices": [
+      "Took Portal",
+      "Ignored"
+    ]
+  },
+  "SensoryStone": {
+    "choices": [
+      "Memory 1",
+      "Memory 2",
+      "Memory 3"
+    ]
+  },
+  "Tomb of Lord Red Mask": {
+    "choices": [
+      "Wore Mask",
+      "Paid",
+      "Ignored"
+    ]
+  },
+  "Winding Halls": {
+    "choices": [
+      "Embrace Madness",
+      "Writhe",
+      "Max HP"
+    ]
+  },
+  "Addict": {
+    "choices": [
+      "Obtained Relic",
+      "Stole Relic"
+    ]
+  },
+  "Back to Basics": {
+    "choices": [
+      "Elegance",
+      "Simplicity"
+    ]
+  },
+  "Beggar": {
+    "choices": [
+      "Gave Gold",
+      "Ignored"
+    ]
+  },
+  "Cursed Tome": {
+    "choices": [
+      "Ignored",
+      "Stopped",
+      "Obtained Book"
+    ]
+  },
+  "Drug Dealer": {
+    "choices": [
+      "Obtain J.A.X.",
+      "Inject Mutagens",
+      "Became Test Subject"
+    ]
+  },
+  "Forgotten Altar": {
+    "choices": [
+      "Shed Blood",
+      "Smashed Altar",
+      "Gave Idol"
+    ]
+  },
+  "Ghosts": {
+    "choices": [
+      "Ignored",
+      "Became a Ghost"
+    ]
+  },
+  "Masked Bandits": {
+    "choices": [
+      "Fought Bandits",
+      "Paid Fearfully"
+    ]
+  },
+  "Nest": {
+    "choices": [
+      "Stole From Cult",
+      "Joined the Cult"
+    ]
+  },
+  "The Joust": {
+    "choices": [
+      "Bet on Owner",
+      "Bet on Murderer"
+    ]
+  },
+  "The Library": {
+    "choices": [
+      "Read",
+      "Heal"
+    ]
+  },
+  "The Mausoleum": {
+    "choices": [
+      "Opened",
+      "Ignored"
+    ]
+  },
+  "Vampires": {
+    "choices": [
+      "Became a vampire",
+      "Became a vampire (Vial)",
+      "Ignored"
+    ]
+  },
+  "Big Fish": {
+    "choices": [
+      "Banana",
+      "Donut",
+      "Box"
+    ]
+  },
+  "The Cleric": {
+    "choices": [
+      "Card Removal",
+      "Healed",
+      "Leave"
+    ]
+  },
+  "Golden Idol": {
+    "choices": [
+      "Ignored",
+      "Take Wound",
+      "Take Damage",
+      "Lose Max HP"
+    ]
+  },
+  "Golden Wing": {
+    "choices": [
+      "Gained Gold",
+      "Ignored",
+      "Card Removal"
+    ]
+  },
+  "World of Goop": {
+    "choices": [
+      "Gather Gold",
+      "Left Gold"
+    ]
+  },
+  "Living Wall": {
+    "choices": [
+      "Forget",
+      "Change",
+      "Grow"
+    ]
+  },
+  "Mushrooms": {
+    "choices": [
+      "Fought Mushrooms",
+      "Healed and dodged fight"
+    ]
+  },
+  "Scrap Ooze": {
+    "choices": [
+      "Success",
+      "Fled"
+    ]
+  },
+  "Shining Light": {
+    "choices": [
+      "Ignored",
+      "Entered Light"
+    ]
+  },
+  "Liars Game": {
+    "choices": [
+      "AGREE",
+      "Ignored"
+    ]
+  },
+  "Accursed Blacksmith": {
+    "choices": [
+      "Forge",
+      "Rummage",
+      "Ignored"
+    ]
+  },
+  "Bonfire Elementals": {
+    "choices": [
+      "Offered Curse",
+      "Offered Basic",
+      "Offered Common",
+      "Offered Special",
+      "Offered Uncommon",
+      "Offered Rare"
+    ]
+  },
+  "Designer": {
+    "choices": [
+      "Single Remove",
+      "Upgrade and Remove",
+      "Removal",
+      "Transformed Cards",
+      "Transform",
+      "Upgrade",
+      "Punched",
+      "Tried to Upgrade",
+      "Upgraded Two"
+    ]
+  },
+  "Duplicator": {
+    "choices": [
+      "Copied",
+      "Ignored"
+    ]
+  },
+  "FaceTrader": {
+    "choices": [
+      "Touch",
+      "Trade"
+    ]
+  },
+  "Fountain of Cleansing": {
+    "choices": [
+      "Removed Curses",
+      "Ignored"
+    ]
+  },
+  "Golden Shrine": {
+    "choices": [
+      "Pray",
+      "Desecrate",
+      "Ignored"
+    ]
+  },
+  "Wheel of Change": {
+    "choices": [
+      "Gold",
+      "Relic",
+      "Full Heal",
+      "Cursed",
+      "Damaged",
+      "Card Removal"
+    ]
+  },
+  "Lab": {
+    "choices": [
+      "Got Potions"
+    ]
+  },
+  "N'loth": {
+    "choices": [
+      "Traded Relic",
+      "Ignored"
+    ]
+  },
+  "NoteForYourself": {
+    "choices": [
+      "Ignored",
+      "Took Card"
+    ]
+  },
+  "Purifier": {
+    "choices": [
+      "Purged",
+      "Ignored"
+    ]
+  },
+  "Transmorgrifier": {
+    "choices": [
+      "Transformed",
+      "Ignored"
+    ]
+  },
+  "Upgrade Shrine": {
+    "choices": [
+      "Upgraded",
+      "Ignored"
+    ]
+  },
+  "WeMeetAgain": {
+    "choices": [
+      "Gave Potion",
+      "Paid Gold",
+      "Gave Card",
+      "Ignored"
+    ]
+  }
+}
