@@ -16,7 +16,8 @@
     "prod:dist": "npm-run-all build dist",
     "eject": "react-scripts eject",
     "make_card_json": "node -r dotenv/config scripts/make_card_json.js",
-    "make_relic_json": "node -r dotenv/config scripts/make_relic_json.js"
+    "make_relic_json": "node -r dotenv/config scripts/make_relic_json.js",
+    "make_event_json": "node -r dotenv/config scripts/make_event_json.js"
   },
   "build": {
     "extends": null,
