@@ -14,6 +14,7 @@ import Top from "pages/Top";
 import Winrates from "pages/Winrates";
 import Cards from "pages/Cards";
 import Relics from "pages/Relics";
+import Events from "pages/Events";
 import NotFound from "pages/NotFound";
 
 const App: React.FC = () => {
@@ -66,6 +67,7 @@ const App: React.FC = () => {
                 <Route path="/winrates" exact component={Winrates} />
                 <Route path="/cards" exact component={Cards} />
                 <Route path="/relics" exact component={Relics} />
+                <Route path="/events" exact component={Events} />
                 <Route component={NotFound} />
               </Switch>
             </Grid.Row>
