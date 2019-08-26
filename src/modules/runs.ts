@@ -49,7 +49,7 @@ export const getModeName = (run: Run): string => {
 };
 
 export const isSeeded = (run: Run): boolean => {
-  return run.seed_source_timestamp === 0;
+  return run.chose_seed;
 };
 
 // 統計データを取得する時はこっち
