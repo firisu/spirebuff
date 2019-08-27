@@ -85,7 +85,7 @@ const MonsterName = (props: Prop) => {
   const { id } = props;
   const name = useMonsterName(id);
 
-  return <div>{name}</div>;
+  return <div data-enemies-id={id}>{name}</div>;
 };
 
 export default MonsterName;
