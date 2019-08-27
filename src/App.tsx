@@ -16,6 +16,7 @@ import Cards from "pages/Cards";
 import Relics from "pages/Relics";
 import Events from "pages/Events";
 import Monsters from "pages/Monsters";
+import Records from "pages/Records";
 import NotFound from "pages/NotFound";
 
 const App: React.FC = () => {
@@ -70,6 +71,7 @@ const App: React.FC = () => {
                 <Route path="/relics" exact component={Relics} />
                 <Route path="/events" exact component={Events} />
                 <Route path="/monsters" exact component={Monsters} />
+                <Route path="/records" exact component={Records} />
                 <Route component={NotFound} />
               </Switch>
             </Grid.Row>

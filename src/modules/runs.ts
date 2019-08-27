@@ -3,7 +3,7 @@ import { remote } from "electron";
 
 import { setRuns } from "../reducers/runs";
 import { useRuns } from "../rootReducer";
-import { charColorMap } from "./chars";
+import { charColorMap, CharacterName } from "./chars";
 
 const fs = remote.require("fs");
 const path = remote.require("path");
@@ -14,7 +14,7 @@ const chars = Object.keys(charColorMap);
 
 export type Run = {
   ascension_level: number;
-  character_chosen: string;
+  character_chosen: CharacterName;
   card_choices: ReadonlyArray<{
     not_picked: ReadonlyArray<string>;
     picked: string;
@@ -31,6 +31,7 @@ export type Run = {
     floor: number;
     turns: number;
   }>;
+  score: number;
   [otherParams: string]: any;
 };
 

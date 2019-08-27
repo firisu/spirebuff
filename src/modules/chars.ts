@@ -2,10 +2,16 @@ import ironclad from "components/Avatar/ironclad.png";
 import silent from "components/Avatar/silent.png";
 import defect from "components/Avatar/defect.png";
 
-export const colorCharMap = {
-  red: "IRONCLAD",
-  green: "THE_SILENT",
-  blue: "DEFECT"
+export const characterNames = ["IRONCLAD", "THE_SILENT", "DEFECT"] as const;
+export type CharacterName = typeof characterNames[number];
+
+export const characterColors = ["RED", "GREEN", "BLUE"] as const;
+export type CharacterColor = typeof characterColors[number];
+
+export const colorCharMap: { [C in CharacterColor]?: CharacterName } = {
+  RED: "IRONCLAD",
+  GREEN: "THE_SILENT",
+  BLUE: "DEFECT"
 };
 
 export const charColorMap: { [char: string]: string } = {
