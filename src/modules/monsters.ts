@@ -58,7 +58,7 @@ const monsterTypeMap: { [MT in MonsterType]: ReadonlyArray<string> } = {
 };
 
 export const getMonsterType = (id: string): MonsterType => {
-  const mt: MonsterType = _.find(monsterTypes, key => {
+  const mt: MonsterType | undefined = _.find(monsterTypes, key => {
     const ids = monsterTypeMap[key];
     return ids.includes(id);
   });
