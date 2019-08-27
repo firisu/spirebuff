@@ -14,11 +14,11 @@ const idToRunHistoryNameIndex: { [id: string]: number } = {
   "Exordium Wildlife": 3,
   "Lots of Slimes": 4,
   "Small Slimes": 5,
-  "CITY MUGGERS": 6, // TBD
+  "2 Thieves": 6,
   "3 Byrds": 7,
   "4 Byrds": 8,
   "3 Cultists": 9,
-  "Lots of Chosens": 10, // TBD
+  "Chosen and Byrds": 10,
   "Sentry and Sphere": 11,
   "Centurion and Healer": 12,
   "Shelled Parasite and Fungi": 13,
@@ -39,6 +39,24 @@ const idToRunHistoryNameIndex: { [id: string]: number } = {
   "Shield and Spear": 28
 };
 
+const idToAnotherId: { [id: string]: string } = {
+  "2 Louse": "FuzzyLouseNormal",
+  "3 Louse": "FuzzyLouseNormal",
+  "3 Darklings": "Darkling",
+  Slavers: "SlaverBoss", // act2エリート、タスクマスター
+  "Shell Parasite": "Shelled Parasite",
+  "2 Fungi Beasts": "FungiBeast",
+  "Blue Slaver": "SlaverBlue",
+  "Orb Walker": "Orb Walker", // スペース入りなので定義しないと漏れる
+  Automaton: "BronzeAutomaton",
+  Collector: "TheCollector",
+  "Red Slaver": "SlaverRed",
+  "The Heart": "CorruptHeart",
+  "Spire Growth": "Serpent",
+  "The Mushroom Lair": "FungiBeast",
+  "Lagavulin Event": "Lagavulin"
+};
+
 export const useMonsterName = (id: string) => {
   const l = useLocalization();
   const { monstersJson, uiJson } = l;
@@ -48,7 +66,12 @@ export const useMonsterName = (id: string) => {
     .map(part => _.capitalize(part))
     .join("");
 
-  if (monstersJson[shortId] !== undefined) {
+  // NOTE: Mind Bloom Boss Battle だけ名前を翻訳する仕組みがない…気がする
+
+  if (idToAnotherId[id] !== undefined) {
+    const anotherId = idToAnotherId[id];
+    return monstersJson[anotherId].NAME;
+  } else if (monstersJson[shortId] !== undefined) {
     return monstersJson[shortId].NAME;
   } else if (idToRunHistoryNameIndex[id] !== undefined) {
     const index = idToRunHistoryNameIndex[id];
