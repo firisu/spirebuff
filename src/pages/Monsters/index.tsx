@@ -3,6 +3,7 @@ import { Grid, Table, Menu } from "semantic-ui-react";
 
 import DropdownChar from "components/DropdownChar";
 import DropdownLevel from "components/DropdownLevel";
+import MonsterName from "components/MonsterName";
 import { charNameMap } from "modules/chars";
 import { formatWinrate } from "modules/utils";
 
@@ -86,7 +87,9 @@ const Monsters = () => {
         <Table.Body>
           {Object.keys(stats).map(key => (
             <Table.Row key={`monster-stats-${key}`}>
-              <Table.Cell>{stats[key].name}</Table.Cell>
+              <Table.Cell>
+                <MonsterName id={stats[key].name} />
+              </Table.Cell>
               <Table.Cell>{stats[key].count}</Table.Cell>
               <Table.Cell>
                 {Math.floor(stats[key].damage / stats[key].count)}
