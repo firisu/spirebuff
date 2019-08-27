@@ -25,6 +25,12 @@ export type Run = {
     event_name: string;
     player_choice: string;
   }>;
+  damage_taken: ReadonlyArray<{
+    damage: number;
+    enemies: string;
+    floor: number;
+    turns: number;
+  }>;
   [otherParams: string]: any;
 };
 
