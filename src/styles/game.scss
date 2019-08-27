@@ -75,3 +75,12 @@ $MAROON: #B03060;
   &[data-tier=UNCOMMON] { color: $CARD_COLOR_UNCOMMON; }
   &[data-tier=RARE] { color: $CARD_COLOR_RARE; }
 }
+
+.monster-name {
+  &[data-monster-type=ELITE] {
+    color: $CARD_COLOR_UNCOMMON;
+  }
+  &[data-monster-type=BOSS] {
+    color: $CARD_COLOR_RARE;
+  }
+}

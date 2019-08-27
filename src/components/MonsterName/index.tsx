@@ -2,6 +2,7 @@ import React from "react";
 import * as _ from "lodash";
 
 import { useLocalization } from "modules/localization";
+import { getMonsterType } from "modules/monsters";
 
 interface Prop {
   id: string;
@@ -84,8 +85,13 @@ export const useMonsterName = (id: string) => {
 const MonsterName = (props: Prop) => {
   const { id } = props;
   const name = useMonsterName(id);
+  const mt = getMonsterType(id);
 
-  return <div data-enemies-id={id}>{name}</div>;
+  return (
+    <div className="monster-name" data-monster-type={mt} data-enemies-id={id}>
+      {name}
+    </div>
+  );
 };
 
 export default MonsterName;
