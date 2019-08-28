@@ -1,7 +1,17 @@
 import React from "react";
-import { Grid, Menu, Segment, Statistic, Popup, Icon } from "semantic-ui-react";
+import {
+  Grid,
+  Menu,
+  Segment,
+  Statistic,
+  Popup,
+  Icon,
+  Table,
+  Header
+} from "semantic-ui-react";
 
 import DropdownLevel from "components/DropdownLevel";
+import { characterNames, charNameMap } from "modules/chars";
 
 import "./style.scss";
 import { useAct4WinStreaks, useMaxScores, useAltWinStreak } from "./utils";
@@ -21,7 +31,7 @@ const Records = () => {
         </Menu.Item>
       </Menu>
 
-      <Segment inverted attached="top">
+      <Segment inverted attached>
         <Statistic.Group inverted widths="2">
           <Statistic>
             <Statistic.Label>
@@ -51,7 +61,7 @@ const Records = () => {
         </Statistic.Group>
       </Segment>
 
-      <Segment inverted attached="bottom">
+      <Segment inverted attached>
         <Statistic.Group inverted widths="1">
           <Statistic>
             <Statistic.Label>最大スコア</Statistic.Label>
@@ -60,6 +70,66 @@ const Records = () => {
             </Statistic.Value>
           </Statistic>
         </Statistic.Group>
+      </Segment>
+
+      <Segment inverted attached>
+        <Header inverted size="huge">
+          平均データ
+        </Header>
+        <Table inverted sortable selectable celled size="small" compact="very">
+          <Table.Header>
+            <Table.Row>
+              <Table.HeaderCell width={3}></Table.HeaderCell>
+              <Table.HeaderCell width={1}>
+                {charNameMap[characterNames[0]]}
+              </Table.HeaderCell>
+              <Table.HeaderCell width={1}>
+                {charNameMap[characterNames[1]]}
+              </Table.HeaderCell>
+              <Table.HeaderCell width={1}>
+                {charNameMap[characterNames[2]]}
+              </Table.HeaderCell>
+              <Table.HeaderCell>備考</Table.HeaderCell>
+            </Table.Row>
+          </Table.Header>
+          <Table.Body>
+            <Table.Row>
+              <Table.Cell>エリート討伐数</Table.Cell>
+              <Table.Cell>0</Table.Cell>
+              <Table.Cell>0</Table.Cell>
+              <Table.Cell>0</Table.Cell>
+              <Table.Cell></Table.Cell>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell>スコア</Table.Cell>
+              <Table.Cell>0</Table.Cell>
+              <Table.Cell>0</Table.Cell>
+              <Table.Cell>0</Table.Cell>
+              <Table.Cell></Table.Cell>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell>デッキ枚数</Table.Cell>
+              <Table.Cell>0</Table.Cell>
+              <Table.Cell>0</Table.Cell>
+              <Table.Cell>0</Table.Cell>
+              <Table.Cell></Table.Cell>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell>レリック数</Table.Cell>
+              <Table.Cell>0</Table.Cell>
+              <Table.Cell>0</Table.Cell>
+              <Table.Cell>0</Table.Cell>
+              <Table.Cell></Table.Cell>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell>キャンプ数</Table.Cell>
+              <Table.Cell>0</Table.Cell>
+              <Table.Cell>0</Table.Cell>
+              <Table.Cell>0</Table.Cell>
+              <Table.Cell></Table.Cell>
+            </Table.Row>
+          </Table.Body>
+        </Table>
       </Segment>
     </Grid.Column>
   );
