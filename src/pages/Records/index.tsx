@@ -60,8 +60,9 @@ const Records = () => {
               />
             </Statistic.Label>
             <Statistic.Value>
-              {act4WinStreaks.IRONCLAD} / {act4WinStreaks.THE_SILENT} /{" "}
-              {act4WinStreaks.DEFECT}
+              <span className="red">{act4WinStreaks.IRONCLAD}</span> /{" "}
+              <span className="green">{act4WinStreaks.THE_SILENT}</span> /{" "}
+              <span className="blue">{act4WinStreaks.DEFECT}</span>
             </Statistic.Value>
           </Statistic>
         </Statistic.Group>
@@ -72,7 +73,9 @@ const Records = () => {
           <Statistic>
             <Statistic.Label>最大スコア</Statistic.Label>
             <Statistic.Value>
-              {maxScores.IRONCLAD} / {maxScores.THE_SILENT} / {maxScores.DEFECT}
+              <span className="red">{maxScores.IRONCLAD}</span> /{" "}
+              <span className="green">{maxScores.THE_SILENT}</span> /{" "}
+              <span className="blue">{maxScores.DEFECT}</span>
             </Statistic.Value>
           </Statistic>
         </Statistic.Group>
