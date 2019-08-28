@@ -1,5 +1,8 @@
-import { CharacterName } from "modules/chars";
+import * as _ from "lodash";
+
+import { CharacterName, characterNames } from "modules/chars";
 import { useMetricsRuns, isAct4Victory } from "modules/runs";
+import { getMonsterType } from "modules/monsters";
 
 export const useAltWinStreak = (level: number) => {
   // プレイデータを取得
@@ -91,4 +94,72 @@ export const useMaxScores = (level: number) => {
   });
 
   return maxScores;
+};
+
+export const useAvgStats = (level: number) => {
+  // プレイデータを取得
+  const allRuns = useMetricsRuns();
+  const runs = allRuns.filter(run => run.ascension_level === level);
+
+  // 初期化
+  let stats: {
+    [CN in CharacterName]: {
+      count: number;
+      elite: number;
+      score: number;
+      deckVolume: number;
+      relic: number;
+      campRest: number;
+      campSmith: number;
+    };
+  } = _.reduce(
+    characterNames,
+    (acc, char) => ({
+      ...acc,
+      [char]: {
+        count: 0,
+        elite: 0,
+        score: 0,
+        deckVolume: 0,
+        relic: 0,
+        campRest: 0,
+        campSmith: 0
+      }
+    }),
+    {} as any
+  );
+
+  runs.forEach(run => {
+    const char = run.character_chosen;
+
+    // プレイ回数
+    stats[char].count += 1;
+
+    // エリート討伐数
+    stats[char].elite += run.damage_taken.filter(damage => {
+      const mt = getMonsterType(damage.enemies);
+      return mt === "ELITE";
+    }).length;
+
+    // スコア
+    stats[char].score += run.score;
+
+    // デッキ枚数
+    stats[char].deckVolume += run.master_deck.length;
+
+    // レリック数
+    stats[char].relic += run.relics.length;
+
+    // 休憩
+    stats[char].campRest += run.campfire_choices.filter(cc => {
+      return cc.key === "REST";
+    }).length;
+
+    // 鍛冶
+    stats[char].campSmith += run.campfire_choices.filter(cc => {
+      return cc.key === "SMITH";
+    }).length;
+  });
+
+  return stats;
 };

@@ -32,6 +32,12 @@ export type Run = {
     turns: number;
   }>;
   score: number;
+  relics: ReadonlyArray<string>;
+  campfire_choices: ReadonlyArray<{
+    data: string;
+    floor: number;
+    key: string;
+  }>;
   [otherParams: string]: any;
 };
 

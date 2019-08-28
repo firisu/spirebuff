@@ -14,7 +14,12 @@ import DropdownLevel from "components/DropdownLevel";
 import { characterNames, charNameMap } from "modules/chars";
 
 import "./style.scss";
-import { useAct4WinStreaks, useMaxScores, useAltWinStreak } from "./utils";
+import {
+  useAct4WinStreaks,
+  useMaxScores,
+  useAltWinStreak,
+  useAvgStats
+} from "./utils";
 
 const Records = () => {
   const [level, setLevel] = React.useState(20);
@@ -22,6 +27,7 @@ const Records = () => {
   const alt = useAltWinStreak(level);
   const act4WinStreaks = useAct4WinStreaks(level);
   const maxScores = useMaxScores(level);
+  const avgStats = useAvgStats(level);
 
   return (
     <Grid.Column width={16} className="records-grid">
@@ -95,37 +101,58 @@ const Records = () => {
           <Table.Body>
             <Table.Row>
               <Table.Cell>エリート討伐数</Table.Cell>
-              <Table.Cell>0</Table.Cell>
-              <Table.Cell>0</Table.Cell>
-              <Table.Cell>0</Table.Cell>
+              {characterNames.map(char => (
+                <Table.Cell key={`avg-elite-${char}`}>
+                  {(avgStats[char].elite / avgStats[char].count).toFixed(1)}
+                </Table.Cell>
+              ))}
               <Table.Cell></Table.Cell>
             </Table.Row>
             <Table.Row>
               <Table.Cell>スコア</Table.Cell>
-              <Table.Cell>0</Table.Cell>
-              <Table.Cell>0</Table.Cell>
-              <Table.Cell>0</Table.Cell>
+              {characterNames.map(char => (
+                <Table.Cell key={`avg-score-${char}`}>
+                  {Math.floor(avgStats[char].score / avgStats[char].count)}
+                </Table.Cell>
+              ))}
               <Table.Cell></Table.Cell>
             </Table.Row>
             <Table.Row>
               <Table.Cell>デッキ枚数</Table.Cell>
-              <Table.Cell>0</Table.Cell>
-              <Table.Cell>0</Table.Cell>
-              <Table.Cell>0</Table.Cell>
+              {characterNames.map(char => (
+                <Table.Cell key={`avg-deckVolume-${char}`}>
+                  {(avgStats[char].deckVolume / avgStats[char].count).toFixed(
+                    1
+                  )}
+                </Table.Cell>
+              ))}
               <Table.Cell></Table.Cell>
             </Table.Row>
             <Table.Row>
               <Table.Cell>レリック数</Table.Cell>
-              <Table.Cell>0</Table.Cell>
-              <Table.Cell>0</Table.Cell>
-              <Table.Cell>0</Table.Cell>
+              {characterNames.map(char => (
+                <Table.Cell key={`avg-relic-${char}`}>
+                  {(avgStats[char].relic / avgStats[char].count).toFixed(1)}
+                </Table.Cell>
+              ))}
               <Table.Cell></Table.Cell>
             </Table.Row>
             <Table.Row>
-              <Table.Cell>キャンプ数</Table.Cell>
-              <Table.Cell>0</Table.Cell>
-              <Table.Cell>0</Table.Cell>
-              <Table.Cell>0</Table.Cell>
+              <Table.Cell>キャンプ（休憩）</Table.Cell>
+              {characterNames.map(char => (
+                <Table.Cell key={`avg-campRest-${char}`}>
+                  {(avgStats[char].campRest / avgStats[char].count).toFixed(1)}
+                </Table.Cell>
+              ))}
+              <Table.Cell></Table.Cell>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell>キャンプ（鍛冶）</Table.Cell>
+              {characterNames.map(char => (
+                <Table.Cell key={`avg-campSmith-${char}`}>
+                  {(avgStats[char].campSmith / avgStats[char].count).toFixed(1)}
+                </Table.Cell>
+              ))}
               <Table.Cell></Table.Cell>
             </Table.Row>
           </Table.Body>
