@@ -19,6 +19,10 @@ const reducer: Reducer<State, Action> = combineReducers({
 });
 
 // selector
-export const useRuns = () => useSelector((state: State) => state.runs);
+export const useRuns = () => useSelector((state: State) => state.runs.items);
+export const useRunsLoaded = () =>
+  useSelector((state: State) => state.runs.total);
+export const useRunsTotal = () =>
+  useSelector((state: State) => state.runs.loaded);
 
 export default reducer;

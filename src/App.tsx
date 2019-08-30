@@ -1,10 +1,17 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { HashRouter, Route, Switch } from "react-router-dom";
-import { Container, Grid, Header, Dimmer, Loader } from "semantic-ui-react";
+import {
+  Container,
+  Grid,
+  Header,
+  Dimmer,
+  Loader,
+  Progress
+} from "semantic-ui-react";
 
 import { useLoadRuns } from "modules/runs";
-import { useRuns } from "rootReducer";
+import { useRuns, useRunsLoaded, useRunsTotal } from "rootReducer";
 import AppMenu from "components/AppMenu";
 import UserOverview from "components/UserOverview";
 
@@ -31,13 +38,39 @@ const App: React.FC = () => {
   // storeのRUNデータを読み込む
   const runs = useRuns();
   const runCount = Object.values(runs).flat().length;
+  const loaded = useRunsLoaded();
+  const total = useRunsTotal();
 
   // ロード中
   if (runCount === 0) {
     return (
       <Container>
         <Dimmer active>
-          <Loader />
+          <Grid stretched centered>
+            <Grid.Row>
+              <Grid.Column>
+                <Container>
+                  <Loader />
+                </Container>
+              </Grid.Column>
+            </Grid.Row>
+            {total !== 0 && (
+              <Grid.Row>
+                <Grid.Column width={8}>
+                  <Progress
+                    total={total}
+                    value={loaded}
+                    inverted
+                    progress
+                    autoSuccess
+                  >
+                    {loaded < total ? "Loading" : "Complete!"} ({loaded} /{" "}
+                    {total})
+                  </Progress>
+                </Grid.Column>
+              </Grid.Row>
+            )}
+          </Grid>
         </Dimmer>
       </Container>
     );

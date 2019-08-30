@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { remote } from "electron";
 
-import { setRuns } from "../reducers/runs";
-import { useRuns } from "../rootReducer";
+import { setRuns, setTotal, setLoaded, incrLoaded } from "../reducers/runs";
+import { useRuns, useRunsLoaded } from "../rootReducer";
 import { charColorMap, CharacterName } from "./chars";
 
 const fs = remote.require("fs");
@@ -94,6 +94,17 @@ export const useRunsByColor = () => {
 
 export const useLoadRuns = (dispatch: any) => {
   useEffect(() => {
+    const total = chars
+      .map(char => {
+        const runfiles = fs.readdirSync(path.join(runsDir, char));
+        return runfiles.length;
+      })
+      .reduce((acc, val) => acc + val, 0);
+
+    // ロードカウントの初期化
+    dispatch(setTotal(total));
+    dispatch(setLoaded(0));
+
     const runs: { [timestamp: string]: {} } = {};
     chars.forEach(char => {
       const runfiles = fs.readdirSync(path.join(runsDir, char));
@@ -104,6 +115,9 @@ export const useLoadRuns = (dispatch: any) => {
           fs.readFileSync(fullPath, { encoding: "utf-8" })
         );
         runs[json.timestamp] = json;
+
+        // ロード済みカウントを増やす
+        dispatch(incrLoaded());
       });
     });
     const allRuns: ReadonlyArray<Run> = Object.values(runs) as Run[];
