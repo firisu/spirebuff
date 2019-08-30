@@ -58,10 +58,9 @@ const App: React.FC = () => {
               <Grid.Row>
                 <Grid.Column width={8}>
                   <Progress
-                    total={total}
-                    value={loaded}
-                    inverted
+                    percent={Math.floor((loaded / total) * 100)}
                     progress
+                    inverted
                     autoSuccess
                   >
                     {loaded < total ? "Loading" : "Complete!"} ({loaded} /{" "}

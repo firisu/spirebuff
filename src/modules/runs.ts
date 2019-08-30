@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { remote } from "electron";
 
 import { setRuns, setTotal, setLoaded, incrLoaded } from "../reducers/runs";
-import { useRuns, useRunsLoaded } from "../rootReducer";
+import { useRuns } from "../rootReducer";
 import { charColorMap, CharacterName } from "./chars";
 
 const fs = remote.require("fs");
@@ -106,22 +106,50 @@ export const useLoadRuns = (dispatch: any) => {
     dispatch(setLoaded(0));
 
     const runs: { [timestamp: string]: {} } = {};
-    chars.forEach(char => {
-      const runfiles = fs.readdirSync(path.join(runsDir, char));
+    setTimeout(async () => {
+      const promises = chars
+        .map(char => {
+          const runfiles = fs.readdirSync(path.join(runsDir, char));
 
-      runfiles.forEach((runfile: string) => {
-        const fullPath = path.join(runsDir, char, runfile);
-        const json = JSON.parse(
-          fs.readFileSync(fullPath, { encoding: "utf-8" })
+          return runfiles.map((runfile: string) => () => {
+            new Promise(resolve => {
+              return setTimeout(() => {
+                const fullPath = path.join(runsDir, char, runfile);
+                const json = JSON.parse(
+                  fs.readFileSync(fullPath, { encoding: "utf-8" })
+                );
+                runs[json.timestamp] = json;
+
+                // ロード済みカウントを増やす
+                dispatch(incrLoaded());
+
+                // 終わったら解放
+                resolve();
+              });
+            });
+          });
+        })
+        .flat();
+
+      // レンダリング遅延させるためにわざと setTimeout 入れてみる
+      for (let i = 0; i < 10; i++) {
+        const target = Math.floor(promises.length / i);
+        promises.splice(
+          target,
+          0,
+          () => new Promise(resolve => setTimeout(resolve, 1))
         );
-        runs[json.timestamp] = json;
+      }
 
-        // ロード済みカウントを増やす
-        dispatch(incrLoaded());
-      });
+      // 直列に実行する
+      for (const p of promises) {
+        await p();
+      }
+
+      // 全部処理が終わったらストアに格納する
+      const allRuns: ReadonlyArray<Run> = Object.values(runs) as Run[];
+      dispatch(setRuns(allRuns));
     });
-    const allRuns: ReadonlyArray<Run> = Object.values(runs) as Run[];
-    dispatch(setRuns(allRuns));
   }, [dispatch]);
 };
 
