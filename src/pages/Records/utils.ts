@@ -71,6 +71,28 @@ export const useAct4WinStreaks = (level: number) => {
   return maxStreaks;
 };
 
+export const useAct4Wins = (level: number) => {
+  // プレイデータを取得
+  const allRuns = useMetricsRuns();
+  const runs = allRuns.filter(run => run.ascension_level === level);
+
+  // 初期化
+  const wins: { [CN in CharacterName]: number } = {
+    IRONCLAD: 0,
+    THE_SILENT: 0,
+    DEFECT: 0
+  };
+
+  runs.forEach(run => {
+    if (isAct4Victory(run)) {
+      const name = run.character_chosen;
+      wins[name]++;
+    }
+  });
+
+  return wins;
+};
+
 export const useMaxScores = (level: number) => {
   // プレイデータを取得
   const allRuns = useMetricsRuns();

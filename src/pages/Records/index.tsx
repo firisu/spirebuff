@@ -18,7 +18,8 @@ import {
   useAct4WinStreaks,
   useMaxScores,
   useAltWinStreak,
-  useAvgStats
+  useAvgStats,
+  useAct4Wins
 } from "./utils";
 
 const Records = () => {
@@ -26,6 +27,7 @@ const Records = () => {
 
   const alt = useAltWinStreak(level);
   const act4WinStreaks = useAct4WinStreaks(level);
+  const act4Wins = useAct4Wins(level);
   const maxScores = useMaxScores(level);
   const avgStats = useAvgStats(level);
 
@@ -63,6 +65,19 @@ const Records = () => {
               <span className="red">{act4WinStreaks.IRONCLAD}</span> /{" "}
               <span className="green">{act4WinStreaks.THE_SILENT}</span> /{" "}
               <span className="blue">{act4WinStreaks.DEFECT}</span>
+            </Statistic.Value>
+          </Statistic>
+        </Statistic.Group>
+      </Segment>
+
+      <Segment inverted attached>
+        <Statistic.Group inverted widths="1">
+          <Statistic>
+            <Statistic.Label>心臓キル数</Statistic.Label>
+            <Statistic.Value>
+              <span className="red">{act4Wins.IRONCLAD}</span> /{" "}
+              <span className="green">{act4Wins.THE_SILENT}</span> /{" "}
+              <span className="blue">{act4Wins.DEFECT}</span>
             </Statistic.Value>
           </Statistic>
         </Statistic.Group>
