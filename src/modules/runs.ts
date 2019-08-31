@@ -137,7 +137,7 @@ export const useLoadRuns = (dispatch: any) => {
         promises.splice(
           target,
           0,
-          () => new Promise(resolve => setTimeout(resolve, 1))
+          () => new Promise(resolve => setTimeout(resolve, 100))
         );
       }
 
