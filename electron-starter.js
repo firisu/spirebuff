@@ -13,10 +13,18 @@ function createWindow() {
   win = new BrowserWindow({
     width: process.env.START_WIDTH ? Number(process.env.START_WIDTH) : 1400,
     height: process.env.START_HEIGHT ? Number(process.env.START_HEIGHT) : 1000,
+    center: true,
     webPreferences: {
-      nodeIntegration: true
+      nodeIntegration: true,
+      devTools: !dotenv.error
     }
   });
+
+  // for production
+  if (dotenv.error) {
+    // メニュー削除
+    win.removeMenu();
+  }
 
   // React Dev Toolsの読み込み
   if (!dotenv.error) {
