@@ -1,44 +1,20 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![spirebuff_top](spirebuff_top.png)
 
-## Available Scripts
+# 1. プロジェクト概要
 
-In the project directory, you can run:
+[Slay the Spire](https://store.steampowered.com/app/646570/Slay_the_Spire) というゲームのプレイ履歴(json)を解析して統計的なデータを表示するためのツール。
 
-### `npm start`
+Electron 上に TypeScript + React による SPA を乗せている。
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+自分のためだけに作ったツールだが、当初欲しい機能は全部作ったので記念用に公開。
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+# 2. ビルド方法
 
-### `npm test`
+`electron-builder` を使ってゴニョゴニョ。
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+試行錯誤しながらやっていたせいで詳しい手順を覚えていないのです…ごめんね。
 
-### `npm run build`
+# 3. サポート
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+随分長いこと触っていないのでちょっと厳しいかも。
+自分で読んで動かしたほうが早いと思います。
