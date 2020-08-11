@@ -18,3 +18,9 @@ Electron 上に TypeScript + React による SPA を乗せている。
 
 随分長いこと触っていないのでちょっと厳しいかも。
 自分で読んで動かしたほうが早いと思います。
+
+# 4. スクリーンショット
+
+- [プレイ履歴](spirebuff_history.png)
+- [カード統計](spirebuff_card.png)
+- [自己ベスト](spirebuff_stat.png)
